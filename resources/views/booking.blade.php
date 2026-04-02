@@ -48,8 +48,8 @@
                     <h2 class="pb-2">Reserve Your Room</h2>
 
                     <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="text" name="mobile" placeholder="Mobile Number" required>
-                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="mobile" placeholder="Mobile Number" required pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '')" class="form-control">
+                    <input type="email" name="email" placeholder="Email" required pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" oninput="this.value = this.value.toLowerCase()" class="form-control">
 
                     <div class="form-row">
                         <div>

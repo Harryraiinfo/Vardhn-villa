@@ -2,101 +2,140 @@
 
 @section('content')
 
-<h2>Bookings</h2>
+<div class="container-fluid">
 
-@if(session('success'))
-<div class="alert alert-success">{{ session('success') }}</div>
-@endif
+    <h4 class="mb-3">📅 Booking Management</h4>
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Mobile</th>
-            <th>Check-In</th>
-            <th>Check-Out</th>
-            <th>Rooms</th>
-            <th>Room</th>
-            <th>Price</th>
-            <th>Status</th>
-            <th>Action</th>
-        </tr>
-    </thead>
+    @if(session('success'))
+    <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
 
-    <tbody>
-        @foreach($bookings as $booking)
-        <tr>
-            <td>{{ $booking->name }}</td>
-            <td>{{ $booking->mobile }}</td>
-            <td>{{ $booking->check_in }}</td>
-            <td>{{ $booking->check_out }}</td>
-            <td>{{ $booking->rooms }}</td>
+    <!-- CARD -->
+    <div class="card">
+        <div class="card-body p-2 p-md-3">
 
-            <td>
-                @if($booking->room_number)
+            <!-- MOBILE SCROLL FIX -->
+            <div class="table-responsive">
 
-                @php
-                $rooms = json_decode($booking->room_number, true);
-                @endphp
+                <table class="table table-hover align-middle text-nowrap ">
 
-                @if(is_array($rooms))
-                {{ implode(', ', $rooms) }}
-                @else
-                {{ $booking->room_number }}
-                @endif
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Guest</th>
+                            <th>Mobile</th>
+                            <th>Dates</th>
+                            <th>Rooms</th>
+                            <th>Assigned</th>
+                            <th style="width:180px; min-width: 160px;">Price</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
 
-                @else
-                Not Assigned
-                @endif
-            </td>
+                    <tbody>
+                        @foreach($bookings as $booking)
+                        <tr>
 
-            <td>
-                @if($booking->status !== 'rejected')
+                            <!-- GUEST -->
+                            <td>
+                                <div>
+                                    <strong>{{ $booking->name }}</strong><br>
+                                    <!-- <small>{{ $booking->mobile }}</small> -->
+                                </div>
+                            </td>
+                            <td>{{ $booking->mobile }}</td>
+                            <!-- DATES -->
+                            <td>
+                                <small>
+                                    <b>In:</b> {{ $booking->check_in }} <br>
+                                    <b>Out:</b> {{ $booking->check_out }}
+                                </small>
+                            </td>
 
-                <form method="POST" action="{{ route('manager.booking.price', $booking->id) }}">
-                    @csrf
+                            <!-- ROOMS -->
+                            <td>{{ $booking->rooms }}</td>
 
-                    <div class="d-flex">
-                        <input type="number"
-                            name="price"
-                            value="{{ $booking->price }}"
-                            class="form-control form-control-sm me-1"
-                            placeholder="₹"
-                            style="width:100px;"
-                            required>
+                            <!-- ROOM NUMBER -->
+                            <td>
+                                @if($booking->room_number)
+                                @php $rooms = json_decode($booking->room_number, true); @endphp
 
-                        <button class="btn btn-primary btn-sm">Save</button>
-                    </div>
-                </form>
+                                @if(is_array($rooms))
+                                <span class="badge bg-dark">
+                                    {{ implode(', ', $rooms) }}
+                                </span>
+                                @else
+                                <span class="badge bg-dark">
+                                    {{ $booking->room_number }}
+                                </span>
+                                @endif
+                                @else
+                                <span class="text-muted">Not Assigned</span>
+                                @endif
+                            </td>
 
-                @else
+                            <!-- PRICE -->
+                            <td>
+                                @if($booking->status !== 'rejected')
 
-                <span class="text-muted">Not Allowed</span>
+                                <form method="POST" action="{{ route('manager.booking.price', $booking->id) }}">
+                                    @csrf
 
-                @endif
-            </td>
+                                    <div class="input-group input-group-sm">
+                                        <span class="input-group-text">₹</span>
 
-            <td>
-                <span class="badge 
-                    @if($booking->status == 'pending') bg-warning
-                    @elseif($booking->status == 'confirmed') bg-success
-                    @else bg-danger
-                    @endif">
-                    {{ ucfirst($booking->status) }}
-                </span>
-            </td>
-            <td>
-                <a href="{{ route('manager.booking.status', [$booking->id, 'confirmed']) }}"
-                    class="btn btn-success btn-sm">Confirm</a>
+                                        <input type="number" name="price" value="{{ $booking->price }}" class="form-control" required>
 
-                <a href="{{ route('manager.booking.status', [$booking->id, 'rejected']) }}"
-                    class="btn btn-danger btn-sm">Reject</a>
-            </td>
-        </tr>
-        @endforeach
-    </tbody>
-</table>
-<div class="mt-3">
-    {{ $bookings->links() }}
+                                        <button class="btn btn-primary btn-sm"> Save </button>
+                                    </div>
+                                </form>
+
+                                @else
+                                <span class="text-muted">Not Allowed</span>
+                                @endif
+                            </td>
+
+                            <!-- STATUS -->
+                            <td class="text-center">
+                                @if($booking->status == 'pending')
+                                <span class="badge bg-warning text-dark">Pending</span>
+                                @elseif($booking->status == 'confirmed')
+                                <span class="badge bg-success">Confirmed</span>
+                                @else
+                                <span class="badge bg-danger">Rejected</span>
+                                @endif
+                            </td>
+
+                            <!-- ACTION -->
+                            <td class="text-center">
+                                <div class="d-flex flex-column flex-md-row gap-1 justify-content-center">
+
+                                    <a href="{{ route('manager.booking.status', [$booking->id, 'confirmed']) }}" class="btn btn-success btn-sm m-1">
+                                        Confirm
+                                    </a>
+
+                                    <a href="{{ route('manager.booking.status', [$booking->id, 'rejected']) }}" class="btn btn-danger btn-sm m-1">
+                                        Reject
+                                    </a>
+
+                                </div>
+                            </td>
+
+                        </tr>
+                        @endforeach
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="mt-3">
+        {{ $bookings->links() }}
+    </div>
+
 </div>
+
 @endsection

@@ -17,14 +17,14 @@ class AdminUserSeeder extends Seeder
          User::create([
         'name' => 'Admin',
         'email' => 'admin@gmail.com',
-        'password' => Hash::make('admin165'),
+        'password' => Hash::make('admin123'),
         'role' => 'super_admin',
     ]);
 
     User::create([
         'name' => 'Manager',
         'email' => 'manager@gmail.com',
-        'password' => Hash::make('manager007'),
+        'password' => Hash::make('manager123'),
         'role' => 'manager',
     ]);
     }

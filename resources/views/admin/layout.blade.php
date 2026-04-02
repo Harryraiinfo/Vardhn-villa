@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <title>Admin Panel</title>
+    <title>Admin Panel - Vardhn Villa</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/Img/Vardan_Villa_logo.png') }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

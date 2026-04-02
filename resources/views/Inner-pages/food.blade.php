@@ -1,10 +1,12 @@
 {{-- resources/views/food.blade.php --}}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food - Vardhn Villa</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/Img/Vardan_Villa_logo.png') }}">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
@@ -13,9 +15,10 @@
     <!-- {{-- AOS CSS --}} -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
 
-  @include('partials.navbar')
+    @include('partials.navbar')
     <!-- @include('partials.navbar') -->
 
     <!-- {{-- HERO --}} -->
@@ -88,10 +91,10 @@
 
     <!-- {{-- Navbar Toggle Script --}} -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             const toggler = document.querySelector(".navbar-toggler");
             const menu = document.querySelector("#navbarTogglerDemo02");
-            toggler.addEventListener("click", function () {
+            toggler.addEventListener("click", function() {
                 menu.classList.toggle("show");
             });
         });
@@ -100,8 +103,12 @@
     <!-- {{-- AOS SCRIPT --}} -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
     </script>
 
 </body>
+
 </html>

@@ -18,7 +18,7 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('facilities') }}">Facilities</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('attractions') }}">Attractions</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Admin Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}" target="_blank">Admin Login</a></li>
             </ul>
 
             <a href="{{ route('booking') }}" class="btn btn-outline-warning">Book Now</a>

@@ -11,6 +11,8 @@
 - cp .env.example .env
 - php artisan key:generate
 - php artisan migrate
+- php artisan migrate:fresh
+- php artisan migrate --seed
 - php artisan serve
 
 

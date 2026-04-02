@@ -1,10 +1,12 @@
 {{-- resources/views/rooms.blade.php --}}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rooms - Vardhn Villa</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/Img/Vardan_Villa_logo.png') }}">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
@@ -20,6 +22,7 @@
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
 
     @include('partials.navbar')
@@ -94,12 +97,12 @@
 
     {{-- Scripts --}}
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
 
             // Navbar toggle
             const toggler = document.querySelector(".navbar-toggler");
             const menu = document.querySelector("#navbarTogglerDemo02");
-            toggler.addEventListener("click", function () {
+            toggler.addEventListener("click", function() {
                 menu.classList.toggle("show");
             });
 
@@ -123,11 +126,12 @@
             });
 
             // Refresh AOS on slider change (for cloned slides)
-            $('.room-slider').on('afterChange', function(){
+            $('.room-slider').on('afterChange', function() {
                 AOS.refresh();
             });
 
         });
     </script>
 </body>
+
 </html>
