@@ -1,0 +1,225 @@
+@extends('layouts.app')
+
+@section('content')
+
+<!-- HERO SLIDER -->
+<div class="header">
+    <div class="slider">
+
+        <div class="slide" style="background-image:url('{{ asset('images/Banner-img/Banner 1.jpeg') }}'); height:100vh;">
+            <div class="overlay-heading">
+                <h1>Vardhan Villa</h1>
+                <p>Luxury Stay Experience</p>
+                <a href="{{ route('booking') }}" class="btn btn-outline-warning">Book Now</a>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image:url('{{ asset('images/Banner-img/Royal Palace.jpeg') }}'); height:100vh;">
+            <div class="overlay-heading">
+                <h1>Welcome to Comfort</h1>
+                <p>Feel Like Home</p>
+                <a href="{{ route('booking') }}" class="btn btn-outline-warning">Book Now</a>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image:url('{{ asset('images/Banner-img/banner3.jpeg') }}'); height:100vh;">
+            <div class="overlay-heading">
+                <h1>Premium Rooms</h1>
+                <p>Best Price Guaranteed</p>
+                <a href="{{ route('booking') }}" class="btn btn-outline-warning">Book Now</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ABOUT -->
+<!---------------- Card Setion Start ---------------------->
+<section class="card_sec py-4 ">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6 mb-3">
+                <div class="clearfix ">
+                    <h1 class="pb-2" data-aos="zoom-in">Welcome to VARDHN VILLA</h1>
+                    <h4 class="pb-2" data-aos="fade-up"
+                        data-aos-delay="200">Luxurious Homestay in the heart of Himchal Pradesh</h4>
+
+                    <p data-aos="fade-up" data-aos-delay="400"> VARDHN VILLA is newly Constructed homestay located 1km ahead of the famous Bhima Kali Temple at Sarahan Bushahr. The villa offerss six Luxurious rooms with stuning views of the snow covered moutain rangers of Shree Khand Mahadev and mesmerizing sunsets from the rooms and balconies.
+                    </p>
+                    <a class="btn btn-warning"
+                        href="{{ route('about') }}">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="row justify-content-center">
+                    <!-- 🔹 Rooms -->
+                    <div class="col section_card">
+                        <div class="card">
+                            <img src="images/Img/bed room.jpeg">
+
+                            <div class="col book-room pt-2">
+
+                                <h3>Luxury Room</h3>
+                                <p>₹2999 / night</p>
+                                <ul>
+                                    <li>Running Hot/Cold Water</li>
+                                    <li>Tariff: 2999 per, 5xtra Person</li>
+                                </ul>
+                            </div>
+                            <div class="butn-book">
+                                <a class="btn btn btn-outline-warning" href="{{ route('booking') }}">Book now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<!-- Gallery-section Start -->
+<section class="gallery-section">
+    <div class="container">
+        <h2 style="color: #ffc107;" data-aos="fade-up">Our Photo
+            Gallery</h2>
+        <p style="color: rgb(195 131 42);" class="subtitle" data-aos="fade-up" data-aos-delay="200">A visual tour to Vardhn Villa </p>
+
+        <div class="gallery-grid">
+            <!-- Image Item -->
+            <div class="gallery-item"><img src="images/Img/bed room.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="images/Img/hall.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="images/Img/loby.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="images/Img/room3.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="images/Img/bed room 2.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="images/Img/room2.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="images/Img/bed room.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="images/Img/loby.jpeg" alt> </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-img" src>
+    </div>
+</section>
+
+
+
+<!-- Luxurious Rooms Section start -->
+<section class="luxurious_rooms-Sec py-3 ">
+    <div class="container">
+        <div
+            class="row justify-content-between align-items-center">
+            <div class="col-md-6">
+                <h1 style="color: rgb(255 193 7); font-weight: 700; letter-spacing: 1px;"
+                    class="room_heading mb-2 ps-2" data-aos="fade-up">Luxurious Rooms & Tariff</h1>
+                <!-- ------------ -->
+                <div class="slider pt-3">
+                    <!-- Slide 1 -->
+                    <div class="slide" style="background-image:url('images/Img/bed\ room\ 2.jpeg'); height: 40vh; border-radius: 12px;"> </div>
+                    <!-- Slide 2 -->
+                    <div class="slide" style="background-image: url('images/Img/loby.jpeg'); height: 40vh; border-radius: 12px;"> </div>
+                    <!-- Slide 3 -->
+                    <div class="slide" style="background-image: url('images/Img/room3.jpeg'); height: 40vh; border-radius: 12px;"> </div>
+                    <!-- ------------ -->
+                </div>
+            </div>
+            <div class="col-md-6 ps-4 pt-4">
+                <h1 class="food_heading"> Delicious Food</h1>
+                <ul>
+                    <li>Hot & Cold Water</li>
+                    <li>Breakfast / Lunch / Dinner</li>
+                    <li>Non-vegetarian options avilable on request</li>
+                    <li>Freshly cooked local and north Indian vegetarinbfood</li>
+                </ul>
+                <br>
+                <div class="food_btn"> <a href="{{route('food')}}" class="btn btn-warning">View Menu</a> </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Luxurious Rooms Section End -->
+
+
+<!------------- Facilities Section Start---------- -->
+<section class="facilities">
+    <div class="container">
+        <h2>Facilities for a Comfortable Stay</h2>
+
+        <div class="facility-slider">
+
+            <div class="facility-card facility_place">
+                <img src="images/Banner-img/Bhimakali Temple.webp">
+                <p class="pt-2">Bhimakali Temple</p>
+            </div>
+
+            <div class="facility-card facility_place">
+                <img src="images/Img/view 4.jpeg">
+                <p class="pt-2">Royal Palace</p>
+            </div>
+
+            <div class="facility-card facility_place">
+                <img src="images/Banner-img/sarahan.jpeg">
+                <p class="pt-2">Sarahan Bushahr Palace</p>
+            </div>
+
+            <div class="facility-card facility_place">
+                <img src="images/Banner-img/bird park.jpeg">
+                <p class="pt-2">Bird Park (1km)</p>
+            </div>
+
+            <div class="facility-card facility_place">
+                <img src="images/Banner-img/Hawa Char.png">
+                <p class="pt-2">Hawa Char (2km)</p>
+            </div>
+
+            <div class="facility-card facility_place">
+                <img src="images/Banner-img/Unu Hot Water Spring.webp">
+                <p class="pt-2">Unu Hot Water Spring (2km)</p>
+            </div>
+
+            <div class="facility-card facility_place">
+                <img src="images/Banner-img/waterfalls.jpeg">
+                <p class="pt-2">Bhagawat Waterfall (0km)</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!------------- Facilities Section End ---------- -->
+
+@endsection
+
+@push('scripts')
+<script>
+    $('.slider').slick({
+        infinite: true,
+        speed: 2000,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        fade: true,
+        arrows: false
+    });
+
+    $('.facility-slider').slick({
+        slidesToShow: 4,
+        autoplay: true,
+        responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+</script>
+@endpush
