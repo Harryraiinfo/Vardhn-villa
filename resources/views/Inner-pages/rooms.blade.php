@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rooms - Vardhn Villa</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/Img/Vardhn_Villa_logo.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('Images/Img/Vardhn_Villa_logo.png') }}">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
@@ -42,10 +42,10 @@
             {{-- Deluxe Room --}}
             <div class="room-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="room-slider">
-                    <div><img src="{{ asset('images/Img/bed-room-2.jpeg') }}" alt="Deluxe Room"></div>
-                    <div><img src="{{ asset('images/Img/loby.jpeg') }}" alt="Deluxe Room Lobby"></div>
-                    <div><img src="{{ asset('images/Img/bed-room.jpeg') }}" alt="Deluxe Room"></div>
-                    <div><img src="{{ asset('images/Img/washrooms-2.jpeg') }}" alt="Deluxe Room Washroom"></div>
+                    <div><img src="{{ asset('Images/Img/bed-room-2.jpeg') }}" alt="Deluxe Room"></div>
+                    <div><img src="{{ asset('Images/Img/loby.jpeg') }}" alt="Deluxe Room Lobby"></div>
+                    <div><img src="{{ asset('Images/Img/bed-room.jpeg') }}" alt="Deluxe Room"></div>
+                    <div><img src="{{ asset('Images/Img/washrooms-2.jpeg') }}" alt="Deluxe Room Washroom"></div>
                 </div>
                 <div class="room-info">
                     <h3>Deluxe Room</h3>
@@ -57,7 +57,7 @@
 
             {{-- Super Deluxe Room --}}
             <div class="room-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('images/Img/room-3.jpeg') }}" alt="Super Deluxe Room">
+                <img src="{{ asset('Images/Img/room-3.jpeg') }}" alt="Super Deluxe Room">
                 <div class="room-info">
                     <h3>Super Deluxe Room</h3>
                     <p>Luxury interiors with king-size bed and beautiful scenery.</p>
@@ -69,11 +69,11 @@
             {{-- Family Suite --}}
             <div class="room-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="room-slider">
-                    <div><img src="{{ asset('images/Img/bed-room.jpeg') }}" alt="Family Suite"></div>
-                    <div><img src="{{ asset('images/Img/washrooms-2.jpeg') }}" alt="Family Suite Washroom"></div>
-                    <div><img src="{{ asset('images/Img/bed-room-2.jpeg') }}" alt="Family Suite"></div>
-                    <div><img src="{{ asset('images/Img/loby.jpeg') }}" alt="Family Suite Lobby"></div>
-                    <div><img src="{{ asset('images/Img/washrooms.jpeg') }}" alt="Family Suite Washroom"></div>
+                    <div><img src="{{ asset('Images/Img/bed-room.jpeg') }}" alt="Family Suite"></div>
+                    <div><img src="{{ asset('Images/Img/washrooms-2.jpeg') }}" alt="Family Suite Washroom"></div>
+                    <div><img src="{{ asset('Images/Img/bed-room-2.jpeg') }}" alt="Family Suite"></div>
+                    <div><img src="{{ asset('Images/Img/loby.jpeg') }}" alt="Family Suite Lobby"></div>
+                    <div><img src="{{ asset('Images/Img/washrooms.jpeg') }}" alt="Family Suite Washroom"></div>
                 </div>
                 <div class="room-info">
                     <h3>Family Suite</h3>

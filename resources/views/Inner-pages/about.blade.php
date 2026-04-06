@@ -30,7 +30,7 @@
             </div>
             <div class="col-md-6 mb-3">
                 <div class="about-image" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="{{ asset('images/Img/bed-room-2.jpeg') }}" alt="Villa Image">
+                    <img src="{{ asset('Images/Img/bed-room-2.jpeg') }}" alt="Villa Image">
                 </div>
             </div>
         </div>

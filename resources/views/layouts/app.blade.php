@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VARDHN VILLA</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/Img/Vardhn_Villa_logo.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('Images/Img/Vardhn_Villa_logo.png') }}">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/booking.css') }}">

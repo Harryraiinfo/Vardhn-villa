@@ -19,7 +19,7 @@
     <div class="container">
 
         <div class="attraction-card" data-aos="fade-up">
-            <img src="{{ asset('images/Banner-img/Bhimakali-Temple.webp') }}" alt="Bhimakali Temple">
+            <img src="{{ asset('Images/Banner-img/Bhimakali-Temple.webp') }}" alt="Bhimakali Temple">
             <div class="info">
                 <h3>Bhimakali Temple</h3>
                 <p>Famous ancient temple just 1km from villa.</p>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="attraction-card" data-aos="fade-up" data-aos-delay="400">
-            <img src="{{ asset('images/Banner-img/bird.jpeg') }}" alt="Bird Park">
+            <img src="{{ asset('Images/Banner-img/bird.jpeg') }}" alt="Bird Park">
             <div class="info">
                 <h3>Bird Park</h3>
                 <p>Nature park with rare Himalayan birds.</p>
@@ -43,7 +43,7 @@
         </div>
 
         <div class="attraction-card" data-aos="fade-up" data-aos-delay="600">
-            <img src="{{ asset('images/Banner-img/waterfalls.jpeg') }}" alt="Bhagawat Waterfall">
+            <img src="{{ asset('Images/Banner-img/waterfalls.jpeg') }}" alt="Bhagawat Waterfall">
             <div class="info">
                 <h3>Bhagawat Waterfall</h3>
                 <p>Beautiful waterfall just near the villa.</p>

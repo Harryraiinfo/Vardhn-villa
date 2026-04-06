@@ -6,7 +6,7 @@
 <div class="header">
     <div class="slider">
 
-        <div class="slide" style="background-image:url('{{ asset('images/Banner-img/Banner-1.jpeg') }}'); height:100vh;">
+        <div class="slide" style="background-image:url('{{ asset('Images/Banner-img/Banner-1.jpeg') }}'); height:100vh;">
             <div class="overlay-heading">
                 <h1>Vardhn Villa</h1>
                 <p>Luxury Stay Experience</p>
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="slide" style="background-image:url('{{ asset('images/Banner-img/Royal-Palace.jpeg') }}'); height:100vh;">
+        <div class="slide" style="background-image:url('{{ asset('Images/Banner-img/Royal-Palace.jpeg') }}'); height:100vh;">
             <div class="overlay-heading">
                 <h1>Welcome to Comfort</h1>
                 <p>Feel Like Home</p>
@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <div class="slide" style="background-image:url('{{ asset('images/Banner-img/banner-3.jpeg') }}'); height:100vh;">
+        <div class="slide" style="background-image:url('{{ asset('Images/Banner-img/banner-3.jpeg')}}'); height:100vh;">
             <div class="overlay-heading">
                 <h1>Premium Rooms</h1>
                 <p>Best Price Guaranteed</p>
@@ -55,7 +55,7 @@
                     <!-- 🔹 Rooms -->
                     <div class="col section_card">
                         <div class="card">
-                            <img src="images/Img/bed-room.jpeg">
+                            <img src="Images/Img/bed-room.jpeg">
 
                             <div class="col book-room pt-2">
 
@@ -87,14 +87,14 @@
 
         <div class="gallery-grid">
             <!-- Image Item -->
-            <div class="gallery-item"> <img src="images/Img/bed-room.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="images/Img/hall.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="images/Img/loby.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="images/Img/room-3.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="images/Img/bed-room-2.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="images/Img/room-2.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="images/Img/bed-room.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="images/Img/loby.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="Images/Img/bed-room.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="Images/Img/hall.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="Images/Img/loby.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="Images/Img/room-3.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="Images/Img/bed-room-2.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="Images/Img/room-2.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="Images/Img/bed-room.jpeg" alt> </div>
+            <div class="gallery-item"> <img src="Images/Img/loby.jpeg" alt> </div>
         </div>
     </div>
 </section>
@@ -112,11 +112,11 @@
                 <!-- ------------ -->
                 <div class="slider pt-3">
                     <!-- Slide 1 -->
-                    <div class="slide" style="background-image:url('images/Img/bed-room-2.jpeg'); height: 40vh; border-radius: 12px;"> </div>
+                    <div class="slide" style="background-image:url('Images/Img/bed-room-2.jpeg'); height: 40vh; border-radius: 12px;"> </div>
                     <!-- Slide 2 -->
-                    <div class="slide" style="background-image: url('images/Img/loby.jpeg'); height: 40vh; border-radius: 12px;"> </div>
+                    <div class="slide" style="background-image: url('Images/Img/loby.jpeg'); height: 40vh; border-radius: 12px;"> </div>
                     <!-- Slide 3 -->
-                    <div class="slide" style="background-image: url('images/Img/room-3.jpeg'); height: 40vh; border-radius: 12px;"> </div>
+                    <div class="slide" style="background-image: url('Images/Img/room-3.jpeg'); height: 40vh; border-radius: 12px;"> </div>
                     <!-- ------------ -->
                 </div>
             </div>
@@ -146,37 +146,37 @@
         <div class="facility-slider">
 
             <div class="facility-card facility_place">
-                <img src="images/Banner-img/Bhimakali-Temple.webp">
+                <img src="Images/Banner-img/Bhimakali-Temple.webp">
                 <p class="pt-2">Bhimakali Temple</p>
             </div>
 
             <div class="facility-card facility_place">
-                <img src="images/Img/view-4.jpeg">
+                <img src="Images/Img/view-4.jpeg">
                 <p class="pt-2">Royal Palace</p>
             </div>
 
             <div class="facility-card facility_place">
-                <img src="images/Banner-img/sarahan.jpeg">
+                <img src="Images/Banner-img/sarahan.jpeg">
                 <p class="pt-2">Sarahan Bushahr Palace</p>
             </div>
 
             <div class="facility-card facility_place">
-                <img src="images/Banner-img/bird-park.jpeg">
+                <img src="Images/Banner-img/bird-park.jpeg">
                 <p class="pt-2">Bird Park (1km)</p>
             </div>
 
             <div class="facility-card facility_place">
-                <img src="images/Banner-img/Hawa-Char.png">
+                <img src="Images/Banner-img/Hawa-Char.png">
                 <p class="pt-2">Hawa Char (2km)</p>
             </div>
 
             <div class="facility-card facility_place">
-                <img src="images/Banner-img/Unu-Hot-Water-Spring.webp">
+                <img src="Images/Banner-img/Unu-Hot-Water-Spring.webp">
                 <p class="pt-2">Unu Hot Water Spring (2km)</p>
             </div>
 
             <div class="facility-card facility_place">
-                <img src="images/Banner-img/waterfalls.jpeg">
+                <img src="Images/Banner-img/waterfalls.jpeg">
                 <p class="pt-2">Bhagawat Waterfall (0km)</p>
             </div>
 
