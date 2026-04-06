@@ -19,7 +19,7 @@
     <div class="container">
 
         <div class="attraction-card" data-aos="fade-up">
-            <img src="{{ asset('images/Banner-img/Bhimakali Temple.webp') }}" alt="Bhimakali Temple">
+            <img src="{{ asset('images/Banner-img/Bhimakali-Temple.webp') }}" alt="Bhimakali Temple">
             <div class="info">
                 <h3>Bhimakali Temple</h3>
                 <p>Famous ancient temple just 1km from villa.</p>
@@ -27,7 +27,7 @@
         </div>
 
         <div class="attraction-card" data-aos="fade-up" data-aos-delay="200">
-            <img src="{{ asset('images/Banner-img/Royal Palace.jpeg') }}" alt="Royal Palace">
+            <img src="{{ asset('images/Banner-img/Royal-Palace.jpeg') }}" alt="Royal Palace">
             <div class="info">
                 <h3>Royal Palace</h3>
                 <p>Historic palace with unique architecture.</p>

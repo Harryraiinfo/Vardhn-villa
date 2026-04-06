@@ -19,7 +19,7 @@
     <div class="container">
         <div class="facility-grid">
             <div class="facility-card" data-aos="zoom-in">
-                <img src="{{ asset('images/Img/bed room 2.jpeg') }}" alt="Luxury Rooms">
+                <img src="{{ asset('images/Img/bed-room-2.jpeg') }}" alt="Luxury Rooms">
                 <h3>Luxury Rooms</h3>
                 <p>Spacious rooms with mountain views.</p>
             </div>
@@ -43,19 +43,19 @@
             </div>
 
             <div class="facility-card" data-aos="zoom-in" data-aos-delay="500">
-                <img src="{{ asset('images/Img/dining Room.png') }}" alt="Dining Room">
+                <img src="{{ asset('images/Img/dining-Room.png') }}" alt="Dining Room">
                 <h3>Dining Room</h3>
                 <p>Enjoy food with your family and friends.</p>
             </div>
 
             <div class="facility-card" data-aos="zoom-in" data-aos-delay="500">
-                <img src="{{ asset('images/Img/balcony with view.png') }}" alt="Balcony View">
+                <img src="{{ asset('images/Img/balcony-with-view.png') }}" alt="Balcony View">
                 <h3>Balcony with Stunning View</h3>
                 <p>Beautiful Himalayan mountain view.</p>
             </div>
 
             <div class="facility-card" data-aos="zoom-in" data-aos-delay="500">
-                <img src="{{ asset('images/Img/mini Freezer.png') }}" alt="Mini Freezer">
+                <img src="{{ asset('images/Img/mini-Freezer.png') }}" alt="Mini Freezer">
                 <h3>Mini Freezer</h3>
                 <p>Store food items and drinks.</p>
             </div>

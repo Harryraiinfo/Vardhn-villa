@@ -7,7 +7,7 @@
                      <div class="col-md-6 ">
                          <div class="logo-part text-center px-2">
                              <img
-                                 src="images/Img/Vardan_Villa_logo.png"
+                                 src="images/Img/Vardhn_Villa_logo.png"
                                  class="w-50 logo-footer">
                              <p> VARDHN VILLA Near 1km ahead of the famous Bhima Kali Temple at Sarahan Bushahr.</p>
                              <p> stuning views of the snow covered moutain rangers of Shree Khand Mahadev </p>

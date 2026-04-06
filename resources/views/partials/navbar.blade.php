@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{ asset('images/Img/Vardan_Villa_logo.png') }}" alt="Logo">
+            <img src="{{ asset('images/Img/Vardhn_Villa_logo.png') }}" alt="Logo">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02">

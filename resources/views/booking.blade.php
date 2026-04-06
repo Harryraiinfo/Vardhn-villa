@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Book Your Stay - VARDHAN VILLA')
+@section('title', 'Book Your Stay - VARDHN VILLA')
 
 @section('content')
 
@@ -17,16 +17,16 @@
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="form-room-slider col-md-6 booking-sec mt-3 ">
-                <div><img src="{{ asset('images/Img/room3.jpeg') }}" alt></div>
+                <div><img src="{{ asset('images/Img/room-3.jpeg') }}" alt></div>
                 <div><img src="{{ asset('images/Img/loby.jpeg') }}" alt></div>
                 <div><img src="{{ asset('images/Img/hall.jpeg') }}" alt></div>
-                <div><img src="{{ asset('images/Img/bed room.jpeg') }}" alt></div>
-                <div><img src="{{ asset('images/Img/dining Room.png') }}" alt></div>
-                <div><img src="{{ asset('images/Img/room3.jpeg') }}" alt></div>
-                <div><img src="{{ asset('images/Img/washrooms2.jpeg') }}" alt></div>
+                <div><img src="{{ asset('images/Img/bed-room.jpeg') }}" alt></div>
+                <div><img src="{{ asset('images/Img/dining-Room.png') }}" alt></div>
+                <div><img src="{{ asset('images/Img/room-3.jpeg') }}" alt></div>
+                <div><img src="{{ asset('images/Img/washrooms-2.jpeg') }}" alt></div>
             </div>
             <!-- <div class="col-md-6 booking-sec mt-3">
-                <img src="{{ asset('images/Img/room2.jpeg') }}" data-aos="fade-up" class="card-img-top" alt="Room" style="border-radius: 12px;">
+                <img src="{{ asset('images/Img/room-2.jpeg') }}" data-aos="fade-up" class="card-img-top" alt="Room" style="border-radius: 12px;">
             </div> -->
             <div class="col-md-6 mt-3">
 

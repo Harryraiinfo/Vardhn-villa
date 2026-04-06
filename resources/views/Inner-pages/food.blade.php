@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food - Vardhn Villa</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/Img/Vardan_Villa_logo.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/Img/Vardhn_Villa_logo.png') }}">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
@@ -60,17 +60,17 @@
         <h2 data-aos="fade-up">Special Dishes</h2>
         <div class="dish-grid">
             <div class="dish-card" data-aos="fade-up">
-                <img src="{{ asset('images/Food-img/Paneer Butter.webp') }}" alt="Paneer Butter Masala">
+                <img src="{{ asset('images/Food-img/Paneer-Butter.webp') }}" alt="Paneer Butter Masala">
                 <div class="overlay-text">Paneer Butter Masala</div>
             </div>
 
             <div class="dish-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('images/Food-img/Himachali Thali.webp') }}" alt="Himachali Thali">
+                <img src="{{ asset('images/Food-img/Himachali-Thali.webp') }}" alt="Himachali Thali">
                 <div class="overlay-text">Himachali Thali</div>
             </div>
 
             <div class="dish-card" data-aos="fade-up" data-aos-delay="400">
-                <img src="{{ asset('images/Food-img/Chicken Curry.webp') }}" alt="Chicken Curry">
+                <img src="{{ asset('images/Food-img/Chicken-Curry.webp') }}" alt="Chicken Curry">
                 <div class="overlay-text">Chicken Curry</div>
             </div>
         </div>
