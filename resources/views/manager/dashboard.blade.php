@@ -6,7 +6,7 @@
 
 <div class="row g-3">
 
-    <div class="col-md-4">
+    <div class="col-md-4 px-2">
         <div class="card-box">
             <h6>Total Bookings</h6>
             <h3>{{ $totalBookings }}</h3>
@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 px-2">
         <div class="card-box">
             <h6>Pending</h6>
             <h3>{{ $pendingBookings }}</h3>
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 px-2">
         <div class="card-box">
             <h6>Confirmed</h6>
             <h3>{{ $confirmedBookings }}</h3>

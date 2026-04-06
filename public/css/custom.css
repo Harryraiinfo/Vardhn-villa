@@ -25,7 +25,7 @@
 
     /* Navbar CSS */
     .navbar-brand img {
-        width: 95px;
+        width: 75px;
     }
 
     .navbar {
@@ -313,7 +313,7 @@
     }
 
     .logo-footer {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     footer {
@@ -852,6 +852,16 @@
         padding: 60px 20px;
     }
 
+    .about-hero h1,
+    .attraction-hero h1,
+    .facilities-hero h1,
+    .food-hero h1,
+    .rooms-hero h1,
+    .rooms-hero h1 {
+        color: #ffc107;
+        font-weight: 700;
+    }
+
     /* RESPONSIVE */
     @media(max-width: 992px) {
         .facility-grid {
@@ -884,8 +894,9 @@
     .food-hero,
     .contact-hero,
     .facilities-hero {
-        height: 350px;
-        background: url('/Images/Banner-img/Banner-1.jpeg') center/cover no-repeat;
+        height: 370px;
+        background: url('/Images/Banner-img/Winter-view.jpeg') center/cover no-repeat;
+        background-position-y: center;
         position: relative;
     }
 
@@ -1023,7 +1034,7 @@
 
         /* Navbar Responsive Code */
         .navbar-brand img {
-            width: 65px;
+            width: 45px !important;
         }
 
         .navbar {

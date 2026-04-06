@@ -3,7 +3,7 @@
 
 <head>
     <title>Admin Panel - Vardhn Villa</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('Images/Img/Vardhn_Villa_logo.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('Images/Img/logo-vardhn-villa-removebg.png') }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

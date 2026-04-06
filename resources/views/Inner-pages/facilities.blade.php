@@ -7,7 +7,7 @@
 <!-- HERO -->
 <section class="facilities-hero">
     <div class="overlay">
-        <h1 data-aos="fade-up" style="color:#ffc107; font-weight: 700;">Our Facilities</h1>
+        <h1 data-aos="fade-up">Our Facilities</h1>
         <p data-aos="fade-up" data-aos-delay="200">
             Comfort, Luxury & Nature Together
         </p>
@@ -19,7 +19,7 @@
     <div class="container">
         <div class="facility-grid">
             <div class="facility-card" data-aos="zoom-in">
-                <img src="{{ asset('Images/Img/bed-room-2.jpeg') }}" alt="Luxury Rooms">
+                <img src="{{ asset('Images/Img/Bed-room-02.jpeg') }}" alt="Luxury Rooms">
                 <h3>Luxury Rooms</h3>
                 <p>Spacious rooms with mountain views.</p>
             </div>
@@ -36,11 +36,11 @@
                 <p>Secure parking for all guests.</p>
             </div>
 
-            <div class="facility-card" data-aos="zoom-in" data-aos-delay="300">
+            <!-- <div class="facility-card" data-aos="zoom-in" data-aos-delay="300">
                 <img src="{{ asset('Images/Img/Restaurant.png') }}" alt="Restaurant">
                 <h3>Restaurant</h3>
                 <p>Delicious food with local flavors.</p>
-            </div>
+            </div> -->
 
             <div class="facility-card" data-aos="zoom-in" data-aos-delay="500">
                 <img src="{{ asset('Images/Img/dining-Room.png') }}" alt="Dining Room">
@@ -61,13 +61,13 @@
             </div>
 
             <div class="facility-card" data-aos="zoom-in" data-aos-delay="500">
-                <img src="{{ asset('Images/Img/nature-view.png') }}" alt="Nature View">
+                <img src="{{ asset('Images/Img/natrue-view.jpeg') }}" alt="Nature View">
                 <h3>Nature View</h3>
                 <p>Beautiful Himalayan mountain scenery.</p>
             </div>
 
             <div class="facility-card" data-aos="zoom-in" data-aos-delay="500">
-                <img src="{{ asset('Images/Img/television.png') }}" alt="Television">
+                <img src="{{ asset('Images/Img/loby.jpeg') }}" alt="Television">
                 <h3>Television</h3>
                 <p>Enjoy television with your family and friends.</p>
             </div>

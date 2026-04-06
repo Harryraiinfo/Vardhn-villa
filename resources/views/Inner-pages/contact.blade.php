@@ -24,7 +24,7 @@
                 <!-- FORM -->
                 <div class="col-md-6 pt-3">
                     <div class="contact-form" data-aos="zoom-in" data-aos-delay="200">
-                        <h2>Send Message</h2>
+                        <h2 class="ps-3">Send Message</h2>
                         <form action="https://formsubmit.co/harryinfo9@gmail.com" method="POST">
                             @csrf
                             <input type="text" name="name" placeholder="Your Name" required>

@@ -25,7 +25,7 @@
                             <th>Mobile</th>
                             <th>Dates</th>
                             <th>Rooms</th>
-                            <th>Assigned</th>
+                            <th style="width:180px; min-width: 160px;">Assigned</th>
                             <th style="width:180px; min-width: 160px;">Price</th>
                             <th class="text-center">Status</th>
                             <th class="text-center">Action</th>
@@ -57,22 +57,24 @@
 
                             <!-- ROOM NUMBER -->
                             <td>
-                                @if($booking->room_number)
-                                @php $rooms = json_decode($booking->room_number, true); @endphp
-
-                                @if(is_array($rooms))
-                                <span class="badge bg-dark">
-                                    {{ implode(', ', $rooms) }}
-                                </span>
-                                @else
-                                <span class="badge bg-dark">
-                                    {{ $booking->room_number }}
-                                </span>
-                                @endif
+                                @if($booking->status !== 'rejected')
+                                <form method="POST" action="{{ route('manager.booking.updateRoom', $booking->id) }}">
+                                    @csrf
+                                    <div class="input-group input-group-sm">
+                                        <input type="text"
+                                            name="room_number"
+                                            value="{{ is_array(json_decode($booking->room_number, true)) ? implode(', ', json_decode($booking->room_number, true)) : $booking->room_number }}"
+                                            class="form-control"
+                                            required>
+                                        <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                                    </div>
+                                </form>
                                 @else
                                 <span class="text-muted">Not Assigned</span>
+                                <!-- <span class="text-muted"> -- </span> -->
                                 @endif
                             </td>
+ 
 
                             <!-- PRICE -->
                             <td>
@@ -92,6 +94,7 @@
 
                                 @else
                                 <span class="text-muted">Not Allowed</span>
+                                <!-- <span class="text-muted"> -- </span> -->
                                 @endif
                             </td>
 
@@ -110,7 +113,7 @@
                             <td class="text-center">
                                 <div class="d-flex flex-column flex-md-row gap-1 justify-content-center">
 
-                                    <a href="{{ route('manager.booking.status', [$booking->id, 'confirmed']) }}" class="btn btn-success btn-sm m-1">
+                                    <a href="{{ route('manager.booking.status', [$booking->id,$booking->room_number, 'confirmed']) }}" class="btn btn-success btn-sm m-1">
                                         Confirm
                                     </a>
 
@@ -137,5 +140,4 @@
     </div>
 
 </div>
-
 @endsection

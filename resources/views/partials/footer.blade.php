@@ -7,9 +7,9 @@
                      <div class="col-md-6 ">
                          <div class="logo-part text-center px-2">
                              <img
-                                 src="Images/Img/Vardhn_Villa_logo.png"
+                                 src="Images/Img/logo-vardhn-villa.png"
                                  class="w-50 logo-footer">
-                             <p> VARDHN VILLA Near 1km ahead of the famous Bhima Kali Temple at Sarahan Bushahr.</p>
+                             <p> VARDHN VILLA  1km ahead of the famous Bhima Kali Temple at Sarahan Bushahr.</p>
                              <p> stuning views of the snow covered moutain rangers of Shree Khand Mahadev </p>
                          </div>
                      </div>
@@ -17,10 +17,10 @@
                          <div class="footer_heading">
 
                              <h6> About Vardhn Villa</h6>
-                             <p> VARDHN VILLA is newly Constructed homestay located 1km ahead of the famous Bhima Kali Temple at Sarahan Bushahr. The villa offerss six Luxurious rooms with stuning views of the snow covered moutain rangers of Shree Khand Mahadev and mesmerizing sunsets from the rooms and balconies.</p>
+                             <p> VARDHN VILLA is newly constructed homestay located 1km ahead of the famous Bhima Kali Temple at Sarahan Bushahr. The villa offerss six Luxurious rooms with stuning views of the snow covered moutain rangers of Shree Khand Mahadev and mesmerizing sunsets from the rooms and balconies.</p>
 
                              <div class="d-flex py-2">
-                                 <div class="px-1 ">
+                                 <div>
                                      <a href="{{ route('about') }}" class="btn-footer btn-outline-warning"> More Info </a>
                                  </div>
                                  <!-- <br> -->

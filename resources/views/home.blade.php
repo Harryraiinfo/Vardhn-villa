@@ -6,7 +6,7 @@
 <div class="header">
     <div class="slider">
 
-        <div class="slide" style="background-image:url('{{ asset('Images/Banner-img/Banner-1.jpeg') }}'); height:100vh;">
+        <div class="slide" style="height:100vh; background-image:url('{{ asset('Images/Banner-img/Winter-view.jpeg') }}')">
             <div class="overlay-heading">
                 <h1>Vardhn Villa</h1>
                 <p>Luxury Stay Experience</p>
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="slide" style="background-image:url('{{ asset('Images/Banner-img/Royal-Palace.jpeg') }}'); height:100vh;">
+        <div class="slide" style="height:100vh; background-image:url('{{ asset('Images/Banner-img/Front-view-night.jpeg') }}')">
             <div class="overlay-heading">
                 <h1>Welcome to Comfort</h1>
                 <p>Feel Like Home</p>
@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <div class="slide" style="background-image:url('{{ asset('Images/Banner-img/banner-3.jpeg')}}'); height:100vh;">
+        <div class="slide" style="height:100vh; background-image:url('{{ asset('Images/Banner-img/Bed-room-01.jpeg')}}')">
             <div class="overlay-heading">
                 <h1>Premium Rooms</h1>
                 <p>Best Price Guaranteed</p>
@@ -40,14 +40,20 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-md-6 mb-3">
                 <div class="clearfix ">
-                    <h1 class="pb-2" data-aos="zoom-in">Welcome to VARDHN VILLA</h1>
+                    <!-- <h1 class="pb-2" data-aos="zoom-in">Welcome to VARDHN VILLA</h1>
                     <h4 class="pb-2" data-aos="fade-up"
                         data-aos-delay="200">Luxurious Homestay in the heart of Himachal Pradesh</h4>
 
-                    <p data-aos="fade-up" data-aos-delay="400"> VARDHN VILLA is newly Constructed homestay located 1km ahead of the famous Bhima Kali Temple at Sarahan Bushahr. The villa offers six Luxurious rooms with stunning views of the snow covered mountain ranges of Shree Khand Mahadev and mesmerizing sunsets from the rooms and balconies.
+                    <p data-aos="fade-up" data-aos-delay="400"> VARDHN VILLA is newly constructed homestay located 1km ahead of the famous Bhima Kali Temple at Sarahan Bushahr. The villa offers six Luxurious rooms with stunning views of the snow covered mountain ranges of Shree Khand Mahadev and mesmerizing sunsets from the rooms and balconies.
                     </p>
                     <a class="btn btn-warning"
-                        href="{{ route('about') }}">Read More</a>
+                        href="{{ route('about') }}">Read More</a> -->
+
+                    <h1 style="color: #ffc107; font-weight: 700;">Welcome to Vardhn Villa</h1>
+                    <h4 class="mb-3" style="color: #c3872a;">Your Sanctuary in the Clouds</h4>
+                    <p>Nestled in the serene embrace of the green hills, <strong>Vardhn Villa</strong> is more than a stay—it’s a soulful escape. Located 162 km from the bustle of Shimla in the beautiful town of Sarahan Bushahr, Himachal Pradesh, our villa offers a front-row seat to the majestic Himalayas, blending luxury with the warmth of a mountain home.</p>
+                    <p>Our Villa ensures a peaceful and premium stay experience for travellers through its modern architecture, making it a perfect and comfortable choice.</p>
+                    <a href="{{ route('booking') }}" class="btn btn-warning mt-3">Book Your Stay Now</a>
                 </div>
             </div>
             <div class="col-md-6 mb-3">
@@ -60,10 +66,9 @@
                             <div class="col book-room pt-2">
 
                                 <h3>Luxury Room</h3>
-                                <p>₹2999 / night</p>
                                 <ul>
-                                    <li>Running Hot/Cold Water</li>
-                                    <li>Tariff: 2999 per, 5xtra Person</li>
+                                    <li>₹2999 / night</li>
+                                    <li>Extra Person ₹500</li>
                                 </ul>
                             </div>
                             <div class="butn-book">
@@ -146,33 +151,37 @@
         <div class="facility-slider">
 
             <div class="facility-card facility_place">
-                <img src="Images/Banner-img/Bhimakali-Temple.webp">
+                <img src="Images/Banner-img/Bhimakali-Temple.jpeg">
                 <p class="pt-2">Bhimakali Temple</p>
             </div>
 
             <div class="facility-card facility_place">
-                <img src="Images/Img/view-4.jpeg">
+                <img src="Images/banner-img/Royal-Palace.jpeg">
                 <p class="pt-2">Royal Palace</p>
             </div>
 
             <div class="facility-card facility_place">
-                <img src="Images/Banner-img/sarahan.jpeg">
-                <p class="pt-2">Sarahan Bushahr Palace</p>
+                <img src="Images/img/view-4.jpeg">
+                <p class="pt-2">Sarahan Bushahr </p>
             </div>
 
             <div class="facility-card facility_place">
-                <img src="Images/Banner-img/bird-park.jpeg">
+                <img src="Images/Banner-img/bird.jpeg">
                 <p class="pt-2">Bird Park (1km)</p>
             </div>
 
-            <div class="facility-card facility_place">
+            <!-- <div class="facility-card facility_place">
                 <img src="Images/Banner-img/Hawa-Char.png">
-                <p class="pt-2">Hawa Char (2km)</p>
+                <p class="pt-2">Hawa Ghar (2km)</p>
+            </div> -->
+            <div class="facility-card facility_place">
+                <img src="Images/Banner-img/bhaser-kanda-track.jpeg" alt="Bashal-Kanda-Track">
+                <p class="pt-2">Bashal Kanda Track </p>
             </div>
 
             <div class="facility-card facility_place">
                 <img src="Images/Banner-img/Unu-Hot-Water-Spring.webp">
-                <p class="pt-2">Unu Hot Water Spring (2km)</p>
+                <p class="pt-2">Unu Hot Water Spring (12km)</p>
             </div>
 
             <div class="facility-card facility_place">

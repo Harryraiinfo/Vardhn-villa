@@ -18,14 +18,13 @@ Route::middleware(['auth'])->prefix('manager')->group(function () {
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('manager.dashboard');
 
-        Route::get('/bookings', [ManagerBookingController::class, 'index'])->name('manager.bookings');
+    Route::get('/bookings', [ManagerBookingController::class, 'index'])->name('manager.bookings');
 
     Route::get('/booking/{id}/{status}', [ManagerBookingController::class, 'updateStatus'])
         ->name('manager.booking.status');
 
-        Route::post('/booking/{id}/price', [ManagerBookingController::class, 'updatePrice'])
-    ->name('manager.booking.price');
-
+    Route::post('/booking/{id}/price', [ManagerBookingController::class, 'updatePrice'])
+        ->name('manager.booking.price');
 });
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
@@ -34,6 +33,14 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         ->name('admin.dashboard');
 });
 
+// Room Selection by manager 
+Route::prefix('manager')->name('manager.')->group(function () {
+    // Other manager routes...
+
+    // Route to update room number
+    Route::post('booking/{booking}/update-room', [BookingController::class, 'updateRoom'])
+        ->name('booking.updateRoom');
+});
 
 
 
@@ -71,6 +78,6 @@ Route::get('/booking', function () {
     return view('booking');
 })->name('booking');
 
-Route::get('/admin',function(){
+Route::get('/admin', function () {
     return view('Admin.admin');
 });

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food - Vardhn Villa</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('Images/Img/Vardhn_Villa_logo.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('Images/Img/logo-vardhn-villa-removebg.png') }}">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
@@ -21,10 +21,10 @@
     @include('partials.navbar')
     <!-- @include('partials.navbar') -->
 
-    <!-- {{-- HERO --}} -->
+    <!-- -- HERO ---->
     <section class="food-hero">
         <div class="overlay">
-            <h1 data-aos="fade-up" style="color:#ffc107; font-weight: 700;">Delicious Food</h1>
+            <h1 data-aos="fade-up">Delicious Food</h1>
             <p data-aos="fade-up" data-aos-delay="200">Taste the Best of Himachal & Indian Cuisine</p>
         </div>
     </section>
