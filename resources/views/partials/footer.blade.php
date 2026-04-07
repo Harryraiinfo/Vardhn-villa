@@ -52,9 +52,9 @@
                                  <ul>
                                      <li> <a href="#"> Cab Faciliy</a> </li>
                                      <li> <a href="#"> Fax</a> </li>
-                                     <li> <a href="#"> Terms</a> </li>
-                                     <li> <a href="#"> Policy</a> </li>
-                                     <li> <a href="#"> Refunds</a> </li>
+                                     <li> <a href="{{route('terms')}}"> Terms</a> </li>
+                                     <li> <a href="{{route('privacy')}}"> Policy</a> </li>
+                                     <li> <a href="{{route('refund')}}"> Refunds</a> </li>
                                      <li> <a href="#"> Paypal</a> </li>
                                  </ul>
                              </div>

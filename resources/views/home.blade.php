@@ -53,6 +53,8 @@
                     <h4 class="mb-3" style="color: #c3872a;">Your Sanctuary in the Clouds</h4>
                     <p>Nestled in the serene embrace of the green hills, <strong>Vardhn Villa</strong> is more than a stay—it’s a soulful escape. Located 162 km from the bustle of Shimla in the beautiful town of Sarahan Bushahr, Himachal Pradesh, our villa offers a front-row seat to the majestic Himalayas, blending luxury with the warmth of a mountain home.</p>
                     <p>Our Villa ensures a peaceful and premium stay experience for travellers through its modern architecture, making it a perfect and comfortable choice.</p>
+                    <a class="btn btn-warning mt-3  me-2"
+                        href="{{ route('about') }}">Read More</a>
                     <a href="{{ route('booking') }}" class="btn btn-warning mt-3">Book Your Stay Now</a>
                 </div>
             </div>
@@ -156,12 +158,12 @@
             </div>
 
             <div class="facility-card facility_place">
-                <img src="Images/banner-img/Royal-Palace.jpeg">
+                <img src="Images/Banner-img/Royal-Palace.jpeg">
                 <p class="pt-2">Royal Palace</p>
             </div>
 
             <div class="facility-card facility_place">
-                <img src="Images/img/view-4.jpeg">
+                <img src="Images/Img/view-4.jpeg">
                 <p class="pt-2">Sarahan Bushahr </p>
             </div>
 

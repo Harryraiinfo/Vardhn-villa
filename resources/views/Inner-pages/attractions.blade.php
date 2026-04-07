@@ -29,7 +29,7 @@
         </div>
 
         <div class="attraction-card" data-aos="fade-up" data-aos-delay="200">
-            <img class="img-fluid" src="{{ asset('images/Banner-img/Royal-Palace.jpeg') }}" alt="Royal Palace">
+            <img class="img-fluid" src="{{ asset('Images/Banner-img/Royal-Palace.jpeg') }}" alt="Royal Palace">
             <div class="info">
                 <h3>Royal Palace</h3>
                 <h6>Historic palace with unique architecture.</h6>

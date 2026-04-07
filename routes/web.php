@@ -81,3 +81,7 @@ Route::get('/booking', function () {
 Route::get('/admin', function () {
     return view('Admin.admin');
 });
+
+Route::view('/privacy-policy', 'privacy')->name('privacy');
+Route::view('/terms-conditions', 'terms')->name('terms');
+Route::view('/refund-policy', 'refund')->name('refund');
