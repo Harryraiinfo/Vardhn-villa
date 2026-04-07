@@ -113,7 +113,7 @@
                             <td class="text-center">
                                 <div class="d-flex flex-column flex-md-row gap-1 justify-content-center">
 
-                                    <a href="{{ route('manager.booking.status', [$booking->id,$booking->room_number, 'confirmed']) }}" class="btn btn-success btn-sm m-1">
+                                    <a href="{{ route('manager.booking.status', [$booking->id, 'confirmed']) }}" class="btn btn-success btn-sm m-1">
                                         Confirm
                                     </a>
 

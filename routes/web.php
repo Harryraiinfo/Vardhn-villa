@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookingController;
-use App\Http\Controllers\Manager\BookingController as ManagerBookingController;
 use App\Http\Controllers\Manager\DashboardController;
+use App\Http\Controllers\Manager\BookingController as ManagerBookingController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\BillController;
 
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
@@ -94,3 +95,6 @@ Route::get('/refund-policy', function () {
     return view('refund');
 })->name('refund');
 
+
+Route::get('/bill/{id}', [BillController::class, 'show'])->name('bill.show');
+Route::get('/bill/{id}/pdf', [BillController::class, 'download'])->name('bill.pdf');
