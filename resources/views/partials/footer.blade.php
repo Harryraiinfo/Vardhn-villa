@@ -10,14 +10,14 @@
                                  src="Images/Img/logo-vardhn-villa.png"
                                  class="w-50 logo-footer">
                              <p> VARDHN VILLA  1km ahead of the famous Bhima Kali Temple at Sarahan Bushahr.</p>
-                             <p> stuning views of the snow covered moutain rangers of Shree Khand Mahadev </p>
+                             <p> stunning views of the snow covered Mountain View of Shree Khand Mahadev </p>
                          </div>
                      </div>
                      <div class="col-md-6 px-3">
                          <div class="footer_heading">
 
                              <h6> About Vardhn Villa</h6>
-                             <p> VARDHN VILLA is newly constructed homestay located 1km ahead of the famous Bhima Kali Temple at Sarahan Bushahr. The villa offerss six Luxurious rooms with stuning views of the snow covered moutain rangers of Shree Khand Mahadev and mesmerizing sunsets from the rooms and balconies.</p>
+                             <p> VARDHN VILLA is newly constructed homestay located 1km ahead of the famous Bhima Kali Temple at Sarahan Bushahr. The villa offers six luxurious rooms with stunning views of the snow covered mountain ranges of Shree Khand Mahadev and mesmerizing sunset from the rooms and balconies.</p>
 
                              <div class="d-flex py-2">
                                  <div>
@@ -79,7 +79,7 @@
                                      name="search">
                                  <a type="button" href="mailto:vardhnvilla@gmail.com" class="btn btn-warning px-1 py-0 mb-1 mt-0" value="Go">Go</a>
                              </form>
-                             <p>Thanks For Visiting Vardhn Villa Hotel</p>
+                             <p>Thanks For Visiting Vardhn Villa </p>
                          </div>
                      </div>
                  </div>

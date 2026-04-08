@@ -7,7 +7,7 @@ use App\Http\Controllers\Manager\DashboardController;
 use App\Http\Controllers\Manager\BookingController as ManagerBookingController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\BillController;
-
+use App\Http\Controllers\FoodBillController;
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -44,6 +44,10 @@ Route::prefix('manager')->name('manager.')->group(function () {
 });
 
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/bill/{id}', [BillController::class, 'show'])->name('bill.show');
+    Route::get('/bill/{id}/pdf', [BillController::class, 'download'])->name('bill.pdf');
+});
 
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
 
@@ -95,6 +99,4 @@ Route::get('/refund-policy', function () {
     return view('refund');
 })->name('refund');
 
-
-Route::get('/bill/{id}', [BillController::class, 'show'])->name('bill.show');
-Route::get('/bill/{id}/pdf', [BillController::class, 'download'])->name('bill.pdf');
+Route::post('/food-bill-store', [FoodBillController::class, 'store'])->name('food.bill.store');

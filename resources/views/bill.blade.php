@@ -57,41 +57,78 @@
                 <h4 class="text-start mb-4">🍽 Food Billing </h4>
 
                 <div class="table-responsive">
-                    <table class="table table-bordered text-center" id="billTable">
-                        <thead class="table-dark">
-                            <tr>
-                                <th>S. No </th>
-                                <th>Item Name </th>
-                                <th>Price (₹)</th>
-                                <th>Qty</th>
-                                <th>Total (₹)</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
+                    <form method="POST" action="{{ route('food.bill.store') }}">
+                        @csrf
 
-                        <tbody id="tableBody">
-                            <tr>
-                                <td class="sno">1</td>
-                                <td><input type="text" placeholder="Food Name"></td>
-                                <td><input type="number" class="price" value="0"></td>
-                                <td><input type="number" class="qty" value="0"></td>
-                                <td class="rowTotal">0</td>
-                                <td><button class="btn btn-danger btn-sm deleteRow">X</button></td>
-                            </tr>
-                        </tbody>
 
-                        <tfoot>
-                            <tr>
-                                <td colspan="6">
-                                    <!-- Buttons -->
-                                    <div class="d-flex justify-content-between mt-3 px-3">
-                                        <button class="btn btn-primary" onclick="addRow()">➕ Add Item</button>
-                                        <div class="total-box"><b>Grand Total: ₹ <span id="grandTotal">0</span></b></div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
+                        <table class="table table-bordered text-center" id="billTable">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>S. No </th>
+                                    <th>Item Name </th>
+                                    <th>Price (₹)</th>
+                                    <th>Qty</th>
+                                    <th>Total (₹)</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                                <tr>
+                                    <td class="sno">1</td>
+
+                                    <td>
+                                        <input type="hidden" name="booking_id" value="{{ $booking->id }}">
+                                        <input type="text" name="items[0][name]" placeholder="Food Name">
+                                    </td>
+
+                                    <td>
+                                        <input type="number" name="items[0][price]" class="price" value="0">
+                                    </td>
+
+                                    <td>
+                                        <input type="number" name="items[0][qty]" class="qty" value="0">
+                                    </td>
+
+                                    <td class="rowTotal">0</td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-sm deleteRow">X</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <!-- <tbody id="tableBody">
+                                <tr>
+                                    <td class="sno">1</td>
+                                    <td>
+                                        <input type="text" placeholder="Food Name">
+                                    </td>
+                                    <td>
+                                        <input type="number" class="price" value="0">
+                                    </td>
+                                    <td>
+                                        <input type="number" class="qty" value="0">
+                                    </td>
+                                    <td class="rowTotal">0</td>
+                                    <td><button class="btn btn-danger btn-sm deleteRow">X</button></td>
+                                </tr>
+                            </tbody> -->
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6">
+                                        <!-- Buttons -->
+                                        <div class="d-flex justify-content-between mt-3 px-3">
+                                            <button type="button" class="btn btn-primary" onclick="addRow()">➕ Add Item</button>
+                                            <input type="hidden" name="grand_total" id="grandTotalInput">
+                                            <div class="total-box"><b>Grand Total: ₹ <span id="grandTotal">0</span></b></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <button type="submit" class="btn btn-success mt-3">Save Bill</button>
+                    </form>
                 </div>
             </div>
             <br>
@@ -113,21 +150,35 @@
     }
 
     function addRow() {
+        let index = document.querySelectorAll("#tableBody tr").length;
+
         let row = `
-        <tr>
-            <td class="sno"></td>
-            <td><input type="text" placeholder="Food Name"></td>
-            <td><input type="number" class="price" value="0"></td>
-            <td><input type="number" class="qty" value="1"></td>
-            <td class="rowTotal">0</td>
-            <td><button class="btn btn-danger btn-sm deleteRow">X</button></td>
-        </tr>`;
+    <tr>
+        <td class="sno"></td>
+
+        <td>
+            <input type="text" name="items[${index}][name]" placeholder="Food Name">
+        </td>
+
+        <td>
+            <input type="number" name="items[${index}][price]" class="price" value="0">
+        </td>
+
+        <td>
+            <input type="number" name="items[${index}][qty]" class="qty" value="1">
+        </td>
+
+        <td class="rowTotal">0</td>
+
+        <td>
+            <button type="button" class="btn btn-danger btn-sm deleteRow">X</button>
+        </td>
+    </tr>`;
 
         document.getElementById("tableBody").insertAdjacentHTML("beforeend", row);
 
-        updateSerialNumbers(); // 🔥 update after adding
+        updateSerialNumbers();
     }
-
     // Auto calculate total
     function calculateTotal() {
         let rows = document.querySelectorAll("#tableBody tr");
@@ -144,6 +195,7 @@
         });
 
         document.getElementById("grandTotal").innerText = grandTotal;
+         document.getElementById("grandTotalInput").value = grandTotal;
     }
 
     document.addEventListener("input", function() {

@@ -25,7 +25,7 @@
                         <li>✔ Mountain View Balconies</li>
                         <li>✔ 24/7 Hot & Cold Water</li>
                         <li>✔ Delicious Local Food</li>
-                        <li>✔ Free WIFI</li>
+                        <li>✔ Free Wi-Fi</li>
                     </ul>
                 </div>
             </div>

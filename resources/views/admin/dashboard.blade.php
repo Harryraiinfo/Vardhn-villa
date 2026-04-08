@@ -64,6 +64,9 @@
                         <th>Rooms</th>
                         <th>Room No.</th>
                         <th>Price</th>
+                        <th class="text-center">Food Cost</th>
+                        <th>View Details</th>
+
                     </tr>
                 </thead>
 
@@ -91,6 +94,16 @@
 
                         <td class="fw-bold text-success">
                             ₹{{ number_format($booking->price, 2) }}
+                        </td>
+
+                        <td></td>
+
+                        <td>
+                            <div class="text-center">
+                                <a href="{{ route('bill.show', $booking->id) }}" class="btn btn-secondary btn-sm m-1">
+                                    View Bill
+                                </a>
+                            </div>
                         </td>
                     </tr>
                     @endforeach
