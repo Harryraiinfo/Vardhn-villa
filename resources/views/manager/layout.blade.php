@@ -153,10 +153,6 @@
             <i class="bi bi-calendar-check"></i> Bookings
         </a>
 
-        <a href="{{ route('bill.show', $booking->id) }}">
-            <i class="bi bi-receipt"></i> Create Bill
-        </a>
-
         <form method="POST" action="{{ route('logout') }}" class="p-3">
             @csrf
             <button class="btn btn-warning w-100">Logout</button>

@@ -29,6 +29,7 @@
                             <th style="width:180px; min-width: 160px;">Price</th>
                             <th class="text-center">Status</th>
                             <th class="text-center">Action</th>
+                            <th class="text-center">Genrate Bill</th>
                         </tr>
                     </thead>
 
@@ -47,8 +48,8 @@
                             <!-- DATES -->
                             <td>
                                 <small>
-                                    <b>In:</b> {{ $booking->check_in }} <br>
-                                    <b>Out:</b> {{ $booking->check_out }}
+                                    <b>In:</b> {{ \Carbon\Carbon::parse($booking->check_in)->format('d M Y') }} <br>
+                                    <b>Out:</b> {{ \Carbon\Carbon::parse($booking->check_out)->format('d M Y') }}
                                 </small>
                             </td>
 
@@ -74,7 +75,7 @@
                                 <!-- <span class="text-muted"> -- </span> -->
                                 @endif
                             </td>
- 
+
 
                             <!-- PRICE -->
                             <td>
@@ -121,6 +122,14 @@
                                         Reject
                                     </a>
 
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="text-center">
+                                    <a href="{{ route('bill.show', $booking->id) }}" class="btn btn-secondary btn-sm m-1">
+                                        Create Bill
+                                    </a>
                                 </div>
                             </td>
 
