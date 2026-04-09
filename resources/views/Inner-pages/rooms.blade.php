@@ -42,7 +42,7 @@
             <!-- -- Shri Khand View Room -- -->
             <div class="room-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="room-slider">
-                    <div><img src="{{ asset('Images/Img/bed-room-2.jpeg') }}" alt="Deluxe Room"></div>
+                    <div><img src="{{ asset('Images/Img/Shri-Khand-view.jpeg') }}" alt="Deluxe Room"></div>
                     <div><img src="{{ asset('Images/Img/loby.jpeg') }}" alt="Deluxe Room Lobby"></div>
                     <div><img src="{{ asset('Images/Img/bed-room.jpeg') }}" alt="Deluxe Room"></div>
                     <div><img src="{{ asset('Images/Img/washrooms-2.jpeg') }}" alt="Deluxe Room Washroom"></div>
@@ -55,32 +55,40 @@
                 </div>
             </div>
             
-            <!-- -- Moutain View Room -- -->
+            <!-- -- Bhima Kali Temple and Valley View Room -- -->
             <div class="room-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('Images/Img/room-3.jpeg') }}" alt="Super Deluxe Room">
+                <img src="{{ asset('Images/Img/Bhima-Kali-Temple-and-Valley-View.jpeg') }}" alt="Super Deluxe Room">
                 <div class="room-info">
-                    <h3>Moutain View Room</h3>
+                    <h3>Bhima Kali Temple and Valley View</h3>
                     <p>Luxury interiors with king-size bed and beautiful scenery.</p>
                     <span>₹2999 / night</span>
                     <a href="{{ url('/booking') }}" class="btn btn-warning">Book Now</a>
                 </div>
             </div>
             
-            <!-- -- Shri Khand View Room -- -->
+            <!-- -- Apple orchard and Forest view Room -- -->
             <div class="room-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="room-slider">
-                    <div><img src="{{ asset('Images/Img/bed-room-2.jpeg') }}" alt="Deluxe Room"></div>
-                    <div><img src="{{ asset('Images/Img/loby.jpeg') }}" alt="Deluxe Room Lobby"></div>
-                    <div><img src="{{ asset('Images/Img/bed-room.jpeg') }}" alt="Deluxe Room"></div>
-                    <div><img src="{{ asset('Images/Img/washrooms-2.jpeg') }}" alt="Deluxe Room Washroom"></div>
-                </div>
+                <img src="{{ asset('Images/Img/Apple-orchard-and-Forest-view.jpeg') }}" alt="Super Deluxe Room">
                 <div class="room-info">
-                    <h3>Shri Khand View Room</h3>
-                    <p>Spacious room with mountain view balcony and premium comfort.</p>
+                    <h3>Apple orchard and Forest view</h3>
+                    <p>Luxury interiors with king-size bed and beautiful scenery.</p>
                     <span>₹2999 / night</span>
                     <a href="{{ url('/booking') }}" class="btn btn-warning">Book Now</a>
                 </div>
             </div>
+            
+            <!-- -- Green Valley View Room -- -->
+            <div class="room-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('Images/Img/Green-Valley-View.jpeg') }}" alt="Super Deluxe Room">
+                <div class="room-info">
+                    <h3>Green Valley View</h3>
+                    <p>Luxury interiors with king-size bed and beautiful scenery.</p>
+                    <span>₹2999 / night</span>
+                    <a href="{{ url('/booking') }}" class="btn btn-warning">Book Now</a>
+                </div>
+            </div>
+            
+        
             <!-- -- Moutain View Room -- -->
             <div class="room-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="room-slider">

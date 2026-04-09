@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <div class="slide" style="height:100vh; background-image:url('{{ asset('Images/Banner-img/Bed-room-01.jpeg')}}')">
+        <div class="slide" style="height:100vh; background-image:url('{{ asset('Images/Img/Bhima-Kali-Temple-and-Valley-View.jpeg')}}')">
             <div class="overlay-heading">
                 <h1>Premium Rooms</h1>
                 <p>Best Price Guaranteed</p>
@@ -188,7 +188,7 @@
 
             <div class="facility-card facility_place">
                 <img src="Images/Banner-img/waterfalls.jpeg">
-                <p class="pt-2">Bhagawat Waterfall (0km)</p>
+                <p class="pt-2">Bhagawat Waterfall (10km)</p>
             </div>
 
         </div>

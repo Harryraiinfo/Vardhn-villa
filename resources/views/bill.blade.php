@@ -141,6 +141,10 @@
     </div>
 
 </div>
+@endsection
+
+
+@push('scripts')
 <script>
     function updateSerialNumbers() {
         let rows = document.querySelectorAll("#tableBody tr");
@@ -195,7 +199,7 @@
         });
 
         document.getElementById("grandTotal").innerText = grandTotal;
-         document.getElementById("grandTotalInput").value = grandTotal;
+        document.getElementById("grandTotalInput").value = grandTotal;
     }
 
     document.addEventListener("input", function() {
@@ -211,5 +215,4 @@
         }
     });
 </script>
-
-@endsection
+@endpush
