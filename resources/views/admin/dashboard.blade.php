@@ -26,7 +26,7 @@
         <div class="col-lg-4 col-md-6">
             <div class="card stat-card shadow-sm">
                 <div>
-                    <h6>Monthly Revenue</h6>
+                    <h6>Rooms Monthly Revenue</h6>
                     <h2>₹{{ number_format($monthlyRevenue, 2) }}</h2>
                 </div>
                 <div class="icon">💰</div>
@@ -36,8 +36,8 @@
         <div class="col-lg-4 col-md-12">
             <div class="card stat-card shadow-sm">
                 <div>
-                    <h6>Total Revenue</h6>
-                    <h2>₹{{ number_format($totalRevenue, 2) }}</h2>
+                    <h6>Food Monthly Revenue</h6>
+                    <h2>₹{{ number_format($monthlyFoodRevenue, 2) }}</h2>
                 </div>
                 <div class="icon">📊</div>
             </div>
@@ -96,24 +96,29 @@
                             ₹{{ number_format($booking->price, 2) }}
                         </td>
 
-                        <td></td>
+                        <td class="text-center fw-bold text-primary">
+                            ₹{{ number_format($booking->food_total, 2) }}
+                        </td>
 
-                        <td>
-                            <div class="text-center">
-                                <a href="{{ route('bill.show', $booking->id) }}" class="btn btn-secondary btn-sm m-1">
-                                    View Bill
-                                </a>
-                            </div>
+                        <td class="text-center">
+                            @if($booking->status == 'confirmed')
+                            <a href="{{ route('bill.pdf', $booking->id) }}" class="btn btn-secondary btn-sm m-1">
+                                View Bill
+                            </a>
+                            @else($booking->status == 'rejected')
+                            <span class="badge bg-danger px-2 py-2">Rejected</span>
+                            @endif
                         </td>
                     </tr>
                     @endforeach
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td class="fw-bold text-dark text-end" colspan="6">Total Revenue:</td>
+                        <td class="py-3 fw-bold text-dark text-end" colspan="6">Total Revenue:</td>
                         <td class="fw-bold text-success">₹{{ number_format($totalRevenue, 2) }}</td>
-                    </tr>
+                        <td class="fw-bold text-primary text-center">₹{{ number_format($monthlyFoodRevenue, 2) }}</td>
 
+                    </tr>
                 </tfoot>
 
             </table>

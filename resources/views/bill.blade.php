@@ -54,8 +54,9 @@
             <br>
 
             <div class="bill-container">
-                <h4 class="text-start mb-4">🍽 Food Billing </h4>
-
+                <h4 class="text-st  art mb-4">🍽 Food Billing </h4>
+                
+                <!-- <P class="ps-1 mb-3"> Name: <b>{{ $booking->name }}</b> </P> -->
                 <div class="table-responsive">
                     <form method="POST" action="{{ route('food.bill.store') }}">
                         @csrf
@@ -97,23 +98,6 @@
                                 </tr>
                             </tbody>
 
-                            <!-- <tbody id="tableBody">
-                                <tr>
-                                    <td class="sno">1</td>
-                                    <td>
-                                        <input type="text" placeholder="Food Name">
-                                    </td>
-                                    <td>
-                                        <input type="number" class="price" value="0">
-                                    </td>
-                                    <td>
-                                        <input type="number" class="qty" value="0">
-                                    </td>
-                                    <td class="rowTotal">0</td>
-                                    <td><button class="btn btn-danger btn-sm deleteRow">X</button></td>
-                                </tr>
-                            </tbody> -->
-
                             <tfoot>
                                 <tr>
                                     <td colspan="6">
@@ -143,8 +127,6 @@
 </div>
 @endsection
 
-
-@push('scripts')
 <script>
     function updateSerialNumbers() {
         let rows = document.querySelectorAll("#tableBody tr");
@@ -215,4 +197,3 @@
         }
     });
 </script>
-@endpush

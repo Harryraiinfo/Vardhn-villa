@@ -46,7 +46,7 @@ Route::prefix('manager')->name('manager.')->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/bill/{id}', [BillController::class, 'show'])->name('bill.show');
-    Route::get('/bill/{id}/pdf', [BillController::class, 'download'])->name('bill.pdf');
+    Route::get('/bill/{id}/pdf', [BillController::class, 'downloadPDF'])->name('bill.pdf');
 });
 
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');

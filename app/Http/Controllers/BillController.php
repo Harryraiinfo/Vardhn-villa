@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Booking;
+use App\Models\FoodBill;
 
 class BillController extends Controller
 {
     private function calculateDays($checkin, $checkout)
     {
-        $checkinTime = strtotime($checkin. '14:00:00');
-        $checkoutTime = strtotime($checkout. '12:00:00');
+        $checkinTime = strtotime($checkin . '14:00:00');
+        $checkoutTime = strtotime($checkout . '12:00:00');
         $days = ($checkinTime - $checkoutTime) / (60 * 60 * 24);
         return max(1, ceil($days));
     }
@@ -22,12 +23,17 @@ class BillController extends Controller
         return view('bill', compact('booking', 'days'));
     }
 
-    public function download($id)
+    public function downloadPDF($id)
     {
         $booking = Booking::findOrFail($id);
 
-        $pdf = Pdf::loadView('bill_pdf', compact('booking'));
+        $days = 1; // or calculate if you already have logic
 
-        return $pdf->download('invoice_' . $id . '.pdf');
+        // Fetch food items (if stored in DB)
+        $foodItems = FoodBill::where('booking_id', $id)->get();
+
+        $pdf = Pdf::loadView('bill_pdf', compact('booking', 'days', 'foodItems'));
+
+        return $pdf->download('invoice_' . $booking->id . '.pdf');
     }
 }
