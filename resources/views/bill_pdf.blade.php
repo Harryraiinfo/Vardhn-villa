@@ -51,17 +51,38 @@
 </head>
 
 <body>
+    <table width="100%" style="margin-bottom: 10px; border-style:none;">
+    <tr>
+        <!-- LEFT: Logo -->
+        <td style="text-align: left; width: 30%; border-style:none;">
+            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('Images/logo.png'))) }}" width="100">
+        </td>
 
-    <!-- <div style="text-align:left;">
-        <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('Images/logo.png'))) }}" width="120">
-    </div> -->
+        <!-- CENTER: Title -->
+        <td style="text-align: center; width: 40%; border-style:none;">
+            <div style="font-size: 22px; font-weight: bold; color: #d4a017;">
+                Vardhn Villa
+            </div>
+            <div>Customer Invoice</div>
+        </td>
 
-    <div style="text-align:right;">
+        <!-- RIGHT: Date & Time -->
+        <td style="text-align: right; width: 30%; font-size: 12px; border-style:none;">
+            Date: {{ now()->format('d-m-Y') }}<br>
+            Time: {{ now()->format('H:i') }}
+        </td>
+    </tr>
+</table>
+    <!-- <div style="text-align:right;">
         Date: {{ now()->format('d-m-Y') }}
         <br>
         Time: {{ now()->format('H:i') }}
-
     </div>
+
+    <div style="text-align:left;">
+        <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('Images/logo.png'))) }}" width="120">
+    </div>
+
 
     <div class="header">
         <div class="title">
@@ -69,7 +90,7 @@
             Vardhn Villa
         </div>
         <p>Customer Invoice</p>
-    </div>
+    </div> -->
 
     <p>
         Name: <b>{{ $booking->name }}</b> <br>
@@ -115,7 +136,7 @@
         @endphp
         <tr>
             <td>{{ $key+1 }}</td>
-            <td>{{ $item->name }}</td>
+            <td>{{ $item->item }}</td>
             <td>₹{{ $item->price }}</td>
             <td>{{ $item->qty }}</td>
             <td>₹{{ $rowTotal }}</td>
