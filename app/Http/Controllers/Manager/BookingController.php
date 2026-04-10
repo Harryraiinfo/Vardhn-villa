@@ -25,6 +25,11 @@ class BookingController extends Controller
         $booking = Booking::findOrFail($id);
 
         if ($status === 'confirmed') {
+            if ($booking->room_number){
+                $booking->status = 'confirmed';
+                $booking->save();
+                return back()-> with('success', 'booking confirmed with existing room');
+            }
 
             $rooms = ['101', '102', '103', '104', '105', '106'];
             $assignedRooms = [];

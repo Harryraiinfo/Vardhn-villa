@@ -67,17 +67,17 @@ class BookingController extends Controller
     {
         $booking = Booking::findOrFail($id);
 
-        // Validate input
-        $request->validate([
-            'room_number' => 'required|string|max:255',
-        ]);
+        // Convert comma-separated input into array
+        $rooms = explode(',', $request->room_number);
 
-        // Optional: store as JSON array if multiple rooms are entered separated by commas
-        $rooms = array_map('trim', explode(',', $request->room_number));
-        $booking->room_number = json_encode($rooms);
+        // साफ spaces
+        $cleanRooms = array_map('trim', $rooms);
+
+        // Save as JSON
+        $booking->room_number = json_encode($cleanRooms);
 
         $booking->save();
 
-        return redirect()->back()->with('success', 'Room number updated successfully.');
+        return back()->with('success', 'Room number updated successfully');
     }
 }
