@@ -38,13 +38,13 @@
                         <td>{{ $booking->rooms }}</td>
                         <td>{{ $days }}</td>
                         <td>₹{{ $booking->price }}</td>
-                        <td>₹{{ $booking->price * $days }}</td>
+                        <td>₹{{ $booking->price }}</td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
                         <td colspan="5" class="text-end py-3 pe-4">
-                            <b>Grand Total: ₹{{ $booking->price * $days }}</b>
+                            <b>Grand Total: ₹{{ $booking->price  }}</b>
                         </td>
                     </tr>
                 </tfoot>

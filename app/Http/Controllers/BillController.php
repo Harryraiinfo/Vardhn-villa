@@ -10,16 +10,22 @@ class BillController extends Controller
 {
     private function calculateDays($checkin, $checkout)
     {
+        if (!$checkin || !$checkout) {
+            return 1;
+        }
+
         $checkinTime = strtotime($checkin . '14:00:00');
         $checkoutTime = strtotime($checkout . '12:00:00');
-        $days = ($checkinTime - $checkoutTime) / (60 * 60 * 24);
+
+        $days = ($checkoutTime - $checkinTime) / (60 * 60 * 24);
         return max(1, ceil($days));
     }
 
     public function show($id)
     {
         $booking = Booking::findOrFail($id);
-        $days = $this->calculateDays($booking->checkin, $booking->checkout);
+        $days = $this->calculateDays($booking->check_in, $booking->check_out);
+
         return view('bill', compact('booking', 'days'));
     }
 
@@ -27,7 +33,7 @@ class BillController extends Controller
     {
         $booking = Booking::findOrFail($id);
 
-        $days = 1; // or calculate if you already have logic
+        $days = $this->calculateDays($booking->check_in, $booking->check_out);
 
         // Fetch food items (if stored in DB)
         $foodItems = FoodBill::where('booking_id', $id)->get();

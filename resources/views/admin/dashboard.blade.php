@@ -39,7 +39,7 @@
                     <h6>Food Monthly Revenue</h6>
                     <h2>₹{{ number_format($monthlyFoodRevenue, 2) }}</h2>
                 </div>
-                <div class="icon">📊</div>
+                <div class="icon">💰</div>
             </div>
         </div>
 
