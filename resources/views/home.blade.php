@@ -86,14 +86,13 @@
 
 <!-- GALLERY -->
 <!-- Gallery-section Start -->
-<section class="gallery-section">
+<!-- <section class="gallery-section">
     <div class="container">
         <h2 style="color: #ffc107;" data-aos="fade-up">Our Photo
             Gallery</h2>
         <p style="color: rgb(195 131 42);" class="subtitle" data-aos="fade-up" data-aos-delay="200">A visual tour to Vardhn Villa </p>
 
         <div class="gallery-grid">
-            <!-- Image Item -->
             <div class="gallery-item"> <img src="Images/Img/bed-room.jpeg" alt> </div>
             <div class="gallery-item"> <img src="Images/Img/hall.jpeg" alt> </div>
             <div class="gallery-item"> <img src="Images/Img/loby.jpeg" alt> </div>
@@ -102,6 +101,22 @@
             <div class="gallery-item"> <img src="Images/Img/room-2.jpeg" alt> </div>
             <div class="gallery-item"> <img src="Images/Img/bed-room.jpeg" alt> </div>
             <div class="gallery-item"> <img src="Images/Img/loby.jpeg" alt> </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="gallery-section">
+    <div class="container">
+        <h2 style="color: #ffc107;" data-aos="fade-up">Our Photo
+            Gallery</h2>
+        <p style="color: rgb(195 131 42);" class="subtitle" data-aos="fade-up" data-aos-delay="200">A visual tour to Vardhn Villa </p>
+
+        <div class="gallery-grid">
+            @foreach($images as $img)
+            <div class="gallery-item">
+                <img src="{{ asset('gallery/'.$img->image) }}" alt>
+            </div>
+            @endforeach
         </div>
     </div>
 </section>

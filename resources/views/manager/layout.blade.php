@@ -131,6 +131,10 @@
                 display: contents;
             }
         }
+
+        .gallery-item{
+            cursor: grab;
+        }
     </style>
 </head>
 
@@ -151,6 +155,10 @@
 
         <a href="{{ route('manager.bookings') }}">
             <i class="bi bi-calendar-check"></i> Bookings
+        </a>
+
+        <a href="{{ route('gallery.index') }}">
+            <i class="bi bi-calendar-check"></i> Manage Gallery
         </a>
 
         <form method="POST" action="{{ route('logout') }}" class="p-3">
@@ -195,7 +203,7 @@
             }
         }
     </script>
-
+@stack('scripts')
 </body>
 
 </html>

@@ -51,7 +51,7 @@
                     <h3>Shri Khand View Room</h3>
                     <p>Spacious room with mountain view balcony and premium comfort.</p>
                     <span>₹2999 / night</span>
-                    <a href="{{ url('/booking') }}" class="btn btn-warning">Book Now</a>
+                    <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
                 </div>
             </div>
             
@@ -62,7 +62,7 @@
                     <h3>Bhima Kali Temple and Valley View</h3>
                     <p>Luxury interiors with king-size bed and beautiful scenery.</p>
                     <span>₹2999 / night</span>
-                    <a href="{{ url('/booking') }}" class="btn btn-warning">Book Now</a>
+                    <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
                 </div>
             </div>
             
@@ -73,7 +73,7 @@
                     <h3>Apple orchard and Forest view</h3>
                     <p>Luxury interiors with king-size bed and beautiful scenery.</p>
                     <span>₹2999 / night</span>
-                    <a href="{{ url('/booking') }}" class="btn btn-warning">Book Now</a>
+                    <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
                 </div>
             </div>
             
@@ -84,12 +84,12 @@
                     <h3>Green Valley View</h3>
                     <p>Luxury interiors with king-size bed and beautiful scenery.</p>
                     <span>₹2999 / night</span>
-                    <a href="{{ url('/booking') }}" class="btn btn-warning">Book Now</a>
+                    <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
                 </div>
             </div>
             
         
-            <!-- -- Moutain View Room -- -->
+            <!-- -- Mountain View Room -- -->
             <div class="room-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="room-slider">
                     <div><img src="{{ asset('Images/Img/bed-room.jpeg') }}" alt="Family Suite"></div>
@@ -99,10 +99,10 @@
                     <div><img src="{{ asset('Images/Img/washrooms.jpeg') }}" alt="Family Suite Washroom"></div>
                 </div>
                 <div class="room-info">
-                    <h3>Moutain View Room</h3>
+                    <h3>Mountain View </h3>
                     <p>Perfect for families with extra space and comfort.</p>
                     <span>₹2999 / night</span>
-                    <a href="{{ url('/booking') }}" class="btn btn-warning">Book Now</a>
+                    <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
                 </div>
             </div>
 

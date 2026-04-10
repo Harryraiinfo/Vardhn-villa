@@ -9,6 +9,10 @@ use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\BillController;
 use App\Http\Controllers\FoodBillController;
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Manager\GalleryController;
+
+
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 
@@ -100,3 +104,15 @@ Route::get('/refund-policy', function () {
 })->name('refund');
 
 Route::post('/food-bill-store', [FoodBillController::class, 'store'])->name('food.bill.store');
+
+
+
+Route::get('/manager/gallery', [GalleryController::class, 'index'])->name('gallery.index');
+Route::post('/manager/gallery', [GalleryController::class, 'store'])->name('gallery.store');
+Route::delete('/manager/gallery/{id}', [GalleryController::class, 'destroy'])->name('gallery.delete');
+
+Route::get('/manager/dashboard', [DashboardController::class, 'index'])->name('manager.dashboard');
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::post('/gallery/sort', [GalleryController::class, 'sort'])->name('gallery.sort');
