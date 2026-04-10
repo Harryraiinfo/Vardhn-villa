@@ -116,3 +116,5 @@ Route::get('/manager/dashboard', [DashboardController::class, 'index'])->name('m
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::post('/gallery/sort', [GalleryController::class, 'sort'])->name('gallery.sort');
+
+Route::get('/invoice/{id}', [BookingController::class, 'generateInvoice'])->name('invoice.generate');

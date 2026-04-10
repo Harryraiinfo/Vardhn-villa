@@ -21,25 +21,65 @@ class BillController extends Controller
         return max(1, ceil($days));
     }
 
+
     public function show($id)
     {
         $booking = Booking::findOrFail($id);
+
+        // 🔒 Invoice generate only once
+        if (!$booking->invoice_no) {
+
+            $lastInvoice = Booking::whereNotNull('invoice_no')
+                ->orderBy('id', 'desc')
+                ->first();
+
+            if ($lastInvoice) {
+                $lastNumber = (int) str_replace('INV-', '', $lastInvoice->invoice_no);
+                $newInvoice = 'INV-' . str_pad($lastNumber + 1, 4, '0', STR_PAD_LEFT);
+            } else {
+                $newInvoice = 'INV-100';
+            }
+
+            $booking->invoice_no = $newInvoice;
+            $booking->save();
+        }
+
         $days = $this->calculateDays($booking->check_in, $booking->check_out);
 
-        return view('bill', compact('booking', 'days'));
+        $foodItems = FoodBill::where('booking_id', $id)->get();
+
+        return view('bill', compact('booking', 'days', 'foodItems'));
     }
+
 
     public function downloadPDF($id)
     {
         $booking = Booking::findOrFail($id);
 
+        // 🔒 Ensure invoice exists
+        if (!$booking->invoice_no) {
+
+            $lastInvoice = Booking::whereNotNull('invoice_no')
+                ->orderBy('id', 'desc')
+                ->first();
+
+            if ($lastInvoice) {
+                $lastNumber = (int) str_replace('INV-', '', $lastInvoice->invoice_no);
+                $newInvoice = 'INV-' . str_pad($lastNumber + 1, 4, '0', STR_PAD_LEFT);
+            } else {
+                $newInvoice = 'INV-100';
+            }
+
+            $booking->invoice_no = $newInvoice;
+            $booking->save();
+        }
+
         $days = $this->calculateDays($booking->check_in, $booking->check_out);
 
-        // Fetch food items (if stored in DB)
         $foodItems = FoodBill::where('booking_id', $id)->get();
 
         $pdf = Pdf::loadView('bill_pdf', compact('booking', 'days', 'foodItems'));
 
-        return $pdf->download('invoice_' . $booking->id . '.pdf');
+        return $pdf->download('invoice_' . $booking->invoice_no . '.pdf');
     }
 }

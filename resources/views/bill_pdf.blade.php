@@ -2,152 +2,207 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
-            font-family: DejaVu Sans;
+            font-family: DejaVu Sans, sans-serif;
+            font-size: 12px;
             color: #333;
+            padding: 20px;
         }
 
-        .header {
-            text-align: center;
+        .invoice-box {
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+
+        .top-section {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .top-section td {
+            vertical-align: top;
         }
 
         .title {
-            font-size: 24px;
+            text-align: center;
+            font-size: 18px;
             font-weight: bold;
-            color: #d4a017;
+            margin-bottom: 10px;
+        }
+
+        .company {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .right {
+            text-align: right;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
         }
 
-        th {
-            background: #000;
-            color: #fff;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
+        .table th,
+        .table td {
+            border: 1px solid #ccc;
+            padding: 6px;
             text-align: center;
         }
 
+        .table th {
+            background: #f5f5f5;
+        }
+
+        .no-border td {
+            border: none;
+        }
+
         .total {
-            text-align: right;
-            font-size: 18px;
-            margin-top: 20px;
-        }
-
-        .section-title {
-            margin-top: 20px;
             font-weight: bold;
-            font-size: 18px;
         }
 
-        .food-bill {
-            margin-bottom: 40px;
+        .footer {
+            margin-top: 20px;
+            font-size: 11px;
+        }
+
+        .signature {
+            margin-top: 40px;
+            text-align: right;
         }
     </style>
 </head>
 
 <body>
-    <table width="100%" style="margin-bottom: 30px; border-style:none;">
-        <tr>
-            <!-- LEFT: Logo -->
-            <td style="text-align: left; width: 30%; border-style:none;">
-                <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('Images/logo.png'))) }}" width="100">
-            </td>
 
-            <!-- CENTER: Title -->
-            <td style="text-align: center; width: 40%; border-style:none;">
-                <div style="font-size: 22px; font-weight: bold; color: #d4a017;">
-                    Vardhn Villa
-                </div>
-                <div>Customer Invoice</div>
-            </td>
+    <div class="container">
+        <div class="invoice-box">
 
-            <!-- RIGHT: Date & Time -->
-            <td style="text-align: right; width: 30%; font-size: 12px; border-style:none;">
-                Date: {{ now()->format('d-m-Y') }}<br>
-                Time: {{ now()->format('H:i') }}
-            </td>
-        </tr>
-    </table>
+            <div class="title">INVOICE</div>
 
-    <p>
-        Name: <b>{{ $booking->name }}</b> <br>
-        Email: <b>{{ $booking->email }}</b> <br>
-        Mobile: <b>{{ $booking->mobile }}</b>
-    </p>
+            <!-- Top Info -->
+            <table class="top-section">
+                <tr>
+                    <td>
+                        <div class="company">VARDHN VILLA</div>
+                        Address Line Here <br>
+                        <!-- GSTIN: XXXXXXXX <br> -->
+                        Phone: 000 000 0000
+                    </td>
 
-    <div class="section-title">Room Billing</div>
+                    <td class="right">
+                        Invoice No: <b> {{ $booking->invoice_no}}</b><br>
+                        Date: {{ date('d-m-Y') }}<br>
+                        Time: {{ now()->format('H:i') }} <br>
+                        State: Punjab
+                    </td>
+                </tr>
+            </table>
 
-    <table>
-        <tr>
-            <th>Rooms</th>
-            <th>Days</th>
-            <th>Price</th>
-            <th>Total</th>
-        </tr>
+            <!-- Customer Info -->
+            <table class="top-section">
+                <tr>
+                    <td>
+                        <b>Bill To:</b><br>
+                        Customer Name: {{ $booking->name }}<br>
+                        Email: {{ $booking->email }} <br>
+                        Mobile: {{ $booking->mobile }}
+                    </td>
 
-        <tr>
-            <td>{{ $booking->rooms }}</td>
-            <td>{{ $days }}</td>
-            <td>₹{{ $booking->price }}</td>
-            <td>₹{{ $booking->price  }}</td>
-        </tr>
-    </table>
+                    <td class="right">
+                        <b>Ship To:</b><br>
+                        Same as above
+                    </td>
+                </tr>
+            </table>
 
-    <div class="section-title">Food Billing</div>
-    <div class="food-bill">
+            <!-- Items Table -->
+            <div class="section-title">Room Billing</div>
+            <table class="table">
+                <tr>
+                    <th>Rooms</th>
+                    <th>Days</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
 
-        <table>
-            <tr>
-                <th>S. No </th>
-                <th>Item</th>
-                <th>Price</th>
-                <th>Qty</th>
-                <th>Total</th>
-            </tr>
-
-            @php $foodTotal = 0; @endphp
-
-            @foreach($foodItems as $key => $item)
-            @php
-            $rowTotal = $item->price * $item->qty;
-            $foodTotal += $rowTotal;
-            @endphp
-            <tr>
-                <td>{{ $key+1 }}</td>
-                <td>{{ $item->item }}</td>
-                <td>₹{{ $item->price }}</td>
-                <td>{{ $item->qty }}</td>
-                <td>₹{{ $rowTotal }}</td>
-            </tr>
-            @endforeach
-
-        </table>
-
-        <div class="total">
-            <b>Grand Total: ₹{{ $booking->price  + $foodTotal }}</b>
-        </div>
-    </div>
-
-    <br>
-
-    <div style="position: relative; bottom:0px;">
-        <hr style="margin-top: 30px; border: 0; border-top: 1px solid #ccc;">
-
-        <div style="text-align: center; font-size: 12px; color: #777; margin-top: 8px;">
-            Thank you for visiting Vardhn Villa
+                <tr>
+                    <td>{{ $booking->rooms }}</td>
+                    <td>{{ $days }}</td>
+                    <td>₹{{ $booking->price }}</td>
+                    <td>₹{{ $booking->price }}</td>
+                </tr>
+            </table>
             <br>
-            Visit Again
+
+            <div class="section-title">Food Billing</div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>S. No </th>
+                        <th>Item Description</th>
+                        <th>Rate</th>
+                        <th>Qty</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @php $foodTotal = 0; @endphp
+
+                    @foreach($foodItems as $key => $item)
+                    @php
+                    $rowTotal = $item->price * $item->qty;
+                    $foodTotal += $rowTotal;
+                    @endphp
+                    <tr>
+                        <td>{{ $key+1 }}</td>
+                        <td>{{ $item->item }}</td>
+                        <td>₹{{ $item->price }}</td>
+                        <td>{{ $item->qty }}</td>
+                        <td>₹{{ $rowTotal }}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            <br>
+            <!-- Totals -->
+            <table class="top-section">
+                <tr>
+                    <td></td>
+                    <td class="right">
+                        Room Total: ₹{{ $booking->price }}<br>
+                        Food Total: ₹ {{ number_format($foodTotal, 2) }} <br>
+                        <span class="total">
+                            <b>Grand Total: ₹{{ $booking->price  + $foodTotal }}</b>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Footer -->
+            <div class="footer">
+                <b>Terms & Conditions:</b><br>
+                1. Goods once sold will not be taken back.<br>
+                2. Subject to jurisdiction.<br><br>
+
+                <b> Thank you for visiting Vardhn Villa</b>
+            </div>
+
+            <!-- Signature -->
+            <div class="signature">
+                Authorized Signatory
+            </div>
+
         </div>
     </div>
+    <!-- <p style="text-align: center; padding-top:5px;">Visit Again</p> -->
 </body>
 
 </html>

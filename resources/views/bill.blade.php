@@ -55,7 +55,7 @@
 
             <div class="bill-container">
                 <h4 class="text-st  art mb-4">🍽 Food Billing </h4>
-                
+
                 <!-- <P class="ps-1 mb-3"> Name: <b>{{ $booking->name }}</b> </P> -->
                 <div class="table-responsive">
                     <form method="POST" action="{{ route('food.bill.store') }}">

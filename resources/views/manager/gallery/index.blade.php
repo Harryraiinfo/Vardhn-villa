@@ -62,8 +62,7 @@
                         @foreach($images as $img)
                         <div class="col-md-4 mb-3 gallery-item" data-id="{{ $img->id }}">
                             <div class="card shadow-sm">
-
-                                <img src="{{ asset('gallery/'.$img->image) }}" class="img-fluid">
+                                <img src="{{ asset('gallery/'.$img->image) }}" class="" style="min-height: 40px; max-height: 200px;">
 
                                 <div class="p-2">
                                     <form action="{{ route('gallery.delete', $img->id) }}" method="POST">

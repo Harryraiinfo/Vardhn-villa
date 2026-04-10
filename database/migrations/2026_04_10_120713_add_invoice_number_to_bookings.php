@@ -9,10 +9,10 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         Schema::table('bookings', function (Blueprint $table) {
-            $table->decimal('price', 10, 2)->nullable();
+            $table->string('invoice_no')->unique()->nullable();
         });
     }
 
