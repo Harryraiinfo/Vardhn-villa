@@ -22,10 +22,26 @@
             </div>
         </div>
 
+        <div class="slide" style="height:100vh; background-image:url('{{ asset('Images/Img/hotel-view.jpeg') }}')">
+            <div class="overlay-heading">
+                <h1>Vardhn Villa</h1>
+                <p>Luxury Stay Experience</p>
+                <a href="{{ route('booking') }}" class="btn btn-outline-warning">Book Now</a>
+            </div>
+        </div>
+
         <div class="slide" style="height:100vh; background-image:url('{{ asset('Images/Img/Bhima-Kali-Temple-and-Valley-View.jpeg')}}')">
             <div class="overlay-heading">
                 <h1>Premium Rooms</h1>
                 <p>Best Price Guaranteed</p>
+                <a href="{{ route('booking') }}" class="btn btn-outline-warning">Book Now</a>
+            </div>
+        </div>
+
+        <div class="slide" style="height:100vh; background-image:url('{{ asset('Images/Img/night-front-banner.jpeg')}}')">
+            <div class="overlay-heading">
+                <h1>Night View</h1>
+                <p>Best Experience This Location </p>
                 <a href="{{ route('booking') }}" class="btn btn-outline-warning">Book Now</a>
             </div>
         </div>
@@ -178,7 +194,7 @@
             </div>
 
             <div class="facility-card facility_place">
-                <img src="Images/Img/view-4.jpeg">
+                <img src="Images/Banner-img/sarahan.jpeg">
                 <p class="pt-2">Sarahan Bushahr </p>
             </div>
 
