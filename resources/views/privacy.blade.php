@@ -141,7 +141,7 @@
         <!-- CONTACT -->
         <div class="contact-box mt-5">
             <h5>📞 Need Help?</h5>
-            <p>Email: support@vardhnvilla.com <br> Phone: +91 XXXXX XXXXX</p>
+            <p>Email: vardhnvilla@gmail.com <br> Phone: +91 93171 96995</p>
         </div>
 
     </div>

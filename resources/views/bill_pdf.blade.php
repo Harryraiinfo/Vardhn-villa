@@ -93,7 +93,7 @@
                         <div class="company">VARDHN VILLA</div>
                         Address Line Here <br>
                         <!-- GSTIN: XXXXXXXX <br> -->
-                        Phone: 000 000 0000
+                        Phone: +91 93171 96995
                     </td>
 
                     <td class="right">
