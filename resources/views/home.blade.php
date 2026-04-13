@@ -2,6 +2,17 @@
 
 @section('content')
 
+<head>
+    <style>
+        .review-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
 <!-- HERO SLIDER -->
 <div class="header">
     <div class="slider">
@@ -100,26 +111,6 @@
     </div>
 </section>
 
-<!-- GALLERY -->
-<!-- Gallery-section Start -->
-<!-- <section class="gallery-section">
-    <div class="container">
-        <h2 style="color: #ffc107;" data-aos="fade-up">Our Photo
-            Gallery</h2>
-        <p style="color: rgb(195 131 42);" class="subtitle" data-aos="fade-up" data-aos-delay="200">A visual tour to Vardhn Villa </p>
-
-        <div class="gallery-grid">
-            <div class="gallery-item"> <img src="Images/Img/bed-room.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="Images/Img/hall.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="Images/Img/loby.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="Images/Img/room-3.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="Images/Img/bed-room-2.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="Images/Img/room-2.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="Images/Img/bed-room.jpeg" alt> </div>
-            <div class="gallery-item"> <img src="Images/Img/loby.jpeg" alt> </div>
-        </div>
-    </div>
-</section> -->
 
 <section class="gallery-section">
     <div class="container">
@@ -175,6 +166,49 @@
 
 <!-- Luxurious Rooms Section End -->
 
+<!-- Reviews Sections -->
+<section class="reviews-section py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">What Our Guests Say</h2>
+
+        <div class="row justify-content-center align-items-center review-slider">
+
+            <div class="col review-card">
+                <div class="review-box">
+                    <h5>Rahul Sharma</h5>
+                    <p>⭐⭐⭐</p>
+                    <p>Very clean and peaceful stay.</p>
+                </div>
+            </div>
+
+            <div class="col review-card">
+                <div class="review-box">
+                    <h5>Simran Kaur</h5>
+                    <p>⭐⭐⭐⭐</p>
+                    <p>"Beautiful location and great service."</p>
+                </div>
+            </div>
+
+            <div class="col review-card">
+                <div class="review-box">
+                    <h5>Rahul Sharma</h5>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>Very clean and peaceful stay.</p>
+                </div>
+            </div>
+
+            <div class="col review-card">
+                <div class="review-box">
+                    <h5>Simran Kaur</h5>
+                    <p>⭐⭐⭐</p>
+                    <p>Nice location and good food.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ------------------------------ -->
 
 <!------------- Facilities Section Start---------- -->
 <section class="facilities">
@@ -203,10 +237,6 @@
                 <p class="pt-2">Bird Park (1km)</p>
             </div>
 
-            <!-- <div class="facility-card facility_place">
-                <img src="Images/Banner-img/Hawa-Char.png">
-                <p class="pt-2">Hawa Ghar (2km)</p>
-            </div> -->
             <div class="facility-card facility_place">
                 <img src="Images/Banner-img/bhaser-kanda-track.jpeg" alt="Bashal-Kanda-Track">
                 <p class="pt-2">Bashal Kanda Track </p>
@@ -256,6 +286,29 @@
                 }
             }
         ]
+    });
+</script>
+<script>
+    $('.review-slider').slick({
+        slidesToShow: 3,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+
     });
 </script>
 @endpush

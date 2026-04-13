@@ -80,20 +80,20 @@ class BookingController extends Controller
             ->filter(function ($b) use ($checkIn, $checkOut) {
                 return ($b->check_in <=  $checkOut) && ($b->check_out >= $checkIn);
             });
-            $assignedRooms =[];
+        $assignedRooms = [];
 
-            foreach($otherBookings as $b){
-                $rooms=json_decode($b->room_number, true);
-                if(is_array($rooms)){
-                    $assignedRooms=array_merge($assignedRooms, $rooms);
-                }
+        foreach ($otherBookings as $b) {
+            $rooms = json_decode($b->room_number, true);
+            if (is_array($rooms)) {
+                $assignedRooms = array_merge($assignedRooms, $rooms);
             }
-            foreach($cleanRooms as $room){
-                if(in_array($room, $assignedRooms)){
-                    return back()->with('error',"Room $room is already assigned for selected dates!");
-                }
+        }
+        foreach ($cleanRooms as $room) {
+            if (in_array($room, $assignedRooms)) {
+                return back()->with('error', "Room $room is already assigned for selected dates!");
             }
-            
+        }
+
 
         $booking->room_number = json_encode($cleanRooms);
 
