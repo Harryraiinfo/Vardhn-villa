@@ -120,3 +120,5 @@ Route::post('/gallery/sort', [GalleryController::class, 'sort'])->name('gallery.
 Route::get('/invoice/{id}', [BookingController::class, 'generateInvoice'])->name('invoice.generate');
 
 Route::get('/booked-dates/{roomType}', [BookingController::class, 'getBookedDates']);
+
+Route::get('/admin/dashboard', [AdminDashboardController::class, 'dashboard'])->name('admin.dashboard');

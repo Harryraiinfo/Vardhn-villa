@@ -67,11 +67,33 @@ class BookingController extends Controller
     {
         $booking = Booking::findOrFail($id);
 
-
         $rooms = explode(',', $request->room_number);
 
-
         $cleanRooms = array_map('trim', $rooms);
+
+        $checkIn = $booking->check_in;
+        $checkOut = $booking->check_out;
+
+        $otherBookings = Booking::where('id', '!=', $id)
+            ->whereIn('status', ['confirmed', 'pending'])
+            ->get()
+            ->filter(function ($b) use ($checkIn, $checkOut) {
+                return ($b->check_in <=  $checkOut) && ($b->check_out >= $checkIn);
+            });
+            $assignedRooms =[];
+
+            foreach($otherBookings as $b){
+                $rooms=json_decode($b->room_number, true);
+                if(is_array($rooms)){
+                    $assignedRooms=array_merge($assignedRooms, $rooms);
+                }
+            }
+            foreach($cleanRooms as $room){
+                if(in_array($room, $assignedRooms)){
+                    return back()->with('error',"Room $room is already assigned for selected dates!");
+                }
+            }
+            
 
         $booking->room_number = json_encode($cleanRooms);
 

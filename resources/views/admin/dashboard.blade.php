@@ -10,6 +10,17 @@
         <span class="text-muted">Welcome Admin 👋</span>
     </div>
 
+
+    <!-- <div class="text-end mb-4">
+        <form method="GET" action="{{ route('admin.dashboard') }}">
+            <input type="month" name="month" value="{{ request('month') }}">
+            <button class="btn btn-primary btn-sm">Filter</button>
+        </form>
+        <h6 class="text-muted">
+            Showing data for: {{ $month->format('F Y') }}
+        </h6>
+    </div> -->
+
     <!-- Stats Cards -->
     <div class="row g-3 mb-4">
 
@@ -43,6 +54,31 @@
             </div>
         </div>
 
+    </div>
+
+
+    <div class="card shadow-sm p-3 mb-3">
+        <form method="GET" action="{{ route('admin.dashboard') }}" class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+
+            <div>
+                <label class="fw-bold mb-1">Select Month</label>
+                <input type="month"
+                    name="month"
+                    class="form-control"
+                    value="{{ request('month', now()->format('Y-m')) }}">
+            </div>
+            <div class="text-center">
+                <p class="text-muted"><b>Total Revenue (Room / Food)</b></p>                
+                <h4><b> ₹{{ number_format($monthlyFoodRevenue+$monthlyRevenue ) }}</b></h4>
+
+            </div>
+            <div class="mt-2">
+                <button class="btn btn-dark px-4">
+                    🔍 Filter
+                </button>
+            </div>
+
+        </form>
     </div>
 
     <!-- Booking Table -->
