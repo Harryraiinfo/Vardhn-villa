@@ -4,6 +4,11 @@
 
 @section('content')
 
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
 <!-- HERO -->
 <section class="booking-hero">
     <div class="overlay">
@@ -42,7 +47,7 @@
                 </div>
                 @endif
 
-                <form method="POST" action="{{ route('booking.store') }}" class="booking-form text-center">
+                <form id="bookingForm" method="POST" action="{{ route('booking.store') }}" class="booking-form text-center">
                     @csrf
 
                     <h2 class="pb-2">Reserve Your Room</h2>
@@ -85,7 +90,7 @@
                     <div class="form-row">
                         <div>
                             <label>Select Room</label>
-                            <select name="room_type">
+                            <select name="room_type" id="room_type">
                                 <option value="Deluxe - 2999">Deluxe - ₹2999</option>
                             </select>
                         </div>
@@ -101,7 +106,8 @@
 
                     <textarea name="special_request" placeholder="Special Request"></textarea>
 
-                    <button class="btn btn-outline-warning" type="submit">Book Now</button>
+                    <button class="btn btn-outline-warning" type="submit" onclick="showPayment(event)">Book Now</button>
+
 
                     @if(session('success'))
                     <p class="text-success mt-2">{{ session('success') }}</p>
@@ -110,6 +116,44 @@
             </div>
         </div>
     </div>
+    <div id="paymentBox" style="display:none; margin-top:40px;" class="payment-card">
+
+        <div class="container card p-4 shadow ">
+            <h4 class="text-center">Complete Your Payment</h4>
+            <p class="text-center text-success">We are Accept Your Payment olny This Method</p>
+            <div class="row justify-content-center align-items-center mt-3">
+                <div class="col-md-5">
+                    <div class="Bank-deatils">
+                        <h5 class="mb-3"><b> Bank Transfer</b></h5>
+                        <p><strong>Bank Name:</strong> HDFC Bank</p>
+                        <p><strong>Account No:</strong> 1234567890</p>
+                        <p><strong>IFSC:</strong> HDFC0001234</p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="text-center">
+                        <p>Scan QR Code</p>
+                        <img src="{{ asset('Images/Img/qr-code.avif') }}" width="200" alt="QR Code">
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-danger text-center mt-2">
+                After payment, click confirm booking
+                <br>
+                and Send Screenshot on WhatsApp No. <b> +91 9317196995</b>
+                <br>and E-mail: <b>vardhnvilla@gmail.com</b>
+            </p>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-2" onclick="submitBookingForm()">
+                    Confirm Booking
+                </button>
+            </div>
+
+        </div>
+        <br>
+    </div>
+
 </section>
 
 <!-- SUMMARY -->
@@ -144,50 +188,75 @@
 
 <!-- Selection date Script -->
 <script>
-    // Get today's date in YYYY-MM-DD format
     let today = new Date().toISOString().split('T')[0];
 
-    // Set minimum date for check-in and check-out
     document.getElementById("checkin").setAttribute("min", today);
     document.getElementById("checkout").setAttribute("min", today);
 
-    // Optional: Ensure checkout is always after checkin
     document.getElementById("checkin").addEventListener("change", function() {
         document.getElementById("checkout").setAttribute("min", this.value);
     });
 </script>
-<!-- --------- -->
 
 <script>
-    let bookedDates = [];
+    let bookedDates = {};
 
     function fetchBookedDates(roomType) {
         fetch(`/booked-dates/${roomType}`)
             .then(res => res.json())
-            .then(data => bookedDates = data);
+            .then(data => {
+                bookedDates = data;
+            });
     }
 
+    // Page load pe call
+    document.addEventListener("DOMContentLoaded", function() {
+        fetchBookedDates(document.getElementById('room_type').value);
+    });
+
+    // Room change pe
     document.getElementById('room_type').addEventListener('change', function() {
         fetchBookedDates(this.value);
     });
 
-    function disableBookedDates(input) {
-        input.addEventListener('input', function() {
-            if (bookedDates.includes(this.value)) {
-                alert('This date is already booked. Please choose another date.');
-                this.value = '';
+    // 👇 NEW FUNCTION (IMPORTANT)
+    function isDateFullyBooked(start, end) {
+        let current = new Date(start);
+
+        while (current <= new Date(end)) {
+            let date = current.toISOString().split('T')[0];
+
+            // 👇 MAIN LOGIC (6 rooms check)
+            if (bookedDates[date] && bookedDates[date] >= 6) {
+                return true;
             }
-        });
+
+            current.setDate(current.getDate() + 1);
+        }
+
+        return false;
     }
 
-    disableBookedDates(document.getElementById('check_in'));
-    disableBookedDates(document.getElementById('check_out'));
+    // 👇 VALIDATION FUNCTION
+    function validateDates() {
+        let checkin = document.getElementById('checkin').value;
+        let checkout = document.getElementById('checkout').value;
 
-    flatpickr("#check_in", {
-        minDate: "today",
-        disable: bookedDates
-    });
+        if (checkin && checkout) {
+            if (isDateFullyBooked(checkin, checkout)) {
+                alert('All rooms are booked for selected dates.');
+
+                document.getElementById('checkin').value = '';
+                document.getElementById('checkout').value = '';
+            }
+        }
+    }
+
+    // 👇 EVENTS FIX (ID correct karo)
+    document.getElementById('checkin').addEventListener('change', validateDates);
+    document.getElementById('checkout').addEventListener('change', validateDates);
 </script>
+<!-- --------- -->
 
 <!-- Javascript code  -->
 <script
@@ -215,5 +284,44 @@
         cssEase: 'linear',
 
     });
+</script>
+
+<script>
+    function showPayment(event) {
+        event.preventDefault();
+        // Validate form before showing payment
+        let form = document.querySelector('.booking-form');
+
+        if (form.checkValidity()) {
+            document.getElementById('paymentBox').style.display = 'block';
+            // window.scrollTo(0, document.getElementById('paymentBox').offsetTop);
+        } else {
+            form.reportValidity();
+        }
+    }
+</script>
+<script>
+    function submitBookingForm() {
+        let form = document.getElementById('bookingForm');
+
+        if (form.checkValidity()) {
+            form.submit();
+        } else {
+            form.reportValidity();
+        }
+    }
+
+    function submitBookingForm() {
+        let form = document.getElementById('bookingForm');
+        let btn = event.target;
+
+        if (form.checkValidity()) {
+            btn.disabled = true;
+            btn.innerText = "Processing...";
+            form.submit();
+        } else {
+            form.reportValidity();
+        }
+    }
 </script>
 @endpush

@@ -46,7 +46,7 @@ class BookingController extends Controller
             if (is_array($rooms)) {
                 $roomsBooked += count($rooms);
             } else {
-                $roomsBooked += $booking->rooms; // correct
+                $roomsBooked += $booking->rooms;
             }
         }
 
@@ -67,17 +67,41 @@ class BookingController extends Controller
     {
         $booking = Booking::findOrFail($id);
 
-        // Convert comma-separated input into array
+
         $rooms = explode(',', $request->room_number);
 
-        // साफ spaces
+
         $cleanRooms = array_map('trim', $rooms);
 
-        // Save as JSON
         $booking->room_number = json_encode($cleanRooms);
 
         $booking->save();
 
         return back()->with('success', 'Room number updated successfully');
+    }
+
+    public function getBookedDates($roomType)
+    {
+        $bookings = Booking::where('room_type', $roomType)
+            ->whereIn('status', ['pending', 'confirmed'])
+            ->get();
+
+        $dateCounts = [];
+
+        foreach ($bookings as $booking) {
+            $start = strtotime($booking->check_in);
+            $end = strtotime($booking->check_out);
+
+            for ($i = $start; $i <= $end; $i += 86400) {
+                $date = date('Y-m-d', $i);
+
+                if (!isset($dateCounts[$date])) {
+                    $dateCounts[$date] = 0;
+                }
+                $dateCounts[$date] += $booking->rooms;
+            }
+        }
+
+        return response()->json($dateCounts);
     }
 }

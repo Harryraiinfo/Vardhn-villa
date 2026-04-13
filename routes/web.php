@@ -118,3 +118,5 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/gallery/sort', [GalleryController::class, 'sort'])->name('gallery.sort');
 
 Route::get('/invoice/{id}', [BookingController::class, 'generateInvoice'])->name('invoice.generate');
+
+Route::get('/booked-dates/{roomType}', [BookingController::class, 'getBookedDates']);
