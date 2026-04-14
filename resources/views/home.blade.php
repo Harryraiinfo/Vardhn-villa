@@ -90,7 +90,7 @@
                     <!-- 🔹 Rooms -->
                     <div class="col section_card">
                         <div class="card">
-                            <img src="Images/Img/bed-room.jpeg">
+                            <img src="{{ asset('Images/Img/bed-room.jpeg')}}" alt="bed-room image">
 
                             <div class="col book-room pt-2">
 
@@ -183,7 +183,7 @@
 
             <div class="col review-card">
                 <div class="review-box">
-                    <h5>Simran Kaur</h5>
+                    <h5>Harry</h5>
                     <p>⭐⭐⭐⭐</p>
                     <p>"Beautiful location and great service."</p>
                 </div>
