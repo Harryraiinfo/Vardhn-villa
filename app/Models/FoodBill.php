@@ -8,7 +8,7 @@ class FoodBill extends Model
 {
     protected $fillable = [
         'booking_id',
-        'item',
+        'item_name',
         'price',
         'qty',
         'total',

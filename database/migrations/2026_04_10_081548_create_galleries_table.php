@@ -16,6 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('image'); // image path
             $table->timestamps();
+            $table->integer('position')->default(0);
         });
     }
     /**

@@ -25,6 +25,10 @@ return new class extends Migration
             $table->text('special_request')->nullable();
             $table->string('status')->default('pending');
             $table->timestamps();
+            $table->string('invoice_no')->unique()->nullable();
+            $table->decimal('price', 10, 2)->nullable();
+            $table->text('room_number')->nullable()->change();
+            $table->string('room_number')->nullable();
         });
     }
 

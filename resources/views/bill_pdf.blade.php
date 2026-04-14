@@ -85,7 +85,6 @@
         <div class="invoice-box">
 
             <div class="title">INVOICE</div>
-
             <!-- Top Info -->
             <table class="top-section">
                 <tr>
@@ -163,7 +162,7 @@
                     @endphp
                     <tr>
                         <td>{{ $key+1 }}</td>
-                        <td>{{ $item->item }}</td>
+                        <td>{{ $item->item_name }}</td>
                         <td>₹{{ $item->price }}</td>
                         <td>{{ $item->qty }}</td>
                         <td>₹{{ $rowTotal }}</td>
@@ -177,10 +176,10 @@
                 <tr>
                     <td></td>
                     <td class="right">
-                        Room Total: ₹{{ $booking->price }}<br>
+                        Room Total: ₹ {{ number_format($booking->price, 2) }}<br>
                         Food Total: ₹ {{ number_format($foodTotal, 2) }} <br>
                         <span class="total">
-                            <b>Grand Total: ₹{{ $booking->price  + $foodTotal }}</b>
+                            <b>Grand Total: ₹ {{ number_format($booking->price  + $foodTotal, 2) }}</b>
                         </span>
                     </td>
                 </tr>

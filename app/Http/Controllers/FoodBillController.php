@@ -16,7 +16,7 @@ class FoodBillController extends Controller
             if (!empty($item['name'])) {
                 FoodBill::create([
                     'booking_id' => $request->booking_id,
-                    'item' => $item['name'],
+                    'item_name' => $item['name'],
                     'price' => $item['price'],
                     'qty' => $item['qty'],
                     'total' => $item['price'] * $item['qty'],
