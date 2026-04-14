@@ -67,6 +67,8 @@
                         </div>
                     </div>
 
+                    <p id="roomMessage" style="font-weight:bold; margin-top:10px;"></p>
+
                     <div class="form-row">
                         <div>
                             <label>Adults</label>
@@ -297,6 +299,8 @@
         let checkin = document.getElementById('checkin').value;
         let checkout = document.getElementById('checkout').value;
         let selectedRooms = parseInt(document.getElementById('rooms').value);
+        let messageBox = document.getElementById('roomMessage');
+
 
         if (checkin && checkout) {
 
@@ -304,26 +308,42 @@
 
             //  Fully booked
             if (availableRooms <= 0) {
-                alert("All rooms are booked for selected dates ❌");
+                // alert("All rooms are booked for selected dates ❌");
+                messageBox.innerText = `All rooms are booked for selected dates`;
+                messageBox.style.color = "red";
 
-                document.getElementById('checkin').value = '';
-                document.getElementById('checkout').value = '';
+                // document.getElementById('checkin').value = '';
+                // document.getElementById('checkout').value = '';
                 return;
             }
 
             //  Less rooms
             if (availableRooms < selectedRooms) {
-                alert(`Only ${availableRooms} room(s) available for selected dates. Please contact manager.`);
+                // alert(`Only ${availableRooms} room(s) available for selected dates. Please contact manager.`);
 
-                document.getElementById('checkin').value = '';
-                document.getElementById('checkout').value = '';
+                messageBox.innerText = `Only ${availableRooms} room(s) available these dates. Please contact manager: +91 93171 96995 `;
+                messageBox.style.color = "orange";
+                // document.getElementById('checkin').value = '';
+                // document.getElementById('checkout').value = '';
                 return;
             }
 
             // Success message
-            alert(`Good news! ${availableRooms} room(s) available ✅`);
+            // alert(`Good news! ${availableRooms} room(s) available ✅`);
+            messageBox.innerText = `${availableRooms} room(s) available ✅`;
+            messageBox.style.color = "green";
+
         }
     }
+
+    document.getElementById('checkin').addEventListener('input', () => {
+        document.getElementById('roomMessage').innerText = '';
+    });
+
+    document.getElementById('checkout').addEventListener('input', () => {
+        document.getElementById('roomMessage').innerText = '';
+    });
+
 
     // 👇 EVENTS FIX (ID correct karo)
     document.getElementById('checkin').addEventListener('change', validateDates);

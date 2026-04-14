@@ -36,7 +36,7 @@ class BookingController extends Controller
             $availableRooms = $totalRooms - $bookedRooms;
 
             if ($availableRooms < $requestedRooms) {
-                return back()->with('error', "Only $availableRooms room(s) avilable on $date. Please contact manager.");
+                return back()->with('error', "Only $availableRooms room(s) avilable on $date. Please contact manager: +91 93171 96995");
             }
             $checkIn->addDay();
         }
@@ -68,7 +68,7 @@ class BookingController extends Controller
 
 
         if ($request->rooms > $availableRooms) {
-            return back()->with('error', 'Rooms are currently full . please contact the manager +918787878787');
+            return back()->with('error', 'Rooms are currently full . please contact the manager +91 93171 96995');
         }
 
         \App\Models\Booking::create($request->all());
