@@ -96,7 +96,7 @@
                         </div>
                         <div>
                             <label>Number of Rooms</label>
-                            <select name="rooms">
+                            <select name="rooms" id="rooms">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -116,8 +116,8 @@
             </div>
         </div>
     </div>
+    <!-- Payment Method  -->
     <div id="paymentBox" style="display:none; margin-top:40px;" class="payment-card">
-
         <div class="container card p-4 shadow ">
             <h4 class="text-center">Complete Your Payment</h4>
             <p class="text-center text-success">We are Accept Your Payment olny This Method</p>
@@ -153,6 +153,7 @@
         </div>
         <br>
     </div>
+    <!-- Payment Method  -->
 
 </section>
 
@@ -186,79 +187,7 @@
 
 @push('scripts')
 
-<!-- Selection date Script -->
-<script>
-    let today = new Date().toISOString().split('T')[0];
-
-    document.getElementById("checkin").setAttribute("min", today);
-    document.getElementById("checkout").setAttribute("min", today);
-
-    document.getElementById("checkin").addEventListener("change", function() {
-        document.getElementById("checkout").setAttribute("min", this.value);
-    });
-</script>
-
-<script>
-    let bookedDates = {};
-
-    function fetchBookedDates(roomType) {
-        fetch(`/booked-dates/${roomType}`)
-            .then(res => res.json())
-            .then(data => {
-                bookedDates = data;
-            });
-    }
-
-    // Page load pe call
-    document.addEventListener("DOMContentLoaded", function() {
-        fetchBookedDates(document.getElementById('room_type').value);
-    });
-
-    // Room change pe
-    document.getElementById('room_type').addEventListener('change', function() {
-        fetchBookedDates(this.value);
-    });
-
-    // 👇 NEW FUNCTION (IMPORTANT)
-    function isDateFullyBooked(start, end) {
-        let current = new Date(start);
-
-        while (current <= new Date(end)) {
-            let date = current.toISOString().split('T')[0];
-
-            // 👇 MAIN LOGIC (6 rooms check)
-            if (bookedDates[date] && bookedDates[date] >= 6) {
-                return true;
-            }
-
-            current.setDate(current.getDate() + 1);
-        }
-
-        return false;
-    }
-
-    // 👇 VALIDATION FUNCTION
-    function validateDates() {
-        let checkin = document.getElementById('checkin').value;
-        let checkout = document.getElementById('checkout').value;
-
-        if (checkin && checkout) {
-            if (isDateFullyBooked(checkin, checkout)) {
-                alert('All rooms are booked for selected dates.');
-
-                document.getElementById('checkin').value = '';
-                document.getElementById('checkout').value = '';
-            }
-        }
-    }
-
-    // 👇 EVENTS FIX (ID correct karo)
-    document.getElementById('checkin').addEventListener('change', validateDates);
-    document.getElementById('checkout').addEventListener('change', validateDates);
-</script>
-<!-- --------- -->
-
-<!-- Javascript code  -->
+<!-- Javascript code For Slider  -->
 <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script
@@ -286,6 +215,124 @@
     });
 </script>
 
+<!-- Selection date Script -->
+<script>
+    let today = new Date().toISOString().split('T')[0];
+
+    document.getElementById("checkin").setAttribute("min", today);
+    document.getElementById("checkout").setAttribute("min", today);
+
+    document.getElementById("checkin").addEventListener("change", function() {
+        document.getElementById("checkout").setAttribute("min", this.value);
+    });
+</script>
+
+<script>
+    let bookedDates = {};
+
+    function fetchBookedDates(roomType) {
+        fetch(`/booked-dates/${roomType}`)
+            .then(res => res.json())
+            .then(data => {
+                bookedDates = data;
+            });
+    }
+    // Page load pe call
+    document.addEventListener("DOMContentLoaded", function() {
+        fetchBookedDates(document.getElementById('room_type').value);
+    });
+
+    // Room change pe
+    document.getElementById('room_type').addEventListener('change', function() {
+        fetchBookedDates(this.value);
+    });
+
+
+    function isRoomAvailable(start, end, selectedRooms) {
+        let current = new Date(start);
+
+        while (current <= new Date(end)) {
+            let date = current.toISOString().split('T')[0];
+
+            let booked = bookedDates[date] ? bookedDates[date] : 0;
+            let totalRooms = 6;
+
+            let available = totalRooms - booked;
+
+            // MAIN LOGIC
+            if (available < selectedRooms) {
+                return false;
+            }
+
+            current.setDate(current.getDate() + 1);
+        }
+        return true;
+    }
+
+    function getAvailableRooms(start, end) {
+        let current = new Date(start);
+        let totalRooms = 6;
+
+        let minAvailable = totalRooms;
+
+        while (current <= new Date(end)) {
+            let date = current.toISOString().split('T')[0];
+
+            let booked = bookedDates[date] ? bookedDates[date] : 0;
+            let available = totalRooms - booked;
+
+            if (available < minAvailable) {
+                minAvailable = available;
+            }
+
+            current.setDate(current.getDate() + 1);
+        }
+
+        return minAvailable;
+    }
+
+    //  VALIDATION FUNCTION
+
+    function validateDates() {
+        let checkin = document.getElementById('checkin').value;
+        let checkout = document.getElementById('checkout').value;
+        let selectedRooms = parseInt(document.getElementById('rooms').value);
+
+        if (checkin && checkout) {
+
+            let availableRooms = getAvailableRooms(checkin, checkout);
+
+            //  Fully booked
+            if (availableRooms <= 0) {
+                alert("All rooms are booked for selected dates ❌");
+
+                document.getElementById('checkin').value = '';
+                document.getElementById('checkout').value = '';
+                return;
+            }
+
+            //  Less rooms
+            if (availableRooms < selectedRooms) {
+                alert(`Only ${availableRooms} room(s) available for selected dates. Please contact manager.`);
+
+                document.getElementById('checkin').value = '';
+                document.getElementById('checkout').value = '';
+                return;
+            }
+
+            // Success message
+            alert(`Good news! ${availableRooms} room(s) available ✅`);
+        }
+    }
+
+    // 👇 EVENTS FIX (ID correct karo)
+    document.getElementById('checkin').addEventListener('change', validateDates);
+    document.getElementById('checkout').addEventListener('change', validateDates);
+    document.getElementById('rooms').addEventListener('change', validateDates);
+</script>
+<!-- --------- -->
+
+
 <script>
     function showPayment(event) {
         event.preventDefault();
@@ -299,8 +346,7 @@
             form.reportValidity();
         }
     }
-</script>
-<script>
+
     function submitBookingForm() {
         let form = document.getElementById('bookingForm');
 

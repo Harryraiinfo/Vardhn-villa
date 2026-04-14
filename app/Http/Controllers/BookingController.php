@@ -25,7 +25,21 @@ class BookingController extends Controller
 
         $checkIn = Carbon::parse($request->check_in . ' ' . config('hotel.check_in_time'));
         $checkOut = Carbon::parse($request->check_out . ' ' . config('hotel.check_out_time'));
+        $requestedRooms = $request->rooms;
 
+        while ($checkIn <= $checkOut) {
+            $date = $checkIn->format('Y-m-d');
+            $bookedRooms = Booking::whereDate('check_in', '<=', $date)
+                ->whereDate('check_out', '>=', $date)
+                ->sum('rooms');
+
+            $availableRooms = $totalRooms - $bookedRooms;
+
+            if ($availableRooms < $requestedRooms) {
+                return back()->with('error', "Only $availableRooms room(s) avilable on $date. Please contact manager.");
+            }
+            $checkIn->addDay();
+        }
 
         $bookings = Booking::whereIn('status', ['pending', 'confirmed'])
             ->get()
@@ -94,7 +108,6 @@ class BookingController extends Controller
             }
         }
 
-
         $booking->room_number = json_encode($cleanRooms);
 
         $booking->save();
@@ -104,26 +117,27 @@ class BookingController extends Controller
 
     public function getBookedDates($roomType)
     {
-        $bookings = Booking::where('room_type', $roomType)
-            ->whereIn('status', ['pending', 'confirmed'])
-            ->get();
+        $bookings = Booking::select('check_in', 'check_out', 'rooms')->get();
 
-        $dateCounts = [];
+        $dates = [];
 
         foreach ($bookings as $booking) {
-            $start = strtotime($booking->check_in);
-            $end = strtotime($booking->check_out);
+            $start = Carbon::parse($booking->check_in);
+            $end = Carbon::parse($booking->check_out);
 
-            for ($i = $start; $i <= $end; $i += 86400) {
-                $date = date('Y-m-d', $i);
+            while ($start <= $end) {
+                $date = $start->format('Y-m-d');
 
-                if (!isset($dateCounts[$date])) {
-                    $dateCounts[$date] = 0;
+                if (!isset($dates[$date])) {
+                    $dates[$date] = 0;
                 }
-                $dateCounts[$date] += $booking->rooms;
+
+                $dates[$date] += $booking->rooms;
+
+                $start->addDay();
             }
         }
 
-        return response()->json($dateCounts);
+        return response()->json($dates);
     }
 }
