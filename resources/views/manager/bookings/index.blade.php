@@ -11,10 +11,10 @@
     @endif
 
     @if(session('error'))
-<div class="alert alert-danger">
-    {{ session('error') }}
-</div>
-@endif
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+    @endif
     <!-- CARD -->
     <div class="card">
         <div class="card-body p-2 p-md-3">
@@ -28,6 +28,7 @@
                         <tr>
                             <th>Guest</th>
                             <th>Mobile</th>
+                            <th style="width:160px; min-width: 160px;">Room Selection</th>
                             <th>Dates</th>
                             <th>Rooms</th>
                             <th style="width:180px; min-width: 160px;">Assigned</th>
@@ -50,6 +51,10 @@
                                 </div>
                             </td>
                             <td>{{ $booking->mobile }}</td>
+
+                            <td style="width:160px; min-width: 160px;">
+                                {{ $booking->room_type }}
+                            </td>
                             <!-- DATES -->
                             <td>
                                 <small>

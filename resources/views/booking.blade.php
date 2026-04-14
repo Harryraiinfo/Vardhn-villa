@@ -93,7 +93,11 @@
                         <div>
                             <label>Select Room</label>
                             <select name="room_type" id="room_type">
-                                <option value="Deluxe - 2999">Deluxe - ₹2999</option>
+                                <option value="Shri Khand View - 2999">Shri Khand View - ₹2999</option>
+                                <option value="Bhima Kali Temple and Valley View - 2999">Bhima Kali Temple and Valley View - ₹2999</option>
+                                <option value="Apple orchard and Forest view - 2999">Apple orchard and Forest view - ₹2999</option>
+                                <option value="Green Valley View - 2999">Green Valley View - ₹2999</option>
+                                <option value="Mountain View - 2999">Mountain View - ₹2999</option>
                             </select>
                         </div>
                         <div>
