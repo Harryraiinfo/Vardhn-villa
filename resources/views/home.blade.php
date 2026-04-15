@@ -121,7 +121,7 @@
         <div class="gallery-grid">
             @foreach($images as $img)
             <div class="gallery-item">
-                <img src="{{ asset('gallery/'.$img->image) }}" alt>
+                <img src="{{ asset('gallery/'.$img->image) }}" alt="Gallery Image">
             </div>
             @endforeach
         </div>

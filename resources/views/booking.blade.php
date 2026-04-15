@@ -76,7 +76,6 @@
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
-                                <option>4</option>
                             </select>
                         </div>
                         <div>
@@ -91,6 +90,15 @@
 
                     <div class="form-row">
                         <div>
+                            <label>Number of Rooms</label>
+                            <select name="rooms" id="rooms">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+
+                        <div>
                             <label>Select Room</label>
                             <select name="room_type" id="room_type">
                                 <option value="Shri Khand View - 2999">Shri Khand View - ₹2999</option>
@@ -100,18 +108,13 @@
                                 <option value="Mountain View - 2999">Mountain View - ₹2999</option>
                             </select>
                         </div>
-                        <div>
-                            <label>Number of Rooms</label>
-                            <select name="rooms" id="rooms">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                        </div>
                     </div>
 
                     <textarea name="special_request" placeholder="Special Request"></textarea>
-
+                    <input type="hidden" name="total_price" id="total_price_input">
+                    <p id="totalPrice" style="font-weight:bold; font-size:18px; color:green;">
+                        Total Price: ₹0
+                    </p>
                     <button class="btn btn-outline-warning" type="submit" onclick="showPayment(event)">Book Now</button>
 
 
@@ -393,5 +396,38 @@
             form.reportValidity();
         }
     }
+</script>
+
+<script>
+    function calculateTotal() {
+        let roomType = document.getElementById('room_type').value;
+        let rooms = parseInt(document.getElementById('rooms').value);
+        let checkin = document.getElementById('checkin').value;
+        let checkout = document.getElementById('checkout').value;
+
+        // Extract price from text (2999)
+        let price = parseInt(roomType.split('-')[1]);
+
+        if (checkin && checkout) {
+            let start = new Date(checkin);
+            let end = new Date(checkout);
+
+            let timeDiff = end - start;
+            let days = timeDiff / (1000 * 60 * 60 * 24);
+
+            if (days > 0) {
+                let total = price * rooms * days;
+                document.getElementById('totalPrice').innerText = "Total Price: ₹" + total;
+            } else {
+                document.getElementById('totalPrice').innerText = "Total Price: ₹0";
+            }
+        }
+    }
+
+    // Trigger on change
+    document.getElementById('room_type').addEventListener('change', calculateTotal);
+    document.getElementById('rooms').addEventListener('change', calculateTotal);
+    document.getElementById('checkin').addEventListener('change', calculateTotal);
+    document.getElementById('checkout').addEventListener('change', calculateTotal);
 </script>
 @endpush
