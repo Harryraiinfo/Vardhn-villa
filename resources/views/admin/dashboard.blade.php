@@ -68,7 +68,7 @@
                     value="{{ request('month', now()->format('Y-m')) }}">
             </div>
             <div class="text-center">
-                <p class="text-muted"><b>Total Revenue (Room / Food)</b></p>                
+                <p class="text-muted"><b>Total Revenue (Room / Food)</b></p>
                 <h4><b> ₹{{ number_format($monthlyFoodRevenue+$monthlyRevenue ) }}</b></h4>
 
             </div>
@@ -95,6 +95,7 @@
                     <tr>
                         <th>Name</th>
                         <th>Mobile</th>
+                        <th style="width:160px; min-width: 160px;">Room Selection</th>
                         <th>Check-In</th>
                         <th>Check-Out</th>
                         <th>Rooms</th>
@@ -111,6 +112,9 @@
                     <tr>
                         <td>{{ $booking->name }}</td>
                         <td>{{ $booking->mobile }}</td>
+                        <td style="width:160px; min-width: 160px;">
+                            {{ $booking->room_type }}
+                        </td>
                         <td>{{ \Carbon\Carbon::parse($booking->check_in)->format('d M Y') }}</td>
                         <td>{{ \Carbon\Carbon::parse($booking->check_out)->format('d M Y') }}</td>
                         <td>{{ $booking->rooms }}</td>

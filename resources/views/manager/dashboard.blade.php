@@ -32,4 +32,16 @@
 
 </div>
 
+<div class="row g-3 py-5">
+    <div class="">
+        <p class="text-center">
+
+            <a class="btn btn-warning " href="{{ route('manager.bookings') }}">
+                <i class="bi bi-calendar-check"></i>
+                Check New Bookings
+            </a>
+        </p>
+    </div>
+</div>
+
 @endsection
