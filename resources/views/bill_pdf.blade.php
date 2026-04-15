@@ -153,6 +153,7 @@
                 </thead>
 
                 <tbody>
+
                     @php $foodTotal = 0; @endphp
 
                     @foreach($foodItems as $key => $item)
@@ -162,7 +163,7 @@
                     @endphp
                     <tr>
                         <td>{{ $key+1 }}</td>
-                        <td>{{ $item->item_name }}</td>
+                        <td>{{ $item->item }}</td>
                         <td>₹{{ $item->price }}</td>
                         <td>{{ $item->qty }}</td>
                         <td>₹{{ $rowTotal }}</td>

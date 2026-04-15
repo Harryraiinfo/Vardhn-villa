@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\FoodBill;
 use Illuminate\Http\Request;
 
@@ -9,14 +10,12 @@ class FoodBillController extends Controller
 
     public function store(Request $request)
     {
-
-
-        foreach ($request->items as $item) {
-
-            if (!empty($item['name'])) {
+        // dd($request->all());
+        foreach ($request->item ?? [] as $item) {
+            if (!empty($item['item']) && $item['qty'] > 0) {
                 FoodBill::create([
                     'booking_id' => $request->booking_id,
-                    'item_name' => $item['name'],
+                    'item' => $item['item'],
                     'price' => $item['price'],
                     'qty' => $item['qty'],
                     'total' => $item['price'] * $item['qty'],

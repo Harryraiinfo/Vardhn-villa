@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('food_bills', function (Blueprint $table) {
             $table->id();
             $table->foreignId('booking_id')->constrained()->onDelete('cascade');
-            $table->string('item_name');
+            $table->string('item');
             $table->integer('price');
             $table->integer('qty');
             $table->integer('total');

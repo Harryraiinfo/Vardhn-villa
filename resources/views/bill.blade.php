@@ -79,15 +79,15 @@
 
                                     <td>
                                         <input type="hidden" name="booking_id" value="{{ $booking->id }}">
-                                        <input type="text" name="items[0][name]" placeholder="Food Name">
+                                        <input type="text" name="item[0][item]" placeholder="Food Name">
                                     </td>
 
                                     <td>
-                                        <input type="number" name="items[0][price]" class="price" value="0">
+                                        <input type="number" name="item[0][price]" class="price" value="0">
                                     </td>
 
                                     <td>
-                                        <input type="number" name="items[0][qty]" class="qty" value="0">
+                                        <input type="number" name="item[0][qty]" class="qty" value="0">
                                     </td>
 
                                     <td class="rowTotal">0</td>
@@ -143,15 +143,15 @@
         <td class="sno"></td>
 
         <td>
-            <input type="text" name="items[${index}][name]" placeholder="Food Name">
+            <input type="text" name="item[${index}][item]" placeholder="Food Name">
         </td>
 
         <td>
-            <input type="number" name="items[${index}][price]" class="price" value="0">
+            <input type="number" name="item[${index}][price]" class="price" value="0">
         </td>
 
         <td>
-            <input type="number" name="items[${index}][qty]" class="qty" value="1">
+            <input type="number" name="item[${index}][qty]" class="qty" value="1">
         </td>
 
         <td class="rowTotal">0</td>

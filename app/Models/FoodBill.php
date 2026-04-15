@@ -8,7 +8,7 @@ class FoodBill extends Model
 {
     protected $fillable = [
         'booking_id',
-        'item_name',
+        'item',
         'price',
         'qty',
         'total',
@@ -16,7 +16,7 @@ class FoodBill extends Model
     ];
 
     public function booking()
-{
-    return $this->belongsTo(Booking::class);
-}
+    {
+        return $this->belongsTo(Booking::class);
+    }
 }
