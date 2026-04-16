@@ -52,9 +52,15 @@
                             </td>
                             <td>{{ $booking->mobile }}</td>
 
-                            <td style="width:160px; min-width: 160px;">
+                            <!-- <td style="width:160px; min-width: 160px;">
                                 {{ $booking->room_type }}
+                            </td> -->
+                            <td style="width:160px; min-width: 160px;">
+                                @foreach(explode(',', $booking->room_type) as $room)
+                                {{ $room }} <br>
+                                @endforeach
                             </td>
+
                             <!-- DATES -->
                             <td>
                                 <small>

@@ -193,7 +193,6 @@
 </section>
 @endsection
 
-
 @push('scripts')
 
 <!-- Javascript code For Slider  -->
@@ -315,28 +314,21 @@
 
             //  Fully booked
             if (availableRooms <= 0) {
-                // alert("All rooms are booked for selected dates ❌");
                 messageBox.innerText = `All rooms are booked for selected dates`;
                 messageBox.style.color = "red";
 
-                // document.getElementById('checkin').value = '';
-                // document.getElementById('checkout').value = '';
                 return;
             }
 
             //  Less rooms
             if (availableRooms < selectedRooms) {
-                // alert(`Only ${availableRooms} room(s) available for selected dates. Please contact manager.`);
 
                 messageBox.innerText = `Only ${availableRooms} room(s) available these dates. Please contact manager: +91 93171 96995 `;
                 messageBox.style.color = "orange";
-                // document.getElementById('checkin').value = '';
-                // document.getElementById('checkout').value = '';
                 return;
             }
 
             // Success message
-            // alert(`Good news! ${availableRooms} room(s) available ✅`);
             messageBox.innerText = `${availableRooms} room(s) available ✅`;
             messageBox.style.color = "green";
 
@@ -363,12 +355,11 @@
 <script>
     function showPayment(event) {
         event.preventDefault();
-        // Validate form before showing payment
         let form = document.querySelector('.booking-form');
 
         if (form.checkValidity()) {
             document.getElementById('paymentBox').style.display = 'block';
-            // window.scrollTo(0, document.getElementById('paymentBox').offsetTop);
+
         } else {
             form.reportValidity();
         }
