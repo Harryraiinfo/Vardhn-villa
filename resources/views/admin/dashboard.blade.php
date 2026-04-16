@@ -113,7 +113,9 @@
                         <td>{{ $booking->name }}</td>
                         <td>{{ $booking->mobile }}</td>
                         <td style="width:160px; min-width: 160px;">
-                            {{ $booking->room_type }}
+                            @foreach(explode(',', $booking->room_type) as $room)
+                            {{ $room }} <br>
+                            @endforeach
                         </td>
                         <td>{{ \Carbon\Carbon::parse($booking->check_in)->format('d M Y') }}</td>
                         <td>{{ \Carbon\Carbon::parse($booking->check_out)->format('d M Y') }}</td>

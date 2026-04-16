@@ -7,6 +7,47 @@
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <style>
+        .room-options {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .room-card {
+            flex: 1;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            margin-bottom: 10px !important;
+        }
+
+        .room-card input {
+            display: none;
+        }
+
+        .room-card:hover {
+            border-color: #ffc107;
+            background: #fff8e1;
+        }
+
+        .room-card:has(input:checked) {
+            border-color: #28a745;
+            background: #eafaf1;
+            box-shadow: 0 2px 8px rgba(40, 167, 69, 0.2);
+        }
+
+        .room-name {
+            font-weight: 600;
+        }
+
+        .room-price {
+            color: #28a745;
+        }
+    </style>
 </head>
 
 <!-- HERO -->
@@ -86,9 +127,6 @@
                                 <option>2</option>
                             </select>
                         </div>
-                    </div>
-
-                    <div class="form-row">
                         <div>
                             <label>Number of Rooms</label>
                             <select name="rooms" id="rooms">
@@ -97,16 +135,65 @@
                                 <option>3</option>
                             </select>
                         </div>
+                    </div>
+
+                    <div class="form-row">
+
 
                         <div>
-                            <label>Select Room</label>
-                            <select name="room_type" id="room_type">
-                                <option value="Shri Khand View - 2999">Shri Khand View - ₹2999</option>
-                                <option value="Bhima Kali Temple and Valley View - 2999">Bhima Kali Temple and Valley View - ₹2999</option>
-                                <option value="Apple orchard and Forest view - 2999">Apple orchard and Forest view - ₹2999</option>
-                                <option value="Green Valley View - 2999">Green Valley View - ₹2999</option>
-                                <option value="Mountain View - 2999">Mountain View - ₹2999</option>
-                            </select>
+                            <div>
+                                <label>Select Room</label>
+
+                                <!-- Hidden input (IMPORTANT for backend) -->
+                                <input type="hidden" name="room_type" id="room_type">
+
+                                <div class="room-options">
+
+                                    <label class="room-card">
+                                        <input type="checkbox" value="Shri Khand View - 2999">
+                                        <div class="room-content">
+                                            <span class="room-name">Shri Khand View</span>
+                                            <span class="room-price">₹2999</span>
+                                        </div>
+                                    </label>
+
+                                    <label class="room-card">
+                                        <input type="checkbox" value="Bhima Kali Temple and Valley View - 2999">
+                                        <div class="room-content">
+                                            <span class="room-name">Bhima Kali View</span>
+                                            <span class="room-price">₹2999</span>
+                                        </div>
+                                    </label>
+
+                                    <label class="room-card">
+                                        <input type="checkbox" value="Apple orchard and Forest view - 2999">
+                                        <div class="room-content">
+                                            <span class="room-name">Apple Orchard</span>
+                                            <span class="room-price">₹2999</span>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="room-options">
+
+                                    <label class="room-card">
+                                        <input type="checkbox" value="Mountain View - 2999">
+                                        <div class="room-content">
+                                            <span class="room-name">Mountain View</span>
+                                            <span class="room-price">₹2999</span>
+                                        </div>
+                                    </label>
+
+                                    <label class="room-card">
+                                        <input type="checkbox" value="Green Valley View - 2999">
+                                        <div class="room-content">
+                                            <span class="room-name">Green Valley</span>
+                                            <span class="room-price">₹2999</span>
+                                        </div>
+                                    </label>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -243,17 +330,26 @@
             .then(res => res.json())
             .then(data => {
                 bookedDates = data;
+
+                validateDates();
             });
     }
     // Page load pe call
-    document.addEventListener("DOMContentLoaded", function() {
-        fetchBookedDates(document.getElementById('room_type').value);
+    document.getElementById('checkin').addEventListener('change', function() {
+        if (selectedRoomsData.length > 0) {
+            fetchBookedDates(selectedRoomsData[0]);
+        }
     });
 
-    // Room change pe
-    document.getElementById('room_type').addEventListener('change', function() {
-        fetchBookedDates(this.value);
+    document.getElementById('checkout').addEventListener('change', function() {
+        if (selectedRoomsData.length > 0) {
+            fetchBookedDates(selectedRoomsData[0]);
+        }
     });
+    // Room change pe
+    // document.getElementById('room_type').addEventListener('change', function() {
+    //     fetchBookedDates(this.value);
+    // });
 
 
     function isRoomAvailable(start, end, selectedRooms) {
@@ -283,7 +379,7 @@
 
         let minAvailable = totalRooms;
 
-        while (current <= new Date(end)) {
+        while (current < new Date(end)) {
             let date = current.toISOString().split('T')[0];
 
             let booked = bookedDates[date] ? bookedDates[date] : 0;
@@ -420,5 +516,32 @@
     document.getElementById('rooms').addEventListener('change', calculateTotal);
     document.getElementById('checkin').addEventListener('change', calculateTotal);
     document.getElementById('checkout').addEventListener('change', calculateTotal);
+</script>
+
+<script>
+    let selectedRoomsData = [6];
+
+    document.querySelectorAll('.room-card input').forEach((checkbox) => {
+        checkbox.addEventListener('change', function() {
+
+            let value = this.value;
+
+            if (this.checked) {
+                selectedRoomsData.push(value);
+            } else {
+                selectedRoomsData = selectedRoomsData.filter(item => item !== value);
+            }
+
+            // 👇 IMPORTANT: backend ke liye string bana rahe
+            document.getElementById('room_type').value = selectedRoomsData.join(',');
+
+            // 👇 existing functions trigger karo
+            calculateTotal();
+
+            if (selectedRoomsData.length > 0) {
+                fetchBookedDates(selectedRoomsData[0]); // first room type
+            }
+        });
+    });
 </script>
 @endpush
