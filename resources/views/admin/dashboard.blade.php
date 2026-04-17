@@ -95,7 +95,7 @@
                     <tr>
                         <th>Name</th>
                         <th>Mobile</th>
-                        <th style="width:160px; min-width: 160px;">Room Selection</th>
+                        <th>Room Selection</th>
                         <th>Check-In</th>
                         <th>Check-Out</th>
                         <th>Rooms</th>
@@ -112,7 +112,7 @@
                     <tr>
                         <td>{{ $booking->name }}</td>
                         <td>{{ $booking->mobile }}</td>
-                        <td style="width:160px; min-width: 160px;">
+                        <td>
                             @foreach(explode(',', $booking->room_type) as $room)
                             {{ $room }} <br>
                             @endforeach
@@ -156,7 +156,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td class="py-3 fw-bold text-dark text-end" colspan="6">Total Revenue:</td>
+                        <td class="py-3 fw-bold text-dark text-end" colspan="7">Total Revenue:</td>
                         <td class="fw-bold text-success">₹{{ number_format($totalRevenue, 2) }}</td>
                         <td class="fw-bold text-primary text-center">₹{{ number_format($monthlyFoodRevenue, 2) }}</td>
 

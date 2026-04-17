@@ -47,6 +47,10 @@
         .room-price {
             color: #28a745;
         }
+           @media (max-width:768px) {
+        .room-options{
+            display: block;
+        }}
     </style>
 </head>
 
@@ -142,7 +146,7 @@
 
                         <div>
                             <div>
-                                <label>Select Room</label>
+                                <label class="">Select Room</label>
 
                                 <!-- Hidden input (IMPORTANT for backend) -->
                                 <input type="hidden" name="room_type" id="room_type">
@@ -150,7 +154,7 @@
                                 <div class="room-options">
 
                                     <label class="room-card">
-                                        <input type="checkbox" value="Shri Khand View - 2999">
+                                        <input type="checkbox" value="Shri Khand View - 2999" checked>
                                         <div class="room-content">
                                             <span class="room-name">Shri Khand View</span>
                                             <span class="room-price">₹2999</span>
@@ -288,11 +292,6 @@
 <script
     src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-<script>
-    $(document).ready(function() {
-        $('.form-room-slider').slick();
-    });
-</script>
 <!-- JS -->
 
 <script>
@@ -519,7 +518,7 @@
 </script>
 
 <script>
-    let selectedRoomsData = [6];
+    let selectedRoomsData = [];
 
     document.querySelectorAll('.room-card input').forEach((checkbox) => {
         checkbox.addEventListener('change', function() {
@@ -539,9 +538,30 @@
             calculateTotal();
 
             if (selectedRoomsData.length > 0) {
-                fetchBookedDates(selectedRoomsData[0]); // first room type
+                selectedRoomsData.forEach(room => {
+                    fetchBookedDates(room);
+                });
             }
         });
+    });
+
+
+    window.addEventListener('load', function() {
+
+        let firstRoom = document.querySelector('.room-card input');
+
+        if (firstRoom) {
+            firstRoom.checked = true;
+
+            selectedRoomsData = [firstRoom.value];
+
+            document.getElementById('room_type').value = firstRoom.value;
+
+            // 👇 Availability check ke liye call
+            if (document.getElementById('checkin').value && document.getElementById('checkout').value) {
+                fetchBookedDates(firstRoom.value);
+            }
+        }
     });
 </script>
 @endpush
