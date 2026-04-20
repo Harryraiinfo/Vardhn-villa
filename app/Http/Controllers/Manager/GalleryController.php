@@ -11,7 +11,7 @@ class GalleryController extends Controller
     public function index()
     {
         $images = Gallery::orderBy('position')->get();
-        return view('manager.gallery.index', compact('images'));
+        return view('Inner-pages.gallery-pic', compact('images'));
     }
 
     public function store(Request $request)

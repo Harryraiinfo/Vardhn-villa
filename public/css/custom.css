@@ -303,6 +303,7 @@
         font-weight: 500;
         color: rgb(195 131 42) !important;
     }
+
     /* ========= */
 
     /* Footer start */
@@ -622,6 +623,7 @@
             bottom: -8px;
         }
     }
+
     /* Rooms Page CSS Ends Here */
 
     /* --- FOOD PAGE CSS START*/
@@ -712,6 +714,7 @@
             flex-direction: column;
         }
     }
+
     /* --- FOOD PAGE CSS ENDS*/
 
     /* --- CONTACT PAGE CSS START */
@@ -775,8 +778,9 @@
         margin-top: 15px;
         border-radius: 10px;
     }
+
     /* --- CONTACT PAGE CSS ENDS */
-    
+
     /* RESPONSIVE */
     /* --- Facilities PAGE CSS Start */
 
@@ -941,15 +945,37 @@
         margin-bottom: 20px;
     }
 
-        .payment-card > div{
+    .payment-card>div {
         width: 50%;
     }
-    .Bank-deatils{
+
+    .Bank-deatils {
         padding-left: 30px;
         text-align: start;
     }
 
     /* RESPONSIVE */
+    @media(max-width: 1200px) {
+        .nav-item a {
+            font-size: 14px;
+        }
+    }
+
+    @media(max-width: 1024px) {
+
+        .attraction-hero,
+        .about-hero,
+        .rooms-hero,
+        .food-hero,
+        .contact-hero,
+        .facilities-hero,
+        .hero-privacy,
+        .refund-hero,
+        .terms-hero {
+            height: 300px;
+        }
+    }
+
     @media(max-width: 768px) {
         .attraction-card {
             flex-direction: column;
@@ -958,14 +984,18 @@
         .attraction-card img {
             width: 100%;
         }
-        .payment-card > div{
+
+        .payment-card>div {
             width: 100%;
         }
-        .Bank-deatils{
-        padding-left: 5px;
-        text-align: center;
+
+        .Bank-deatils {
+            padding-left: 5px;
+            text-align: center;
+        }
+
     }
-    }
+
     /* --- Attractions PAGE CSS ENDS */
 
     /* Mobile */

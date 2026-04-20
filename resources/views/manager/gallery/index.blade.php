@@ -33,20 +33,22 @@
         <div class="col-md-9">
             <div class="card p-3 shadow-sm">
                 <h6 class="mb-3">All Images</h6>
+                <div id="gallery-list" class="row">
+                    @foreach($images as $img)
+                    <div class=" col-sm-6 col-md-4 mb-3 gallery-item" data-id="{{ $img->id }}">
+                        <div class="card shadow-sm h-100">
 
-                <div class="row">
-                    <!-- @forelse($images as $img)
-                    <div class="col-md-4 mb-3">
-                        <div class="card border-0 shadow-sm">
-
-                            <img src="{{ asset('gallery/'.$img->image) }}" class="img-fluid rounded">
+                            <img src="{{ asset('gallery/'.$img->image) }}"
+                                class="card-img-top img-fluid"
+                                style="height: 200px; object-fit: cover;">
 
                             <div class="p-2">
                                 <form action="{{ route('gallery.delete', $img->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn btn-danger btn-sm w-100">
+                                    <button onclick="return confirm('Delete this image?')"
+                                        class="btn btn-danger btn-sm w-100">
                                         Delete
                                     </button>
                                 </form>
@@ -54,33 +56,8 @@
 
                         </div>
                     </div>
-                    @empty
-                    <p>No images found</p>
-                    @endforelse -->
-
-                    <div id="gallery-list" class="row">
-                        @foreach($images as $img)
-                        <div class="col-md-4 mb-3 gallery-item" data-id="{{ $img->id }}">
-                            <div class="card shadow-sm">
-                                <img src="{{ asset('gallery/'.$img->image) }}" class="" style="min-height: 40px; max-height: 200px;">
-
-                                <div class="p-2">
-                                    <form action="{{ route('gallery.delete', $img->id) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-
-                                        <button onclick="return confirm('Delete this image?')" class="btn btn-danger btn-sm w-100">
-                                            Delete
-                                        </button>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
+                    @endforeach
                 </div>
-
             </div>
         </div>
 

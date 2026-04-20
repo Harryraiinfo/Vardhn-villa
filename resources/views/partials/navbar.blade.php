@@ -15,9 +15,10 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('rooms') }}">Rooms</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('food') }}">Food</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('facilities') }}">Facilities</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('gallery-pic') }}">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('attractions') }}">Attractions</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#">Get Reach</a></li> -->
                 <li class="nav-item"><a class="nav-link" href="{{ route('login') }}" target="_blank">Admin Login</a></li>
             </ul>
 

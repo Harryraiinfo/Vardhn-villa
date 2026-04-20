@@ -87,6 +87,11 @@ Route::get('/booking', function () {
     return view('booking');
 })->name('booking');
 
+Route::get('/gallery-pic', function () {
+    return view('Inner-pages.gallery-pic');
+})->name('gallery-pic');
+Route::get('/gallery-pic', [GalleryController::class, 'index'])->name('gallery-pic');
+
 Route::get('/admin', function () {
     return view('Admin.admin');
 });
