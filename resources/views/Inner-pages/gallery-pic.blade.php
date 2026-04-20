@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- HERO -->
-<section class="facilities-hero">
+<section class="gallery-hero">
     <div class="overlay">
         <h1 data-aos="fade-up">Our Gallery</h1>
         <p data-aos="fade-up" data-aos-delay="200">

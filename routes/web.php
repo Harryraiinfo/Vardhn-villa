@@ -92,6 +92,10 @@ Route::get('/gallery-pic', function () {
 })->name('gallery-pic');
 Route::get('/gallery-pic', [GalleryController::class, 'index'])->name('gallery-pic');
 
+Route::get('/room-details', function () {
+    return view('Inner-pages.room-details');
+})->name('room-details');
+
 Route::get('/admin', function () {
     return view('Admin.admin');
 });
