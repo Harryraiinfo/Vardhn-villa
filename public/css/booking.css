@@ -133,6 +133,7 @@
 .slider_img .slick-slide {
     padding: 5px;
 }
+
 /* RESPONSIVE */
 @media(max-width: 768px) {
     .form-row {
@@ -154,6 +155,7 @@
     .navbar-brand img {
         width: 65px;
     }
+
     /* .slider_img img {
     height: 300px;
     } */
@@ -305,4 +307,130 @@ a:hover {
 
 .summary-card:hover {
     transform: translateY(-10px);
+}
+
+/* New Section CSS */
+
+.lined-heading {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center;
+    display: block;
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #5e5e5e;
+}
+
+h2.lined-heading span {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+    background: #fff;
+    display: inline-block;
+}
+
+.lined-heading {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center;
+    display: block;
+}
+
+h2.lined-heading:before {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-top: 2px solid #ccc;
+    content: "";
+}
+
+h2.lined-heading span {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+    background: #fff;
+    display: inline-block;
+}
+
+
+.nav-tabs>li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.nav>li {
+    position: relative;
+    display: block;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.tab-content {
+    /* padding: 10px 0px; */
+    padding-top: 5px;
+}
+
+.tab-content>.active {
+    display: block;
+    visibility: visible;
+}
+
+
+
+.tabs {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.tab-buttons {
+    display: flex;
+    /* justify-content: center; */
+    border-bottom: 1px solid #ddd;
+    /* margin-bottom: 20px; */
+}
+
+.tab-btn {
+    padding: 5px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #777;
+    position: relative;
+    font-size: 14px;
+}
+
+.tab-btn.active {
+    color: #ffb30d;
+}
+
+.tab-btn.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffb30d;
+}
+
+.tab-content {
+    display: none;
+    text-align: left;
+}
+
+.tab-content.active {
+    display: block;
 }

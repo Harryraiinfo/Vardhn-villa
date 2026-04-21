@@ -39,73 +39,94 @@
     <section class="rooms-section">
         <div class="container">
 
+            <!-- -- Mountain Peaks & Valley View -- -->
+            <div class="room-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('Images/Img/Green-Valley-View.jpeg') }}" alt="Super Deluxe Room">
+                <div class="room-info">
+                    <h3>Mountain Peaks & Valley View</h3>
+                    <p>Luxury interiors with king-size bed and beautiful scenery.</p>
+                    <span>₹2999 / night</span>
+                    <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
+                </div>
+            </div>
+
+            <!-- -- Temple and Valley View Room -- -->
+            <div class="room-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('Images/Img/Bhima-Kali-Temple-and-Valley-View.jpeg') }}" alt="Super Deluxe Room">
+                <div class="room-info">
+                    <h3>Temple and Valley</h3>
+                    <p>Luxury interiors with king-size bed and beautiful scenery.</p>
+                    <span>₹2999 / night</span>
+                    <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
+                </div>
+            </div>
+
             <!-- -- Shri Khand View Room -- -->
             <div class="room-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="room-slider">
-                    <div><img src="{{ asset('Images/Img/Shri-Khand-view.jpeg') }}" alt="Deluxe Room"></div>
-                    <div><img src="{{ asset('Images/Img/loby.jpeg') }}" alt="Deluxe Room Lobby"></div>
-                    <div><img src="{{ asset('Images/Img/bed-room.jpeg') }}" alt="Deluxe Room"></div>
-                    <div><img src="{{ asset('Images/Img/washrooms-2.jpeg') }}" alt="Deluxe Room Washroom"></div>
+                    <div><img src="{{ asset('Images/Img/bed-room-103.jpeg') }}" alt="bed-room-103"></div>
+                    <div><img src="{{ asset('Images/Img/led-tv-103.jpeg') }}" alt="led-tv-103"></div>
+                    <div><img src="{{ asset('Images/Img/table-chair-103.jpeg') }}" alt="table-chair-103"></div>
+                    <div><img src="{{ asset('Images/Img/washroom-103.jpeg') }}" alt="Washroom-103"></div>
                 </div>
                 <div class="room-info">
-                    <h3>Shri Khand View Room</h3>
+                    <h3>Shri Khand peak View</h3>
                     <p>Spacious room with mountain view balcony and premium comfort.</p>
                     <span>₹2999 / night</span>
                     <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
                 </div>
             </div>
-            
-            <!-- -- Bhima Kali Temple and Valley View Room -- -->
-            <div class="room-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('Images/Img/Bhima-Kali-Temple-and-Valley-View.jpeg') }}" alt="Super Deluxe Room">
-                <div class="room-info">
-                    <h3>Bhima Kali Temple and Valley View</h3>
-                    <p>Luxury interiors with king-size bed and beautiful scenery.</p>
-                    <span>₹2999 / night</span>
-                    <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
-                </div>
-            </div>
-            
-            <!-- -- Apple orchard and Forest view Room -- -->
-            <div class="room-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('Images/Img/Apple-orchard-and-Forest-view.jpeg') }}" alt="Super Deluxe Room">
-                <div class="room-info">
-                    <h3>Apple orchard and Forest view</h3>
-                    <p>Luxury interiors with king-size bed and beautiful scenery.</p>
-                    <span>₹2999 / night</span>
-                    <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
-                </div>
-            </div>
-            
-            <!-- -- Green Valley View Room -- -->
-            <div class="room-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('Images/Img/Green-Valley-View.jpeg') }}" alt="Super Deluxe Room">
-                <div class="room-info">
-                    <h3>Green Valley View</h3>
-                    <p>Luxury interiors with king-size bed and beautiful scenery.</p>
-                    <span>₹2999 / night</span>
-                    <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
-                </div>
-            </div>
-            
-        
+
+
             <!-- -- Mountain View Room -- -->
             <div class="room-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="room-slider">
-                    <div><img src="{{ asset('Images/Img/bed-room.jpeg') }}" alt="Family Suite"></div>
-                    <div><img src="{{ asset('Images/Img/washrooms-2.jpeg') }}" alt="Family Suite Washroom"></div>
-                    <div><img src="{{ asset('Images/Img/bed-room-2.jpeg') }}" alt="Family Suite"></div>
-                    <div><img src="{{ asset('Images/Img/loby.jpeg') }}" alt="Family Suite Lobby"></div>
-                    <div><img src="{{ asset('Images/Img/washrooms.jpeg') }}" alt="Family Suite Washroom"></div>
+                    <div><img src="{{ asset('Images/Img/window-104.jpeg') }}" alt="window-104"></div>
+                    <div><img src="{{ asset('Images/Img/bed-room-104.jpeg') }}" alt="bed-room-104"></div>
+                    <div><img src="{{ asset('Images/Img/washroom-104.jpeg') }}" alt="washroom-104"></div>
+                    <div><img src="{{ asset('Images/Img/table-sofa-104.jpeg') }}" alt="table-sofa-104"></div>
+                    <div><img src="{{ asset('Images/Img/led-tv-104.jpeg') }}" alt="led-tv-104"></div>
                 </div>
                 <div class="room-info">
-                    <h3>Mountain View </h3>
+                    <h3>Mountain & Valley View </h3>
                     <p>Perfect for families with extra space and comfort.</p>
                     <span>₹2999 / night</span>
                     <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
                 </div>
             </div>
 
+            <!-- -- Apple orchard and Forest view Room -- -->
+            <div class="room-card" data-aos="fade-up" data-aos-delay="200">
+                <!-- <img src="{{ asset('Images/Img/Apple-orchard-and-Forest-view.jpeg') }}" alt="Super Deluxe Room"> -->
+                <div class="room-slider">
+                    <div><img src="{{ asset('Images/Img/bed-room-105.jpeg') }}" alt="bed-room-105"></div>
+                    <div><img src="{{ asset('Images/Img/bed-105.jpeg') }}" alt="led-tv-105"></div>
+                    <div><img src="{{ asset('Images/Img/led-tv-105.jpeg') }}" alt="led-tv-105"></div>
+                    <div><img src="{{ asset('Images/Img/washroom-105.jpeg') }}" alt="Washroom-105"></div>
+                </div>
+                <div class="room-info">
+                    <h3>Apple orchard and Forest View</h3>
+                    <p>Luxury interiors with king-size bed and beautiful scenery.</p>
+                    <span>₹2999 / night</span>
+                    <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
+                </div>
+            </div>
+
+            <!-- -- Apple orchard and Forest view Room -- -->
+            <div class="room-card" data-aos="fade-up" data-aos-delay="200">
+                <!-- <img src="{{ asset('Images/Img/Apple-orchard-and-Forest-view.jpeg') }}" alt="Super Deluxe Room"> -->
+                <div class="room-slider">
+                    <div><img src="{{ asset('Images/Img/bed-room-106.jpeg') }}" alt="bed-room-106"></div>
+                    <div><img src="{{ asset('Images/Img/led-tv-106.jpeg') }}" alt="led-tv-106"></div>
+
+                </div>
+                <div class="room-info">
+                    <h3>Village & Apple orchard View</h3>
+                    <p>Luxury interiors with king-size bed and beautiful scenery.</p>
+                    <span>₹2999 / night</span>
+                    <a href="{{ url('/booking') }}" class="btn btn-warning ms-2">Book Now</a>
+                </div>
+            </div>
         </div>
     </section>
 

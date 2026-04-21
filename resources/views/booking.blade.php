@@ -47,10 +47,12 @@
         .room-price {
             color: #28a745;
         }
-           @media (max-width:768px) {
-        .room-options{
-            display: block;
-        }}
+
+        @media (max-width:768px) {
+            .room-options {
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -257,8 +259,244 @@
 
 </section>
 
+<!-- New Sections Add On -->
+<section>
+    <div class="container">
+        <div class="row justify-content-between align-items-start">
+            <h2 class="lined-heading"><span>Room Details</span></h2>
+            <div class="col-sm-7 ">
+                <h3 class="" style="font-size: 18px; font-weight: 600; line-height: 1.1; color: #5e5e5e;">Facilities</h3>
+                <table class="table table-striped mt-3">
+                    <tbody>
+                        <tr>
+                            <td><i class="fa fa-check-circle"></i> Double Bed</td>
+                            <td><i class="fa fa-check-circle"></i> Spacious Wash Room</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-check-circle"></i> Attached Balcony</td>
+                            <td><i class="fa fa-check-circle"></i> Mini Fridage</td>
+                            <td><i class="fa fa-check-circle"></i> Free Wi-Fi</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-check-circle"></i> Cable facility</td>
+                            <td><i class="fa fa-check-circle"></i> Electric Kettle</td>
+                            <td><i class="fa fa-check-circle"></i> Wather Bottle</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-check-circle"></i> Smart LED TV</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-sm-5 ps-5">
+                <h3 class="pb-2" style="font-size: 18px; font-weight: 600; line-height: 1.1; color: #5e5e5e;">Extra Charges</h3>
+                <p class="">
+                    • Tariff for Extra adult and Child above 7 years <br>
+                    • Without extra bed <b> &#8377;500/Night</b><br>
+                    • With extra bed <b>&#8377;1000/Night</b><br>
+                    • Tea | Coffe | Food as per order<br>
+                    • Namkin | Biscuits | Jusice | drinks as per use.<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- New Sections Add On -->
+<section class="rooms my-5">
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- <h2 class="lined-heading"><span>Guests Favorite Rooms</span></h2> -->
+            </div>
+            <!-- Room 1 -->
+            <div class="col-4 col-sm-4 mt-4">
+                <div class="room-thumb"> <img src="{{ asset('Images/Img/bed-room.jpeg')}}" alt="room 3" class="img-responsive" />
+                    <div class="mask">
+                        <div class="main row justify-content-center">
+                            <div class="col-7">
+                                <h5>Mountain Peaks & Valley View </h5>
+                            </div>
+                            <div class="col-5 price"> R.No. 101</div>
+                        </div>
+                        <div class="content">
+                            <!-- <h6 class="text-center">Room Details</h6> -->
+                            <!-- <p><span>A modern room in Vardhn Villa</span> Rejoice with your family while experiencing the legendary hospitality of some of the best hotels in the world. </p> -->
+                            <div class="row">
+                                <div class="tabs">
+                                    <div class="tab-buttons">
+                                        <button class="tab-btn active" data-tab="facilities">Facilities</button>
+                                        <button class="tab-btn" data-tab="extra">Extra Charges</button>
+                                    </div>
+
+                                    <div class="tab-content active" id="facilities">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Double Bed</li>
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Spacious Wash Room</li>
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Attached Balcony</li>
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Mini Fridage</li>
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Free Wi-Fi</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-content" id="extra">
+                                        <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
+                                            • Tariff for Extra adult and Child above 7 years <br>
+                                            • Without extra bed <b> &#8377;500/Night</b><br>
+                                            • With extra bed <b>&#8377;1000/Night</b><br>
+                                            • Tea | Coffe | Food as per order<br>
+                                            • Namkin | Biscuits | Jusice | drinks as per use.<br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="{{ route('rooms') }}" class="btn btn-warning btn-block">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 3 -->
+            <div class="col-4 col-sm-4 mt-4">
+                <div class="room-thumb">
+                    <img src="{{ asset('Images/Img/bed-room.jpeg')}}" alt="bed-room image" class="img-responsive">
+                    <div class="mask">
+                        <div class="main row justify-content-center">
+                            <div class="col-7">
+                                <h5>Shri Khand peak View</h5>
+                            </div>
+                            <div class="col-5 price">R.No. 103
+                                <!-- <span>a night</span> -->
+                            </div>
+                        </div>
+                        <div class="content">
+                            <!-- <p><span>A modern room in Vardhn Villa</span> The spacious deluxe room has everything you could possibly desire for!</p> -->
+                            <h6 class="text-center">Room Details</h6>
+                            <div class="row">
+                                <div class="tabs">
+                                    <div class="tab-buttons">
+                                        <button class="tab-btn active" data-tab="facilities2">Facilities</button>
+                                        <button class="tab-btn" data-tab="extra2">Extra Charges</button>
+                                    </div>
+
+                                    <div class="tab-content active" id="facilities2">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Double Bed</li>
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Spacious Wash Room</li>
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Attached Balcony</li>
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Mini Fridage</li>
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Free Wi-Fi</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-content" id="extra2">
+                                        <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
+                                            • Tariff for Extra adult and Child above 7 years <br>
+                                            • Without extra bed <b> &#8377;500/Night</b><br>
+                                            • With extra bed <b>&#8377;1000/Night</b><br>
+                                            • Tea | Coffe | Food as per order<br>
+                                            • Namkin | Biscuits | Jusice | drinks as per use.<br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="{{ route('rooms') }}" class="btn btn-warning btn-block">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 5 -->
+            <div class="col-4 col-sm-4 mt-4 double executive">
+                <div class="room-thumb"> <img src="{{ asset('Images/Img/bed-room.jpeg')}}" alt="room 4" class="img-responsive" />
+                    <div class="mask">
+                        <div class="main row justify-content-center">
+                            <div class="col-7">
+                                <h5>Apple orchard and Forest View </h5>
+                            </div>
+                            <div class="col-5 price">R.No. 105</div>
+                        </div>
+                        <div class="content">
+                            <!-- <p><span>A modern room in Vardhn Villa</span>Immerse yourself in the elegance and comfort of executive room!</p> -->
+                            <h6 class="text-center">Room Details</h6>
+                            <div class="row">
+                                <div class="tabs">
+                                    <div class="tab-buttons">
+                                        <button class="tab-btn active" data-tab="facilities3">Facilities</button>
+                                        <button class="tab-btn" data-tab="extra3">Extra Charges</button>
+                                    </div>
+
+                                    <div class="tab-content active" id="facilities3">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Double Bed</li>
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Spacious Wash Room</li>
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Attached Balcony</li>
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Mini Fridage</li>
+                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Free Wi-Fi</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-content" id="extra3">
+                                        <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
+                                            • Tariff for Extra adult and Child above 7 years <br>
+                                            • Without extra bed <b> &#8377;500/Night</b><br>
+                                            • With extra bed <b>&#8377;1000/Night</b><br>
+                                            • Tea | Coffe | Food as per order<br>
+                                            • Namkin | Biscuits | Jusice | drinks as per use.<br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="{{ route('booking') }}" class="btn btn-warning btn-block">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- SUMMARY -->
-<section class="booking-summary">
+<!-- <section class="booking-summary">
     <h2 data-aos="fade-up">Why Book With Us?</h2>
 
     <div class="summary-grid">
@@ -281,7 +519,7 @@
         </div>
 
     </div>
-</section>
+</section> -->
 @endsection
 
 @push('scripts')
@@ -563,5 +801,28 @@
             }
         }
     });
+</script>
+
+<script>
+ document.querySelectorAll(".tabs").forEach(tabContainer => {
+
+    const tabs = tabContainer.querySelectorAll(".tab-btn");
+    const contents = tabContainer.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+
+            tabs.forEach(btn => btn.classList.remove("active"));
+            contents.forEach(content => content.classList.remove("active"));
+
+            tab.classList.add("active");
+
+            tabContainer
+                .querySelector(`#${tab.dataset.tab}`)
+                .classList.add("active");
+        });
+    });
+
+});
 </script>
 @endpush
