@@ -136,3 +136,9 @@ Route::get('/admin/dashboard', [AdminDashboardController::class, 'dashboard'])->
 
 Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews');
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+
+Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index');
+// Route::get('/manager/reviews', [ReviewController::class, 'index'])->name('reviews.index');
+Route::get('/manager/review/approve/{id}', [ReviewController::class, 'approve'])->name('review.approve');
+Route::get('/manager/review/delete/{id}', [ReviewController::class, 'approve'])->name('review.delete');
+Route::get('/manager/reviews', [ReviewController::class, 'index'])->name('reviews');

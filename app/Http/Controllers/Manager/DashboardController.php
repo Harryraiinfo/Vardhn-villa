@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
 use App\Models\Booking;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
 
@@ -23,4 +24,10 @@ class DashboardController extends Controller
             'confirmedBookings'
         ));
     }
+    public function manage()
+{
+    $reviews = Review::latest()->get(); // 👈 sab reviews (pending + approved)
+
+    return view('manager.reviews.index', compact('reviews'));
+}
 }

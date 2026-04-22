@@ -161,6 +161,10 @@
             <i class="bi bi-images"></i> Manage Gallery
         </a>
 
+        <a href="{{ route('reviews.index') }}">
+            <i class="bi bi-images"></i> Manage Reviews
+        </a>
+
         <form method="POST" action="{{ route('logout') }}" class="p-3">
             @csrf
             <button class="btn btn-warning w-100">Logout</button>

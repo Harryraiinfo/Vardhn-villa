@@ -24,4 +24,10 @@ class ReviewController extends Controller
 
         return back()->with('success', 'Review Submitted!');
     }
+
+    public function approve($id)
+    {
+        Review::where('id', $id)->update(['status' => 1]);
+        return back()->with('success', 'Review Approved');
+    }
 }
