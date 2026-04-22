@@ -11,7 +11,7 @@ use App\Http\Controllers\FoodBillController;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Manager\GalleryController;
-
+use App\Http\Controllers\ReviewController;
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -87,9 +87,6 @@ Route::get('/booking', function () {
     return view('booking');
 })->name('booking');
 
-// Route::get('/gallery-pic', function () {
-//     return view('Inner-pages.gallery-pic');
-// })->name('gallery-pic');
 
 Route::get('/gallery-pic', [GalleryController::class, 'gallery'])->name('gallery-pic');
 
@@ -136,3 +133,6 @@ Route::get('/invoice/{id}', [BookingController::class, 'generateInvoice'])->name
 Route::get('/booked-dates/{roomType}', [BookingController::class, 'getBookedDates']);
 
 Route::get('/admin/dashboard', [AdminDashboardController::class, 'dashboard'])->name('admin.dashboard');
+
+Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews');
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');

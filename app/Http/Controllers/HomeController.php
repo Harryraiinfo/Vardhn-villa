@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Gallery;
+use App\Models\Review;
 
 class HomeController extends Controller
 {
@@ -12,6 +13,11 @@ class HomeController extends Controller
         $images = Gallery::orderBy('position')
         ->take(8)
         ->get();
-        return view('home', compact('images'));
+
+         $reviews = Review::where('status', 1)
+                ->latest()
+                ->take(3) // 👈 homepage par 3 reviews
+                ->get();
+        return view('home', compact('images','reviews'));
     }
 }

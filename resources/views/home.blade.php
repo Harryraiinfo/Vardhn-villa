@@ -167,44 +167,30 @@
 <!-- Luxurious Rooms Section End -->
 
 <!-- Reviews Sections -->
+
+
 <section class="reviews-section py-5">
     <div class="container text-center">
         <h2 class="mb-4">What Our Guests Say</h2>
 
         <div class="row justify-content-center align-items-center review-slider">
-
+            @foreach($reviews as $review)
             <div class="col review-card">
                 <div class="review-box">
-                    <h5>Rahul Sharma</h5>
-                    <p>⭐⭐⭐</p>
-                    <p>Very clean and peaceful stay.</p>
+                    <h5>{{ $review->name }}</h5>
+                    <div>
+                        @for($i=1; $i<=5; $i++)
+                            @if($i <=$review->rating)
+                            ⭐
+                            @else
+                            ☆
+                            @endif
+                            @endfor
+                    </div>
+                    <p>"{{ $review->message }}"</p>
                 </div>
             </div>
-
-            <div class="col review-card">
-                <div class="review-box">
-                    <h5>Harry</h5>
-                    <p>⭐⭐⭐⭐</p>
-                    <p>"Beautiful location and great service."</p>
-                </div>
-            </div>
-
-            <div class="col review-card">
-                <div class="review-box">
-                    <h5>Rahul Sharma</h5>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>Very clean and peaceful stay.</p>
-                </div>
-            </div>
-
-            <div class="col review-card">
-                <div class="review-box">
-                    <h5>Simran Kaur</h5>
-                    <p>⭐⭐⭐</p>
-                    <p>Nice location and good food.</p>
-                </div>
-            </div>
-
+            @endforeach
         </div>
     </div>
 </section>
