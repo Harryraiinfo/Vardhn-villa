@@ -9,7 +9,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $images = Gallery::orderBy('position')->get();
+        $images = Gallery::orderBy('position')
+        ->take(8)
+        ->get();
         return view('home', compact('images'));
     }
 }

@@ -87,14 +87,19 @@ Route::get('/booking', function () {
     return view('booking');
 })->name('booking');
 
-Route::get('/gallery-pic', function () {
-    return view('Inner-pages.gallery-pic');
-})->name('gallery-pic');
-Route::get('/gallery-pic', [GalleryController::class, 'index'])->name('gallery-pic');
+// Route::get('/gallery-pic', function () {
+//     return view('Inner-pages.gallery-pic');
+// })->name('gallery-pic');
+
+Route::get('/gallery-pic', [GalleryController::class, 'gallery'])->name('gallery-pic');
 
 Route::get('/room-details', function () {
     return view('Inner-pages.room-details');
 })->name('room-details');
+
+Route::get('/roomlist', function () {
+    return view('Inner-pages.roomlist');
+})->name('roomlist');
 
 Route::get('/admin', function () {
     return view('Admin.admin');

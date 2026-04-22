@@ -8,10 +8,16 @@ use Illuminate\Http\Request;
 
 class GalleryController extends Controller
 {
-    public function index()
+    public function gallery()
     {
         $images = Gallery::orderBy('position')->get();
         return view('Inner-pages.gallery-pic', compact('images'));
+    }
+
+    public function index()
+    {
+        $images = Gallery::orderBy('position')->get();
+        return view('manager.gallery.index', compact('images'));
     }
 
     public function store(Request $request)
@@ -49,9 +55,9 @@ class GalleryController extends Controller
 
     public function sort(Request $request)
     {
-if(!$request->has('order')){
-    return response()->json(['error' => 'No data'], 400);
-}
+        if (!$request->has('order')) {
+            return response()->json(['error' => 'No data'], 400);
+        }
 
         foreach ($request->order as $item) {
             Gallery::where('id', $item['id'])

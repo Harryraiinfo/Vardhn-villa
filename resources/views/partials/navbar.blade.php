@@ -24,8 +24,8 @@
                         Rooms
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li class="btnn btn-wrning text-dark "><a class="btnn btn-wrning text-dark " href="{{ route('room-details') }}">Room List</a></li>
-                        <li class="btnn btn-wrning text-dark "><a class="btnn btn-wrning text-dark " href="{{ route('rooms') }}">Room Details</a></li>
+                        <li class="btnn btn-wrning text-dark "><a class="btnn btn-wrning text-dark " href="{{ route('roomlist') }}">Room List</a></li>
+                        <li class="btnn btn-wrning text-dark "><a class="btnn btn-wrning text-dark " href="{{ route('room-details') }}">Room Details</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('facilities') }}">Facilities</a></li>
