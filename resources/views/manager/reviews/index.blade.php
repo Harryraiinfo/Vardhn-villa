@@ -17,7 +17,7 @@
             <table class="table table-bordered table-hover align-middle">
                 <thead class="table-dark text-center">
                     <tr>
-                        <th>#</th>
+                        <th>S. No</th>
                         <th>Name</th>
                         <th>Message</th>
                         <th>Rating</th>

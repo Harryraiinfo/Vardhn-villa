@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div class="slide" style="height:100vh; background-image:url('{{ asset('Images/Img/Bhima-Kali-Temple-and-Valley-View.jpeg')}}')">
+        <div class="slide" style="height:100vh; background-image:url('{{ asset('Images/Img/bed-room-106.jpeg')}}')">
             <div class="overlay-heading">
                 <h1>Premium Rooms</h1>
                 <p>Best Price Guaranteed</p>
@@ -90,7 +90,7 @@
                     <!-- 🔹 Rooms -->
                     <div class="col section_card">
                         <div class="card">
-                            <img src="{{ asset('Images/Img/bed-room.jpeg')}}" alt="bed-room image">
+                            <img src="{{ asset('Images/Img/bed-room-106.jpeg')}}" alt="bed-room image">
 
                             <div class="col book-room pt-2">
 
@@ -141,11 +141,17 @@
                 <!-- ------------ -->
                 <div class="slider pt-3">
                     <!-- Slide 1 -->
-                    <div class="slide" style="background-image:url('Images/Img/bed-room-2.jpeg'); height: 40vh; border-radius: 12px;"> </div>
+                    <div class="slide" style="background-image:url('Images/Img/bed-room-101.jpeg'); height: 40vh; border-radius: 12px;"> </div>
                     <!-- Slide 2 -->
-                    <div class="slide" style="background-image: url('Images/Img/loby.jpeg'); height: 40vh; border-radius: 12px;"> </div>
+                    <div class="slide" style="background-image: url('Images/Img/window-101.jpeg'); height: 40vh; border-radius: 12px;"> </div>
                     <!-- Slide 3 -->
-                    <div class="slide" style="background-image: url('Images/Img/room-3.jpeg'); height: 40vh; border-radius: 12px;"> </div>
+                    <div class="slide" style="background-image: url('Images/Img/bed-room-103.jpeg'); height: 40vh; border-radius: 12px;"> </div>
+                    <!-- Slide 4 -->
+                    <div class="slide" style="background-image: url('Images/Img/bed-room-104.jpeg'); height: 40vh; border-radius: 12px;"> </div>
+                    <!-- Slide 5 -->
+                    <div class="slide" style="background-image: url('Images/Img/bed-room-104.jpeg'); height: 40vh; border-radius: 12px;"> </div>
+                    <!-- Slide 6 -->
+                    <div class="slide" style="background-image: url('Images/Img/bed-room-106.jpeg'); height: 40vh; border-radius: 12px;"> </div>
                     <!-- ------------ -->
                 </div>
             </div>
@@ -172,7 +178,6 @@
 <section class="reviews-section py-5">
     <div class="container text-center">
         <h2 class="mb-4">What Our Guests Say</h2>
-
         <div class="row justify-content-center align-items-center review-slider">
             @foreach($reviews as $review)
             <div class="col review-card ">
@@ -193,6 +198,9 @@
             @endforeach
         </div>
     </div>
+            <div class="text-center mt-4">
+            <a href="{{route('reviews.form')}}" class="btn btn-outline-warning">VIEW ALL REVIEWS</a>
+        </div>
 </section>
 <!-- ------------------------------ -->
 

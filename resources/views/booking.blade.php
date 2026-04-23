@@ -68,18 +68,10 @@
 <section class="booking-section">
     <div class="container">
         <div class="row justify-content-center align-items-center">
-            <div class="form-room-slider col-md-6 booking-sec mt-3 ">
-                <div><img src="{{ asset('Images/Img/room-3.jpeg') }}" alt></div>
-                <div><img src="{{ asset('Images/Img/loby.jpeg') }}" alt></div>
-                <div><img src="{{ asset('Images/Img/hall.jpeg') }}" alt></div>
-                <div><img src="{{ asset('Images/Img/bed-room.jpeg') }}" alt></div>
-                <div><img src="{{ asset('Images/Img/dining-Room.png') }}" alt></div>
-                <div><img src="{{ asset('Images/Img/room-3.jpeg') }}" alt></div>
-                <div><img src="{{ asset('Images/Img/washrooms-2.jpeg') }}" alt></div>
+            <div class="form-room-slider col-md-6 booking-sec " id="roomSlider">
+                <div><img src="/${img}" alt></div>
             </div>
-            <!-- <div class="col-md-6 booking-sec mt-3">
-                <img src="{{ asset('Images/Img/room-2.jpeg') }}" data-aos="fade-up" class="card-img-top" alt="Room" style="border-radius: 12px;">
-            </div> -->
+
             <div class="col-md-6 mt-3">
 
                 @if(session('error'))
@@ -156,25 +148,25 @@
                                 <div class="room-options">
 
                                     <label class="room-card">
-                                        <input type="checkbox" value="Shri Khand View - 2999" checked>
+                                        <input type="checkbox" value="Mountain Peaks & Valley View - 2999" checked>
                                         <div class="room-content">
-                                            <span class="room-name">Shri Khand View</span>
+                                            <span class="room-name">Mountain Peaks & Valley View</span>
                                             <span class="room-price">₹2999</span>
                                         </div>
                                     </label>
 
                                     <label class="room-card">
-                                        <input type="checkbox" value="Bhima Kali Temple and Valley View - 2999">
+                                        <input type="checkbox" value="Temple and Valley - 2999">
                                         <div class="room-content">
-                                            <span class="room-name">Bhima Kali View</span>
+                                            <span class="room-name">Temple and Valley</span>
                                             <span class="room-price">₹2999</span>
                                         </div>
                                     </label>
 
                                     <label class="room-card">
-                                        <input type="checkbox" value="Apple orchard and Forest view - 2999">
+                                        <input type="checkbox" value="Shri Khand peak View - 2999">
                                         <div class="room-content">
-                                            <span class="room-name">Apple Orchard</span>
+                                            <span class="room-name">Shri Khand peak View</span>
                                             <span class="room-price">₹2999</span>
                                         </div>
                                     </label>
@@ -183,17 +175,25 @@
                                 <div class="room-options">
 
                                     <label class="room-card">
-                                        <input type="checkbox" value="Mountain View - 2999">
+                                        <input type="checkbox" value="Mountain & Valley View - 2999">
                                         <div class="room-content">
-                                            <span class="room-name">Mountain View</span>
+                                            <span class="room-name">Mountain & Valley View</span>
                                             <span class="room-price">₹2999</span>
                                         </div>
                                     </label>
 
                                     <label class="room-card">
-                                        <input type="checkbox" value="Green Valley View - 2999">
+                                        <input type="checkbox" value="Apple orchard and Forest View - 2999">
                                         <div class="room-content">
-                                            <span class="room-name">Green Valley</span>
+                                            <span class="room-name">Apple orchard and Forest View</span>
+                                            <span class="room-price">₹2999</span>
+                                        </div>
+                                    </label>
+
+                                    <label class="room-card">
+                                        <input type="checkbox" value="Village & Apple orchard View - 2999">
+                                        <div class="room-content">
+                                            <span class="room-name">Village & Apple orchard View</span>
                                             <span class="room-price">₹2999</span>
                                         </div>
                                     </label>
@@ -227,15 +227,15 @@
                 <div class="col-md-5">
                     <div class="Bank-deatils">
                         <h5 class="mb-3"><b> Bank Transfer</b></h5>
-                        <p><strong>Bank Name:</strong> UCO Bank Rampur Bushahr</p>
-                        <p><strong>Account No:</strong> 20600100002432</p>
-                        <p><strong>IFSC:</strong> UCBA0001543</p>
+                        <p><strong>Bank Name:</strong> HDFC Bank</p>
+                        <p><strong>Account No:</strong> 1234567890</p>
+                        <p><strong>IFSC:</strong> HDFC0001234</p>
                     </div>
                 </div>
                 <div class="col-md-7">
                     <div class="text-center">
                         <p>Scan QR Code</p>
-                        <img src="{{ asset('Images/Img/qr-code.jpeg') }}" width="200" alt="QR Code">
+                        <img src="{{ asset('Images/Img/qr-code.avif') }}" width="200" alt="QR Code">
                     </div>
                 </div>
             </div>
@@ -256,7 +256,6 @@
         <br>
     </div>
     <!-- Payment Method  -->
-
 </section>
 
 <!-- New Sections Add On -->
@@ -308,218 +307,15 @@
 <!-- New Sections Add On -->
 <section class="rooms my-5">
     <div class="container pt-3">
-        <div class="row">
-            <div class="col-sm-12">
-                <!-- <h2 class="lined-heading"><span>Guests Favorite Rooms</span></h2> -->
-            </div>
-            <!-- Room 1 -->
-            <div class="col-4 col-sm-4 mt-4">
-                <div class="room-thumb"> <img src="{{ asset('Images/Img/bed-room.jpeg')}}" alt="room 3" class="img-responsive" />
-                    <div class="mask">
-                        <div class="main row justify-content-center">
-                            <div class="col-7">
-                                <h5>Mountain Peaks & Valley View </h5>
-                            </div>
-                            <div class="col-5 price"> R.No. 101</div>
-                        </div>
-                        <div class="content">
-                            <!-- <h6 class="text-center">Room Details</h6> -->
-                            <!-- <p><span>A modern room in Vardhn Villa</span> Rejoice with your family while experiencing the legendary hospitality of some of the best hotels in the world. </p> -->
-                            <div class="row">
-                                <div class="tabs">
-                                    <div class="tab-buttons">
-                                        <button class="tab-btn active" data-tab="facilities">Facilities</button>
-                                        <button class="tab-btn" data-tab="extra">Extra Charges</button>
-                                    </div>
+        <div class="row" id="roomCardsContainer">
 
-                                    <div class="tab-content active" id="facilities">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <ul class="list-unstyled">
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Double Bed</li>
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Spacious Wash Room</li>
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Attached Balcony</li>
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Mini Fridage</li>
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Free Wi-Fi</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <ul class="list-unstyled">
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-content" id="extra">
-                                        <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
-                                            • Tariff for Extra adult and Child above 7 years <br>
-                                            • Without extra bed <b> &#8377;500/Night</b><br>
-                                            • With extra bed <b>&#8377;1000/Night</b><br>
-                                            • Tea | Coffe | Food as per order<br>
-                                            • Namkin | Biscuits | Jusice | drinks as per use.<br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="{{ route('rooms') }}" class="btn btn-warning btn-block">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Room 3 -->
-            <div class="col-4 col-sm-4 mt-4">
-                <div class="room-thumb">
-                    <img src="{{ asset('Images/Img/bed-room.jpeg')}}" alt="bed-room image" class="img-responsive">
-                    <div class="mask">
-                        <div class="main row justify-content-center">
-                            <div class="col-7">
-                                <h5>Shri Khand peak View</h5>
-                            </div>
-                            <div class="col-5 price">R.No. 103
-                                <!-- <span>a night</span> -->
-                            </div>
-                        </div>
-                        <div class="content">
-                            <!-- <p><span>A modern room in Vardhn Villa</span> The spacious deluxe room has everything you could possibly desire for!</p> -->
-                            <h6 class="text-center">Room Details</h6>
-                            <div class="row">
-                                <div class="tabs">
-                                    <div class="tab-buttons">
-                                        <button class="tab-btn active" data-tab="facilities2">Facilities</button>
-                                        <button class="tab-btn" data-tab="extra2">Extra Charges</button>
-                                    </div>
-
-                                    <div class="tab-content active" id="facilities2">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <ul class="list-unstyled">
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Double Bed</li>
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Spacious Wash Room</li>
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Attached Balcony</li>
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Mini Fridage</li>
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Free Wi-Fi</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <ul class="list-unstyled">
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-content" id="extra2">
-                                        <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
-                                            • Tariff for Extra adult and Child above 7 years <br>
-                                            • Without extra bed <b> &#8377;500/Night</b><br>
-                                            • With extra bed <b>&#8377;1000/Night</b><br>
-                                            • Tea | Coffe | Food as per order<br>
-                                            • Namkin | Biscuits | Jusice | drinks as per use.<br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="{{ route('rooms') }}" class="btn btn-warning btn-block">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Room 5 -->
-            <div class="col-4 col-sm-4 mt-4 double executive">
-                <div class="room-thumb"> <img src="{{ asset('Images/Img/bed-room.jpeg')}}" alt="room 4" class="img-responsive" />
-                    <div class="mask">
-                        <div class="main row justify-content-center">
-                            <div class="col-7">
-                                <h5>Apple orchard and Forest View </h5>
-                            </div>
-                            <div class="col-5 price">R.No. 105</div>
-                        </div>
-                        <div class="content">
-                            <!-- <p><span>A modern room in Vardhn Villa</span>Immerse yourself in the elegance and comfort of executive room!</p> -->
-                            <h6 class="text-center">Room Details</h6>
-                            <div class="row">
-                                <div class="tabs">
-                                    <div class="tab-buttons">
-                                        <button class="tab-btn active" data-tab="facilities3">Facilities</button>
-                                        <button class="tab-btn" data-tab="extra3">Extra Charges</button>
-                                    </div>
-
-                                    <div class="tab-content active" id="facilities3">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <ul class="list-unstyled">
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Double Bed</li>
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Spacious Wash Room</li>
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Attached Balcony</li>
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Mini Fridage</li>
-                                                    <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Free Wi-Fi</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <ul class="list-unstyled">
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-content" id="extra3">
-                                        <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
-                                            • Tariff for Extra adult and Child above 7 years <br>
-                                            • Without extra bed <b> &#8377;500/Night</b><br>
-                                            • With extra bed <b>&#8377;1000/Night</b><br>
-                                            • Tea | Coffe | Food as per order<br>
-                                            • Namkin | Biscuits | Jusice | drinks as per use.<br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="{{ route('booking') }}" class="btn btn-warning btn-block">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+
+    </div>
     </div>
 </section>
 
-<!-- SUMMARY -->
-<!-- <section class="booking-summary">
-    <h2 data-aos="fade-up">Why Book With Us?</h2>
 
-    <div class="summary-grid">
-
-        <div class="summary-card" data-aos="fade-up">
-            <h3>Best Price</h3>
-            <p>Affordable luxury stay</p>
-        </div>
-
-        <div class="summary-card" data-aos="fade-up"
-            data-aos-delay="200">
-            <h3>Instant Confirmation</h3>
-            <p>Quick booking process</p>
-        </div>
-
-        <div class="summary-card" data-aos="fade-up"
-            data-aos-delay="400">
-            <h3>24/7 Support</h3>
-            <p>Always here to help you</p>
-        </div>
-
-    </div>
-</section> -->
 @endsection
 
 @push('scripts')
@@ -534,17 +330,290 @@
 
 <script>
     $('.form-room-slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        speed: 1000,
+        slidesToShow: 3,
+        infinite: true,
+        autoplay: false,
+        // autoplaySpeed: 2000,
         arrows: false,
-        dots: false,
-        fade: true,
-        cssEase: 'linear',
-
+        responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
+</script>
+
+<script>
+    const commonFacilities = `
+   <div class="row">
+    <div class="col-sm-6">
+        <ul class="list-unstyled">
+            <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Double Bed</li>
+            <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Spacious Wash Room</li>
+            <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Attached Balcony</li>
+            <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Mini Fridage</li>
+            <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Free Wi-Fi</li>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <ul class="list-unstyled">
+            <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
+            <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
+            <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
+            <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
+        </ul>
+    </div>
+</div>`;
+
+    const commonExtra = `
+   <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
+    • Tariff for Extra adult and Child above 7 years <br>
+    • Without extra bed <b> &#8377;500/Night</b><br>
+    • With extra bed <b>&#8377;1000/Night</b><br>
+    • Tea | Coffe | Food as per order<br>
+    • Namkin | Biscuits | Jusice | drinks as per use.<br>
+</p>  `;
+
+    const roomData = {
+        "Mountain Peaks & Valley View - 2999": {
+            images: [
+                "Images/Img/window-101.jpeg",
+                "Images/Img/bed-room-101.jpeg",
+                "Images/Img/hall-101.jpeg"
+            ],
+            cards: [{
+                    title: "Shri Khand peak View",
+                    roomNo: "103",
+                    img: "Images/Img/bed-room-103.jpeg",
+                    "facilities": commonFacilities,
+                    "extra": commonExtra
+                },
+                {
+                    title: "Apple orchard and Forest View",
+                    roomNo: "105",
+                    img: "Images/Img/bed-room-105.jpeg",
+                    "facilities": commonFacilities,
+                    "extra": commonExtra
+                },
+                {
+                    title: "Apple orchard and Forest View",
+                    roomNo: "106",
+                    img: "Images/Img/bed-room-106.jpeg",
+                    "extra": commonExtra
+                }
+            ]
+        },
+
+        "Temple and Valley - 2999": {
+            images: [
+                "Images/Img/led-tv-105.jpeg",
+                "Images/Img/bed-room-105.jpeg"
+            ],
+            cards: [{
+                    title: "Mountain Peaks & Valley View",
+                    roomNo: "101",
+                    img: "Images/Img/window-101.jpeg",
+                    "facilities": commonFacilities,
+                    "extra": commonExtra
+                },
+                {
+                    title: "Shri Khand peak View",
+                    roomNo: "103",
+                    img: "Images/Img/bed-room-103.jpeg",
+                    "facilities": commonFacilities,
+                    "extra": commonExtra
+                },
+                {
+                    title: "Apple orchard and Forest View",
+                    roomNo: "106",
+                    img: "Images/Img/bed-room-106.jpeg",
+                    "extra": commonExtra
+                }
+            ]
+        },
+
+        "Shri Khand peak View - 2999": {
+            images: [
+                "Images/Img/bed-room-103.jpeg",
+                "Images/Img/led-tv-103.jpeg"
+            ],
+            cards: [{
+                    title: "Apple orchard and Forest View",
+                    roomNo: "104",
+                    img: "Images/Img/window-104.jpeg",
+                    "facilities": commonFacilities,
+                    "extra": commonExtra
+                },
+                {
+                    title: "Apple orchard and Forest View",
+                    roomNo: "105",
+                    img: "Images/Img/bed-room-105.jpeg",
+                    "facilities": commonFacilities,
+                },
+                {
+                    title: "Apple orchard and Forest View",
+                    roomNo: "106",
+                    img: "Images/Img/bed-room-106.jpeg",
+                    "extra": commonExtra
+                }
+
+            ]
+        },
+
+        "Mountain & Valley View - 2999": {
+            images: [
+                "Images/Img/bed-room-104.jpeg",
+                "Images/Img/window-104.jpeg",
+                "Images/Img/led-tv-104.jpeg"
+            ],
+            cards: [{
+                    title: "Mountain Peaks & Valley View",
+                    roomNo: "101",
+                    img: "Images/Img/window-101.jpeg",
+                    "facilities": commonFacilities,
+                    "extra": commonExtra
+                },
+                {
+                    title: "Apple orchard and Forest View",
+                    roomNo: "105",
+                    img: "Images/Img/bed-room-105.jpeg",
+                    "facilities": commonFacilities,
+                },
+                {
+                    title: "Apple orchard and Forest View",
+                    roomNo: "106",
+                    img: "Images/Img/bed-room-106.jpeg",
+                    "extra": commonExtra
+                }
+            ]
+        },
+
+        "Apple orchard and Forest View - 2999": {
+            images: [
+                "Images/Img/bed-room-105.jpeg",
+                "Images/Img/led-tv-105.jpeg"
+            ],
+            cards: [{
+                    title: "Apple orchard and Forest View",
+                    roomNo: "105",
+                    img: "Images/Img/bed-room-105.jpeg",
+                    "facilities": commonFacilities,
+                },
+                {
+                    title: "Mountain Peaks & Valley View",
+                    roomNo: "101",
+                    img: "Images/Img/window-101.jpeg",
+                    "facilities": commonFacilities,
+                    "extra": commonExtra
+                },
+                {
+                    title: "Apple orchard and Forest View",
+                    roomNo: "106",
+                    img: "Images/Img/bed-room-106.jpeg",
+                    "extra": commonExtra
+                }
+            ]
+        },
+
+        "Village & Apple orchard View - 2999": {
+            images: [
+                "Images/Img/led-tv-106.jpeg",
+                "Images/Img/bed-room-106.jpeg"
+            ],
+            cards: [  {
+                    title: "Mountain Peaks & Valley View",
+                    roomNo: "101",
+                    img: "Images/Img/window-101.jpeg",
+                    "facilities": commonFacilities,
+                    "extra": commonExtra
+                },
+                {
+                title: "Apple orchard and Forest View",
+                roomNo: "106",
+                img: "Images/Img/bed-room-106.jpeg",
+                "extra": commonExtra
+            }]
+        }
+    };
+</script>
+<script>
+    function updateSlider(roomType) {
+        let slider = $('#roomSlider');
+
+        slider.slick('unslick'); // destroy old slider
+        slider.html(''); // clear
+
+        let images = roomData[roomType]?.images || [];
+
+        images.forEach(img => {
+            slider.append(`<div><img src="/${img}" /></div>`);
+        });
+
+        // re-init slider
+        slider.slick({
+            slidesToShow: 1,
+            autoplay: false,
+            fade: true,
+            arrows: true,
+
+        });
+    }
+
+    // -------------------
+    function updateRoomCards(roomType) {
+        let container = document.getElementById('roomCardsContainer');
+        container.innerHTML = "";
+
+        let cards = roomData[roomType]?.cards || [];
+
+        cards.forEach(card => {
+            let uniqueId = Math.random().toString(36).substr(2, 5);
+
+            container.innerHTML += `
+                  <div class="col-sm-4 mt-4 double">
+                <div class="room-thumb">
+                 <img src="/${card.img}" alt="room 5" class="img-responsive" />
+                    <div class="mask">
+                        <div class="main row justify-content-center">
+                            <div class="col-7">
+                                <h5>${card.title}</h5>
+                            </div>
+                            <div class="col-5 price"> R.No. ${card.roomNo}</div>
+                        </div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="tabs">
+                                    <div class="tab-buttons">
+                                        <button class="tab-btn active" data-tab="fac_${uniqueId}">Facilities</button>
+                                        <button class="tab-btn" data-tab="extra_${uniqueId}">Extra Charges</button>
+                                    </div>
+
+                                    <div class="tab-content active" id="fac_${uniqueId}">
+                                       ${card.facilities || ''}
+                                    </div>
+
+                                    <div class="tab-content" id="extra_${uniqueId}">
+                                    ${card.extra || ''}
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="{{ route('roomlist') }}" class="btn btn-warning btn-block">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    `;
+        });
+    }
+    initTabs();
 </script>
 
 <!-- Selection date Script -->
@@ -583,11 +652,6 @@
             fetchBookedDates(selectedRoomsData[0]);
         }
     });
-    // Room change pe
-    // document.getElementById('room_type').addEventListener('change', function() {
-    //     fetchBookedDates(this.value);
-    // });
-
 
     function isRoomAvailable(start, end, selectedRooms) {
         let current = new Date(start);
@@ -762,6 +826,10 @@
         checkbox.addEventListener('change', function() {
 
             let value = this.value;
+            if (this.checked) {
+                updateSlider(this.value);
+                updateRoomCards(this.value);
+            }
 
             if (this.checked) {
                 selectedRoomsData.push(value);
@@ -792,25 +860,29 @@
             firstRoom.checked = true;
 
             selectedRoomsData = [firstRoom.value];
-
             document.getElementById('room_type').value = firstRoom.value;
 
+            updateSlider(firstRoom.value);
+            updateRoomCards(firstRoom.value);
             // 👇 Availability check ke liye call
-            if (document.getElementById('checkin').value && document.getElementById('checkout').value) {
-                fetchBookedDates(firstRoom.value);
-            }
+            // if (document.getElementById('checkin').value && document.getElementById('checkout').value) {
+            //   fetchBookedDates(firstRoom.value);
+            // }
         }
     });
 </script>
 
+
 <script>
- document.querySelectorAll(".tabs").forEach(tabContainer => {
+    document.addEventListener("click", function(e) {
 
-    const tabs = tabContainer.querySelectorAll(".tab-btn");
-    const contents = tabContainer.querySelectorAll(".tab-content");
+        if (e.target.classList.contains("tab-btn")) {
 
-    tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
+            let tab = e.target;
+            let tabContainer = tab.closest(".tabs");
+
+            let tabs = tabContainer.querySelectorAll(".tab-btn");
+            let contents = tabContainer.querySelectorAll(".tab-content");
 
             tabs.forEach(btn => btn.classList.remove("active"));
             contents.forEach(content => content.classList.remove("active"));
@@ -820,9 +892,8 @@
             tabContainer
                 .querySelector(`#${tab.dataset.tab}`)
                 .classList.add("active");
-        });
-    });
+        }
 
-});
+    });
 </script>
 @endpush
