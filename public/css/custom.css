@@ -1162,6 +1162,7 @@
     }
 
     .room-thumb .main {
+        align-items: center;
         border-bottom: 1px solid #ebebeb;
         height: 55px;
     }
@@ -1177,7 +1178,8 @@
     }
 
     .room-thumb .main .price {
-        display: inline;
+        display: inline-flex;
+        align-items: center;
         float: right;
         font-size: 18px;
         font-weight: bold;
