@@ -145,7 +145,7 @@
     }
 
     .booking-section {
-        padding: 20px 16px;
+        padding: 20px 10px;
     }
 
     .navbar {
@@ -345,7 +345,7 @@ h2.lined-heading:before {
     top: 50%;
     z-index: 1;
     display: block;
-    width: 100%;
+    width: 94%;
     height: 1px;
     border-top: 2px solid #ccc;
     content: "";

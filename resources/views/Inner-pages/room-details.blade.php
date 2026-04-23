@@ -68,8 +68,13 @@
 <section class="booking-section">
   <div class="container">
     <div class="row justify-content-center align-items-center">
-      <div class="form-room-slider col-md-6 booking-sec " id="roomSlider">
-        <div><img src="/${img}" alt></div>
+      <div class="col-md-6">
+        <div class="form-room-slider  booking-sec " id="roomSlider">
+          <div>
+            <img src="{{ asset('Images/Img/window-101.jpeg') }}" alt="Room">
+            <!-- <img src="/${img}" alt> -->
+          </div>
+        </div>
       </div>
 
       <div class="col-md-6 mt-3">
@@ -310,7 +315,6 @@
     <div class="row" id="roomCardsContainer">
 
     </div>
-
   </div>
   </div>
 </section>
@@ -390,6 +394,35 @@
         "Images/Img/hall-101.jpeg"
       ],
       cards: [{
+          title: "Shri Khand peak View",
+          roomNo: "103",
+          img: "Images/Img/bed-room-103.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        },
+        {
+          title: "Apple orchard and Forest View",
+          roomNo: "105",
+          img: "Images/Img/bed-room-105.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        },
+        {
+          title: "Village & Apple orchard View",
+          roomNo: "106",
+          img: "Images/Img/bed-room-106.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        }
+      ]
+    },
+
+    "Temple and Valley - 2999": {
+      images: [
+        "Images/Img/led-tv-105.jpeg",
+        "Images/Img/bed-room-105.jpeg"
+      ],
+      cards: [{
           title: "Mountain Peaks & Valley View",
           roomNo: "101",
           img: "Images/Img/window-101.jpeg",
@@ -404,28 +437,13 @@
           "extra": commonExtra
         },
         {
-          title: "Apple orchard and Forest View",
-          roomNo: "105",
-          img: "Images/Img/bed-room-105.jpeg",
+          title: "Village & Apple orchard View",
+          roomNo: "106",
+          img: "Images/Img/bed-room-106.jpeg",
           "facilities": commonFacilities,
           "extra": commonExtra
         }
       ]
-    },
-
-    "Temple and Valley - 2999": {
-      images: [
-        "Images/Img/led-tv-105.jpeg",
-        "Images/Img/bed-room-105.jpeg"
-      ],
-      cards: [{
-        title: "Apple orchard and Forest View",
-        roomNo: "102",
-        img: "Images/Img/bed-room-105.jpeg",
-        "facilities": commonFacilities,
-        "extra": commonExtra
-
-      }]
     },
 
     "Shri Khand peak View - 2999": {
@@ -434,13 +452,28 @@
         "Images/Img/led-tv-103.jpeg"
       ],
       cards: [{
-        title: "Apple orchard and Forest View",
-        roomNo: "103",
-        img: "Images/Img/bed-room-105.jpeg",
-        "facilities": commonFacilities,
-        "extra": commonExtra
+          title: "Mountain & Valley View",
+          roomNo: "104",
+          img: "Images/Img/window-104.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        },
+        {
+          title: "Apple orchard and Forest View",
+          roomNo: "105",
+          img: "Images/Img/bed-room-105.jpeg",
+          "facilities": commonFacilities,
+          "facilities": commonFacilities,
+        },
+        {
+          title: "Village & Apple orchard View",
+          roomNo: "106",
+          img: "Images/Img/bed-room-106.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        }
 
-      }]
+      ]
     },
 
     "Mountain & Valley View - 2999": {
@@ -450,13 +483,27 @@
         "Images/Img/led-tv-104.jpeg"
       ],
       cards: [{
-        title: "Apple orchard and Forest View",
-        roomNo: "104",
-        img: "Images/Img/window-104.jpeg",
-        "facilities": commonFacilities,
-        "extra": commonExtra
-
-      }]
+          title: "Mountain Peaks & Valley View",
+          roomNo: "101",
+          img: "Images/Img/window-101.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        },
+        {
+          title: "Apple orchard and Forest View",
+          roomNo: "105",
+          img: "Images/Img/bed-room-105.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        },
+        {
+          title: "Village & Apple orchard View",
+          roomNo: "106",
+          img: "Images/Img/bed-room-106.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        }
+      ]
     },
 
     "Apple orchard and Forest View - 2999": {
@@ -465,12 +512,27 @@
         "Images/Img/led-tv-105.jpeg"
       ],
       cards: [{
-        title: "Apple orchard and Forest View",
-        roomNo: "105",
-        img: "Images/Img/bed-room-105.jpeg",
-        "facilities": commonFacilities,
-
-      }]
+          title: "Mountain & Valley View",
+          roomNo: "104",
+          img: "Images/Img/window-104.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        },
+        {
+          title: "Mountain Peaks & Valley View",
+          roomNo: "101",
+          img: "Images/Img/window-101.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        },
+        {
+          title: "Village & Apple orchard View",
+          roomNo: "106",
+          img: "Images/Img/bed-room-106.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        }
+      ]
     },
 
     "Village & Apple orchard View - 2999": {
@@ -479,12 +541,27 @@
         "Images/Img/bed-room-106.jpeg"
       ],
       cards: [{
-        title: "Apple orchard and Forest View",
-        roomNo: "106",
-        img: "Images/Img/bed-room-106.jpeg",
-        "extra": commonExtra
-
-      }]
+          title: "Mountain Peaks & Valley View",
+          roomNo: "101",
+          img: "Images/Img/window-101.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        },
+        {
+          title: "Mountain & Valley View",
+          roomNo: "104",
+          img: "Images/Img/window-104.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        },
+        {
+          title: "Village & Apple orchard View",
+          roomNo: "106",
+          img: "Images/Img/bed-room-106.jpeg",
+          "facilities": commonFacilities,
+          "extra": commonExtra
+        }
+      ]
     }
   };
 </script>
@@ -818,7 +895,6 @@
 
 
 <script>
-  
   document.addEventListener("click", function(e) {
 
     if (e.target.classList.contains("tab-btn")) {

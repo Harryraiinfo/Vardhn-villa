@@ -68,8 +68,13 @@
 <section class="booking-section">
     <div class="container">
         <div class="row justify-content-center align-items-center">
-            <div class="form-room-slider col-md-6 booking-sec " id="roomSlider">
-                <div><img src="/${img}" alt></div>
+            <div class="col-md-6">
+                <div class="form-room-slider  booking-sec " id="roomSlider">
+                    <div>
+                        <img src="{{ asset('Images/Img/window-101.jpeg') }}" alt="Room">
+                        <!-- <img src="/${img}" alt> -->
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-6 mt-3">
@@ -136,7 +141,6 @@
                     </div>
 
                     <div class="form-row">
-
 
                         <div>
                             <div>
@@ -330,19 +334,19 @@
 
 <script>
     $('.form-room-slider').slick({
-        slidesToShow: 3,
+        slidesToShow: 1,
         infinite: true,
         autoplay: false,
         // autoplaySpeed: 2000,
         arrows: false,
         responsive: [{
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 2
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 576,
                 settings: {
                     slidesToShow: 1
                 }
@@ -407,6 +411,7 @@
                     title: "Apple orchard and Forest View",
                     roomNo: "106",
                     img: "Images/Img/bed-room-106.jpeg",
+                    "facilities": commonFacilities,
                     "extra": commonExtra
                 }
             ]
@@ -435,6 +440,7 @@
                     title: "Apple orchard and Forest View",
                     roomNo: "106",
                     img: "Images/Img/bed-room-106.jpeg",
+                    "facilities": commonFacilities,
                     "extra": commonExtra
                 }
             ]
@@ -457,11 +463,13 @@
                     roomNo: "105",
                     img: "Images/Img/bed-room-105.jpeg",
                     "facilities": commonFacilities,
+                    "facilities": commonFacilities,
                 },
                 {
                     title: "Apple orchard and Forest View",
                     roomNo: "106",
                     img: "Images/Img/bed-room-106.jpeg",
+                    "facilities": commonFacilities,
                     "extra": commonExtra
                 }
 
@@ -486,11 +494,13 @@
                     roomNo: "105",
                     img: "Images/Img/bed-room-105.jpeg",
                     "facilities": commonFacilities,
+                    "extra": commonExtra
                 },
                 {
                     title: "Apple orchard and Forest View",
                     roomNo: "106",
                     img: "Images/Img/bed-room-106.jpeg",
+                    "facilities": commonFacilities,
                     "extra": commonExtra
                 }
             ]
@@ -506,6 +516,7 @@
                     roomNo: "105",
                     img: "Images/Img/bed-room-105.jpeg",
                     "facilities": commonFacilities,
+                    "extra": commonExtra
                 },
                 {
                     title: "Mountain Peaks & Valley View",
@@ -518,6 +529,7 @@
                     title: "Apple orchard and Forest View",
                     roomNo: "106",
                     img: "Images/Img/bed-room-106.jpeg",
+                    "facilities": commonFacilities,
                     "extra": commonExtra
                 }
             ]
@@ -528,7 +540,7 @@
                 "Images/Img/led-tv-106.jpeg",
                 "Images/Img/bed-room-106.jpeg"
             ],
-            cards: [  {
+            cards: [{
                     title: "Mountain Peaks & Valley View",
                     roomNo: "101",
                     img: "Images/Img/window-101.jpeg",
@@ -536,11 +548,20 @@
                     "extra": commonExtra
                 },
                 {
-                title: "Apple orchard and Forest View",
-                roomNo: "106",
-                img: "Images/Img/bed-room-106.jpeg",
-                "extra": commonExtra
-            }]
+                    title: "Apple orchard and Forest View",
+                    roomNo: "104",
+                    img: "Images/Img/window-104.jpeg",
+                    "facilities": commonFacilities,
+                    "extra": commonExtra
+                },
+                {
+                    title: "Apple orchard and Forest View",
+                    roomNo: "106",
+                    img: "Images/Img/bed-room-106.jpeg",
+                    "facilities": commonFacilities,
+                    "extra": commonExtra
+                }
+            ]
         }
     };
 </script>
