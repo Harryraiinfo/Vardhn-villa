@@ -39,7 +39,7 @@
             </ul>
 
             <!-- <a href="{{ route('booking') }}" class="btn btn-outline-warning">Book Now</a> -->
-            <a href="{{route('reviews')}}" class="btn btn-outline-warning">Reviews</a>
+            <a href="{{route('reviews.form')}}" class="btn btn-outline-warning">Reviews</a>
         </div>
     </div>
 </nav>

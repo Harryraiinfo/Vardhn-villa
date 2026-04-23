@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-   public function index()
+    public function index()
     {
         $totalBookings = Booking::count();
 
@@ -24,10 +24,4 @@ class DashboardController extends Controller
             'confirmedBookings'
         ));
     }
-    public function manage()
-{
-    $reviews = Review::latest()->get(); // 👈 sab reviews (pending + approved)
-
-    return view('manager.reviews.index', compact('reviews'));
-}
 }

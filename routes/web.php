@@ -55,6 +55,7 @@ Route::middleware(['auth'])->group(function () {
 
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
 
+// Navbar Buttons Links below
 Route::get('/', function () {
     return view('home'); // your home Blade file
 })->name('home');
@@ -116,8 +117,6 @@ Route::get('/refund-policy', function () {
 
 Route::post('/food-bill-store', [FoodBillController::class, 'store'])->name('food.bill.store');
 
-
-
 Route::get('/manager/gallery', [GalleryController::class, 'index'])->name('gallery.index');
 Route::post('/manager/gallery', [GalleryController::class, 'store'])->name('gallery.store');
 Route::delete('/manager/gallery/{id}', [GalleryController::class, 'destroy'])->name('gallery.delete');
@@ -135,10 +134,17 @@ Route::get('/booked-dates/{roomType}', [BookingController::class, 'getBookedDate
 Route::get('/admin/dashboard', [AdminDashboardController::class, 'dashboard'])->name('admin.dashboard');
 
 Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews');
+Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.form');
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+Route::get('/reviews', [ReviewController::class, 'form'])->name('reviews.form');
 
-Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index');
-// Route::get('/manager/reviews', [ReviewController::class, 'index'])->name('reviews.index');
-Route::get('/manager/review/approve/{id}', [ReviewController::class, 'approve'])->name('review.approve');
-Route::get('/manager/review/delete/{id}', [ReviewController::class, 'approve'])->name('review.delete');
-Route::get('/manager/reviews', [ReviewController::class, 'index'])->name('reviews');
+
+Route::prefix('manager')->name('manager.')->middleware('auth')->group(function () {
+
+    Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index');
+
+    Route::post('/reviews/{id}/approve', [ReviewController::class, 'approve'])->name('reviews.approve');
+    Route::delete('/reviews/{id}', [ReviewController::class, 'destroy'])->name('reviews.delete');
+
+    Route::get('/manager/reviews', [ReviewController::class, 'index'])->name('reviews');
+});

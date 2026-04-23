@@ -175,7 +175,7 @@
 
         <div class="row justify-content-center align-items-center review-slider">
             @foreach($reviews as $review)
-            <div class="col review-card">
+            <div class="col review-card ">
                 <div class="review-box">
                     <h5>{{ $review->name }}</h5>
                     <div>
@@ -279,7 +279,7 @@
         slidesToShow: 3,
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 1000,
         arrows: false,
         responsive: [{
                 breakpoint: 768,

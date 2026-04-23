@@ -161,8 +161,8 @@
             <i class="bi bi-images"></i> Manage Gallery
         </a>
 
-        <a href="{{ route('reviews.index') }}">
-            <i class="bi bi-images"></i> Manage Reviews
+        <a href="{{ route('manager.reviews.index') }}">
+            <i class="bi bi-chat-right-text"></i> Manage Reviews
         </a>
 
         <form method="POST" action="{{ route('logout') }}" class="p-3">

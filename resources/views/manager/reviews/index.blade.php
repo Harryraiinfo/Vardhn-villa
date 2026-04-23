@@ -1,54 +1,89 @@
-@extends('layouts.app')
+@extends('manager.layout')
 
 @section('content')
-
 <div class="container mt-4">
-    <h3>Manage Reviews</h3>
 
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Message</th>
-                <th>Rating</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        </thead>
+    <h3 class="mb-4">Manage Reviews</h3>
 
-        <tbody>
-            @foreach($reviews as $review)
-            <tr>
-                <td>{{ $review->name }}</td>
-                <td>{{ $review->message }}</td>
-                <td>{{ $review->rating }}</td>
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
 
-                <td>
-                    @if($review->status == 1)
-                        <span class="text-success">Approved</span>
-                    @else
-                        <span class="text-danger">Pending</span>
-                    @endif
-                </td>
+    <div class="card shadow-sm">
+        <div class="card-body table-responsive">
 
-                <td>
-                    @if($review->status == 0)
-                        <form action="{{ route('review.approve', $review->id) }}" method="POST">
-                            @csrf
-                            <button class="btn btn-success btn-sm">Approve</button>
-                        </form>
-                    @endif
+            <table class="table table-bordered table-hover align-middle">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Message</th>
+                        <th>Rating</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
 
-                    <form action="{{ route('review.delete', $review->id) }}" method="POST" style="margin-top:5px;">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-danger btn-sm">Delete</button>
-                    </form>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+                <tbody>
+                    @forelse($reviews as $review)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+
+                        <td>{{ $review->name }}</td>
+
+                        <td style="max-width:250px;">
+                            {{ $review->message }}
+                        </td>
+
+                        <td class="text-center">
+                            ⭐ {{ $review->rating ?? 'N/A' }}
+                        </td>
+
+                        <td class="text-center">
+                            @if($review->status == 1)
+                            <span class="badge bg-success">Approved</span>
+                            @else
+                            <span class="badge bg-warning">Pending</span>
+                            @endif
+                        </td>
+
+                        <td class="text-center">
+
+                            {{-- APPROVE BUTTON --}}
+                            @if($review->status == 0)
+                            <form action="{{ route('manager.reviews.approve', $review->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                <button class="btn btn-sm btn-success">
+                                    Approve
+                                </button>
+                            </form>
+                            @endif
+
+                            {{-- DELETE BUTTON --}}
+                            <form action="{{ route('manager.reviews.delete', $review->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-sm btn-danger"
+                                    onclick="return confirm('Are you sure you want to delete this review?')">
+                                    Delete
+                                </button>
+                            </form>
+
+                        </td>
+                    </tr>
+                    @empty
+                    <tr>
+                        <td colspan="6" class="text-center">No Reviews Found</td>
+                    </tr>
+                    @endforelse
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+
 </div>
-
 @endsection
