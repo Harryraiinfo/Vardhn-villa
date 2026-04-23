@@ -32,7 +32,7 @@
                 <!-- <li class="nav-item"><a class="nav-link" href="{{ route('food') }}">Food</a></li> -->
                 <li class="nav-item"><a class="nav-link" href="{{ route('gallery-pic') }}">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('attractions') }}">Attractions</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Map</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://maps.app.goo.gl/bEBGWbRwePZGerFq5" target="_blank">Map</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('login') }}" target="_blank">Admin Login</a></li>
                 <!-- <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li> -->
