@@ -1141,8 +1141,8 @@
         border: 1px solid #ebebeb;
         -webkit-box-shadow: 0 2px 0 0 #e0e0e0;
         box-shadow: 0 2px 0 0 #e0e0e0;
-        -webkit-backface-visibility: hidden;
-        -webkit-perspective: 5000;
+        /* -webkit-backface-visibility: hidden;
+        -webkit-perspective: 5000; */
     }
 
     .room-thumb .mask {
@@ -1189,8 +1189,8 @@
         border-right: 1px solid #ebebeb;
         border-bottom: 1px solid #ebebeb;
         border-left: 1px solid #ebebeb;
-        -webkit-backface-visibility: hidden;
-        -webkit-perspective: 1000;
+        /* -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000; */
         /* background-color: rgb(221 202 164 / 32%); */
     }
 

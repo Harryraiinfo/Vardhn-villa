@@ -42,6 +42,7 @@
 
         .room-name {
             font-weight: 600;
+            font-size: 14px;
         }
 
         .room-price {
@@ -231,15 +232,15 @@
                 <div class="col-md-5">
                     <div class="Bank-deatils">
                         <h5 class="mb-3"><b> Bank Transfer</b></h5>
-                        <p><strong>Bank Name:</strong> HDFC Bank</p>
-                        <p><strong>Account No:</strong> 1234567890</p>
-                        <p><strong>IFSC:</strong> HDFC0001234</p>
+                        <p><strong>Bank Name:</strong> UCO Bank Rampur Bushahr</p>
+                        <p><strong>Account No:</strong> 20600100002432</p>
+                        <p><strong>IFSC:</strong> UCBA0001543</p>
                     </div>
                 </div>
                 <div class="col-md-7">
                     <div class="text-center">
                         <p>Scan QR Code</p>
-                        <img src="{{ asset('Images/Img/qr-code.avif') }}" width="200" alt="QR Code">
+                        <img src="{{ asset('Images/Img/qr-code.jpeg') }}" width="200" alt="QR Code">
                     </div>
                 </div>
             </div>
