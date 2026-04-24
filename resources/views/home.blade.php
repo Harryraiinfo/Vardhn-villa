@@ -198,9 +198,9 @@
             @endforeach
         </div>
     </div>
-            <div class="text-center mt-4">
-            <a href="{{route('reviews.form')}}" class="btn btn-outline-warning">VIEW ALL REVIEWS</a>
-        </div>
+    <div class="text-center mt-4">
+        <a href="{{route('reviews.form')}}" class="btn btn-outline-warning">VIEW ALL REVIEWS</a>
+    </div>
 </section>
 <!-- ------------------------------ -->
 
