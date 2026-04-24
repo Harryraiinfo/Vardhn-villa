@@ -51,9 +51,9 @@ class ReviewController extends Controller
         return back()->with('success', 'Review Deleted Successfully');
     }
 
-        public function form()
+    public function form()
     {
-        $reviews = Review::where('status', 1)->latest()->get();
+        $reviews = Review::where('status', 1)->latest()->take(12)->get();
 
         return view('reviews', compact('reviews'));
     }

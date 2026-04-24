@@ -225,7 +225,7 @@
                 </div>
 
                 <div class="col-sm-12 pt-2">
-                  <h3 class="pb-1" style="font-size: 18px; font-weight: 600; line-height: 1.1; color: #5e5e5e;">Extra Charges</h3>
+                  <h3 class="pb-1 text-danger" style="font-size: 18px; font-weight: 600; line-height: 1.1; color: #5e5e5e;">Extra Charges</h3>
                   <p class="extra-list-items">
                     • Tariff for Extra adult and Child above 7 years <br>
                     • Without extra bed <b> &#8377;500/Night</b><br>

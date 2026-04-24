@@ -48,7 +48,7 @@
 
     /* FORM CARD */
     .review-card {
-        margin-top: -150px;
+        margin-top: -130px;
         background: #fff;
         border-radius: 12px;
         padding: 25px;
@@ -66,21 +66,6 @@
         border: 1px solid #ddd;
     }
 
-    /* BUTTON */
-    /* .btn-gold {
-        background: #c9a14a;
-        color: #fff;
-        border-radius: 6px;
-        padding: 12px;
-        width: 100%;
-        border: none;
-        font-weight: 600;
-    }
-
-    .btn-gold:hover {
-        background: #a88534;
-    } */
-
     /* STARS */
     .stars i {
         font-size: 20px;
@@ -94,7 +79,6 @@
 
     /* RIGHT SECTION */
     .review-section {
-        /* padding: 60px 0; */
         background: #f5f5f5;
     }
 
@@ -155,20 +139,6 @@
         margin-top: 10px;
     }
 
-    /* VIEW ALL BUTTON */
-    /* .view-btn {
-        border: 1px solid #c9a14a;
-        padding: 10px 20px;
-        color: #c9a14a;
-        border-radius: 6px;
-        text-decoration: none;
-    }
-
-    .view-btn:hover {
-        background: #c9a14a;
-        color: #fff;
-    } */
-
     @media (max-width: 768px) {
 
         .review-hero {
@@ -204,10 +174,6 @@
             font-size: 26px;
         }
 
-        .review-header i {
-            font-size: 30px;
-        }
-
         .review-text {
             font-size: 13px;
         }
@@ -225,7 +191,7 @@
         </div>
     </div>
 
-    <div class="container mt-4 py-5">
+    <div class="container mt-4">
         <div class="row">
 
             <!-- LEFT FORM -->
@@ -248,7 +214,7 @@
                         <textarea name="message" class="form-control" rows="4" placeholder="Share your experience..."></textarea>
 
                         <label>Your Rating</label>
-                        <div class="stars mb-3">
+                        <div class="stars mb-3 pt-1">
                             <i class="fa fa-star" data-value="1"></i>
                             <i class="fa fa-star" data-value="2"></i>
                             <i class="fa fa-star" data-value="3"></i>
@@ -281,7 +247,7 @@
                                 <!-- <img src="https://i.pravatar.cc/100?u={{ $review->id }}"> -->
                                 <div class="ps-3">
                                     <h6>{{ $review->name }}</h6>
-                                    <div class="review-stars">
+                                    <div class="review-stars mt-1">
                                         @for($i=1; $i<=5; $i++)
                                             @if($i <=$review->rating)
                                             <i class="fa fa-star"></i>

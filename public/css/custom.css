@@ -1093,16 +1093,6 @@
             bottom: 23px;
         }
 
-
-        /* @media (min-width: 992px) {
-            .navbar .dropdown:hover .dropdown-menu {
-                display: block;
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
-            }
-        } */
-
         .section_card>div {
             height: 380px;
         }
@@ -1141,8 +1131,6 @@
         border: 1px solid #ebebeb;
         -webkit-box-shadow: 0 2px 0 0 #e0e0e0;
         box-shadow: 0 2px 0 0 #e0e0e0;
-        /* -webkit-backface-visibility: hidden;
-        -webkit-perspective: 5000; */
     }
 
     .room-thumb .mask {
