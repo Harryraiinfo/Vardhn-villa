@@ -43,7 +43,7 @@
             </div> -->
 
             <div class="facility-card" data-aos="zoom-in" data-aos-delay="500">
-                <img src="{{ asset('Images/Img/dining-Room.png') }}" alt="Dining Room">
+                <img src="{{ asset('Images/Img/dining-table-01.jpeg') }}" alt="Dining Room">
                 <h3>Dining Room</h3>
                 <p>Enjoy food with your family and friends.</p>
             </div>
@@ -72,11 +72,11 @@
                 <p>Enjoy television with your family and friends.</p>
             </div>
 
-            <div class="facility-card" data-aos="zoom-in" data-aos-delay="500">
+            <!-- <div class="facility-card" data-aos="zoom-in" data-aos-delay="500">
                 <img src="{{ asset('Images/Img/laundry.png') }}" alt="Laundry">
                 <h3>Laundry</h3>
                 <p>24/7 available laundry service.</p>
-            </div>
+            </div> -->
 
             <div class="facility-card" data-aos="zoom-in" data-aos-delay="400">
                 <img src="{{ asset('Images/Img/Hot-water.png') }}" alt="Hot Water">

@@ -21,7 +21,6 @@
             <!-- Room 1 -->
             <div class="col-sm-4 mt-4">
                 <div class="room-thumb">
-                    <!-- <img src="{{ asset('Images/Img/bed-room-101.jpeg')}}" alt="room 3" class="img-responsive" /> -->
                     <div class="form-room-slider">
                         <div><img src="{{ asset('Images/Img/bed-room-101.jpeg')}}" alt="bed-room-101" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
                         <div><img src="{{ asset('Images/Img/hall-101.jpeg')}}" alt="hall-101" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
@@ -41,8 +40,8 @@
                             <div class="row">
                                 <div class="tabs">
                                     <div class="tab-buttons">
-                                        <button class="tab-btn active" data-tab="facilities">Facilities</button>
-                                        <button class="tab-btn" data-tab="extra">Extra Charges</button>
+                                        <button class="tab-btn active" data-tab="facilities">Room Overview</button>
+                                        <!-- <button class="tab-btn" data-tab="extra">Extra Charges</button> -->
                                     </div>
 
                                     <div class="tab-content active" id="facilities">
@@ -67,7 +66,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="tab-content" id="extra">
+                                    <!-- <div class="tab-content" id="extra">
                                         <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
                                             • Tariff for Extra adult and Child above 7 years <br>
                                             • Without extra bed <b> &#8377;500/Night</b><br>
@@ -75,7 +74,7 @@
                                             • Tea | Coffe | Food as per order<br>
                                             • Namkin | Biscuits | Jusice | drinks as per use.<br>
                                         </p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <a href="{{ route('booking') }}" class="btn btn-warning btn-block">Book Now</a>
@@ -86,7 +85,13 @@
 
             <!-- Room 2 -->
             <div class="col-sm-4 mt-4">
-                <div class="room-thumb"> <img src="{{ asset('Images/Img/bed-room.jpeg')}}" alt="room 2" class="img-responsive" />
+                <div class="room-thumb">
+                    <div class="form-room-slider">
+                        <div><img src="{{ asset('Images/Img/window-101.jpeg')}}" alt="window-101" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                        <div><img src="{{ asset('Images/Img/bed-room-101.jpeg')}}" alt="bed-room-101" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                        <div><img src="{{ asset('Images/Img/hall-101.jpeg')}}" alt="hall-101" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                    </div>
+
                     <div class="mask">
                         <div class="main row justify-content-center">
                             <div class="col-7">
@@ -104,8 +109,8 @@
                             <div class="row">
                                 <div class="tabs">
                                     <div class="tab-buttons">
-                                        <button class="tab-btn active" data-tab="facilities2">Facilities</button>
-                                        <button class="tab-btn" data-tab="extra2">Extra Charges</button>
+                                        <button class="tab-btn active" data-tab="facilities2">Room Overview</button>
+                                        <!-- <button class="tab-btn" data-tab="extra2">Extra Charges</button> -->
                                     </div>
 
                                     <div class="tab-content active" id="facilities2">
@@ -130,7 +135,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="tab-content" id="extra2">
+                                    <!-- <div class="tab-content" id="extra2">
                                         <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
                                             • Tariff for Extra adult and Child above 7 years <br>
                                             • Without extra bed <b> &#8377;500/Night</b><br>
@@ -138,7 +143,7 @@
                                             • Tea | Coffe | Food as per order<br>
                                             • Namkin | Biscuits | Jusice | drinks as per use.<br>
                                         </p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <a href="{{ route('booking') }}" class="btn btn-warning btn-block">Book Now</a>
@@ -151,7 +156,13 @@
             <!-- Room 3 -->
             <div class="col-sm-4 mt-4">
                 <div class="room-thumb">
-                    <img src="{{ asset('Images/Img/table-chair-103.jpeg')}}" alt="bed-room image" class="img-responsive">
+                    <!-- <img src="{{ asset('Images/Img/table-chair-103.jpeg')}}" alt="bed-room image" class="img-responsive"> -->
+                    <div class="form-room-slider">
+                        <div><img src="{{ asset('Images/Img/bed-room-103.jpeg')}}" alt="bed-room-103" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                        <div><img src="{{ asset('Images/Img/table-chair-103.jpeg')}}" alt="table-chair-103" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                        <div><img src="{{ asset('Images/Img/led-tv-103.jpeg')}}" alt="led-tv-103-103" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                        <div><img src="{{ asset('Images/Img/washroom-103.jpeg')}}" alt="washroom-103" class="img-responsive" style="border-radius: 0px;" /></div>
+                    </div>
                     <div class="mask">
                         <div class="main row justify-content-center">
                             <div class="col-7">
@@ -162,13 +173,12 @@
                             </div>
                         </div>
                         <div class="content">
-                            <!-- <p><span>A modern room in Vardhn Villa</span> The spacious deluxe room has everything you could possibly desire for!</p> -->
                             <!-- <h6 class="text-center py-1">Room Details</h6> -->
                             <div class="row">
                                 <div class="tabs">
                                     <div class="tab-buttons">
-                                        <button class="tab-btn active" data-tab="facilities3">Facilities</button>
-                                        <button class="tab-btn" data-tab="extra3">Extra Charges</button>
+                                        <button class="tab-btn active" data-tab="facilities3">Room Overview</button>
+                                        <!-- <button class="tab-btn" data-tab="extra3">Extra Charges</button> -->
                                     </div>
 
                                     <div class="tab-content active" id="facilities3">
@@ -193,7 +203,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="tab-content" id="extra3">
+                                    <!-- <div class="tab-content" id="extra3">
                                         <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
                                             • Tariff for Extra adult and Child above 7 years <br>
                                             • Without extra bed <b> &#8377;500/Night</b><br>
@@ -201,7 +211,7 @@
                                             • Tea | Coffe | Food as per order<br>
                                             • Namkin | Biscuits | Jusice | drinks as per use.<br>
                                         </p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <a href="{{ route('booking') }}" class="btn btn-warning btn-block">Book Now</a>
@@ -211,8 +221,16 @@
             </div>
 
             <!-- Room 4 -->
-            <div class="col-sm-4 mt-4 double">
-                <div class="room-thumb"> <img src="{{ asset('Images/Img/bed-room-104.jpeg')}}" alt="room 5" class="img-responsive" />
+            <div class="col-sm-4 mt-4 ">
+                <div class="room-thumb">
+                    <div class="form-room-slider">
+                        <div><img src="{{ asset('Images/Img/bed-room-104.jpeg')}}" alt="bed-room-104" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                        <div><img src="{{ asset('Images/Img/led-tv-104.jpeg')}}" alt="led-tv-104" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                        <div><img src="{{ asset('Images/Img/table-sofa-104.jpeg')}}" alt="table-sofa-104" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                        <div><img src="{{ asset('Images/Img/window-104.jpeg')}}" alt="window-104" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                        <div><img src="{{ asset('Images/Img/washroom-104.jpeg')}}" alt="washroom-104" class="img-responsive" style="border-radius: 0px;" /></div>
+                    </div>
+                    <!-- <img src="{{ asset('Images/Img/bed-room-104.jpeg')}}" alt="room 5" class="img-responsive" /> -->
                     <div class="mask">
                         <div class="main row justify-content-center">
                             <div class="col-7">
@@ -221,13 +239,12 @@
                             <div class="col-5 price"> R.No. 104</div>
                         </div>
                         <div class="content">
-                            <!-- <p><span>A modern room in Vardhn Villa</span> Comfortable tastefully decorated rooms with their own balconies either have a sea-view.</p> -->
                             <!-- <h6 class="text-center py-1">Room Details</h6> -->
                             <div class="row">
                                 <div class="tabs">
                                     <div class="tab-buttons">
-                                        <button class="tab-btn active" data-tab="facilities4">Facilities</button>
-                                        <button class="tab-btn" data-tab="extra4">Extra Charges</button>
+                                        <button class="tab-btn active" data-tab="facilities4">Room Overview</button>
+                                        <!-- <button class="tab-btn" data-tab="extra4">Extra Charges</button> -->
                                     </div>
 
                                     <div class="tab-content active" id="facilities4">
@@ -252,7 +269,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="tab-content" id="extra4">
+                                    <!-- <div class="tab-content" id="extra4">
                                         <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
                                             • Tariff for Extra adult and Child above 7 years <br>
                                             • Without extra bed <b> &#8377;500/Night</b><br>
@@ -260,7 +277,7 @@
                                             • Tea | Coffe | Food as per order<br>
                                             • Namkin | Biscuits | Jusice | drinks as per use.<br>
                                         </p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <a href="{{ route('booking') }}" class="btn btn-warning btn-block">Book Now</a>
@@ -271,8 +288,15 @@
 
 
             <!-- Room 5 -->
-            <div class="col-sm-4 mt-4 double executive">
-                <div class="room-thumb"> <img src="{{ asset('Images/Img/bed-room-105.jpeg')}}" alt="room 4" class="img-responsive" />
+            <div class="col-sm-4 mt-4 ">
+                <div class="room-thumb">
+                    <div class="form-room-slider">
+                        <div><img src="{{ asset('Images/Img/bed-room-105.jpeg')}}" alt="bed-room-105" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                        <div><img src="{{ asset('Images/Img/bed-105.jpeg')}}" alt="bed-105" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                        <div><img src="{{ asset('Images/Img/led-tv-105.jpeg')}}" alt="led-tv-105" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                        <div><img src="{{ asset('Images/Img/washroom-105.jpeg')}}" alt="washroom-105" class="img-responsive" style="border-radius: 0px;" /></div>
+                    </div>
+                    <!-- <img src="{{ asset('Images/Img/bed-room-105.jpeg')}}" alt="room 4" class="img-responsive" /> -->
                     <div class="mask">
                         <div class="main row justify-content-center">
                             <div class="col-7">
@@ -281,13 +305,12 @@
                             <div class="col-5 price">R.No. 105</div>
                         </div>
                         <div class="content">
-                            <!-- <p><span>A modern room in Vardhn Villa</span>Immerse yourself in the elegance and comfort of executive room!</p> -->
                             <!-- <h6 class="text-center py-1">Room Details</h6> -->
                             <div class="row">
                                 <div class="tabs">
                                     <div class="tab-buttons">
-                                        <button class="tab-btn active" data-tab="facilities5">Facilities</button>
-                                        <button class="tab-btn" data-tab="extra5">Extra Charges</button>
+                                        <button class="tab-btn active" data-tab="facilities5">Room Overview</button>
+                                        <!-- <button class="tab-btn" data-tab="extra5">Extra Charges</button> -->
                                     </div>
 
                                     <div class="tab-content active" id="facilities5">
@@ -312,7 +335,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="tab-content" id="extra5">
+                                    <!-- <div class="tab-content" id="extra5">
                                         <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
                                             • Tariff for Extra adult and Child above 7 years <br>
                                             • Without extra bed <b> &#8377;500/Night</b><br>
@@ -320,7 +343,7 @@
                                             • Tea | Coffe | Food as per order<br>
                                             • Namkin | Biscuits | Jusice | drinks as per use.<br>
                                         </p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <a href="{{ route('booking') }}" class="btn btn-warning btn-block">Book Now</a>
@@ -330,9 +353,13 @@
             </div>
 
             <!-- Room 6-->
-            <div class="col-sm-4 mt-4 single executive apartment">
+            <div class="col-sm-4 mt-4">
                 <div class="room-thumb">
-                    <img src="{{ asset('Images/Img/bed-room-106.jpeg')}}" alt="room 6" class="img-responsive" />
+                      <div class="form-room-slider">
+                        <div><img src="{{ asset('Images/Img/bed-room-106.jpeg')}}" alt="bed-room-106" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                        <div><img src="{{ asset('Images/Img/led-tv-106.jpeg')}}" alt="led-tv-106" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
+                    </div>
+                    <!-- <img src="{{ asset('Images/Img/bed-room-106.jpeg')}}" alt="room 6" class="img-responsive" /> -->
                     <div class="mask">
                         <div class="main row justify-content-center">
                             <div class="col-7">
@@ -341,13 +368,12 @@
                             <div class="col-5 price">R.No. 106</div>
                         </div>
                         <div class="content">
-                            <!-- <p><span>A modern room in Vardhn Villa</span> From a glorious honeymoon and anniversaries, treasure each occasion with a celebration at some of the finest hotels in the world. </p> -->
                             <!-- <h6 class="text-center py-1">Room Details</h6> -->
                             <div class="row">
                                 <div class="tabs">
                                     <div class="tab-buttons">
-                                        <button class="tab-btn active" data-tab="facilities6">Facilities</button>
-                                        <button class="tab-btn" data-tab="extra6">Extra Charges</button>
+                                        <button class="tab-btn active" data-tab="facilities6">Room Overview</button>
+                                        <!-- <button class="tab-btn" data-tab="extra6">Extra Charges</button> -->
                                     </div>
 
                                     <div class="tab-content active" id="facilities6">
@@ -372,7 +398,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="tab-content" id="extra6">
+                                    <!-- <div class="tab-content" id="extra6">
                                         <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
                                             • Tariff for Extra adult and Child above 7 years <br>
                                             • Without extra bed <b> &#8377;500/Night</b><br>
@@ -380,7 +406,7 @@
                                             • Tea | Coffe | Food as per order<br>
                                             • Namkin | Biscuits | Jusice | drinks as per use.<br>
                                         </p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <a href="{{ route('booking') }}" class="btn btn-warning btn-block">Book Now</a>
@@ -415,7 +441,7 @@
     });
 </script>
 
-<script>
+<!-- <script>
     document.querySelectorAll(".tabs").forEach(tabContainer => {
 
         const tabs = tabContainer.querySelectorAll(".tab-btn");
@@ -436,5 +462,5 @@
         });
 
     });
-</script>
+</script> -->
 @endpush

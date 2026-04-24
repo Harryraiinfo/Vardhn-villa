@@ -49,9 +49,102 @@
             color: #28a745;
         }
 
-        @media (max-width:768px) {
+        .fac-text {
+            font-size: 15px;
+        }
+
+        .room-charges {
+            color: #5e5e5e;
+            text-align: right;
+            font-size: 16px;
+        }
+
+        /* Slick arrows custom style */
+        .slick-prev,
+        .slick-next {
+            width: 50px;
+            height: 50px;
+            z-index: 10;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            font-size: 55px !important;
+            color: #ffc107 !important;
+        }
+
+
+        .slick-prev {
+            left: 10px;
+        }
+
+        .slick-next {
+            right: 15px;
+        }
+
+        /* ========================= */
+        .facilities-box {
+            padding: 10px 0;
+        }
+
+        .fac-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .fac-row {
+            display: flex;
+            flex-wrap: wrap;
+            background: #f3f3f3;
+            padding: 5px 12px;
+            margin-bottom: 4px;
+            border-radius: 4px;
+        }
+
+        .fac-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 15px;
+            color: #333;
+            min-width: 180px;
+            /* flex: 1; */
+        }
+
+        .fac-item i {
+            color: #1e1e1e;
+            font-size: 16px;
+        }
+
+
+        @media (max-width: 768px) {
             .room-options {
                 display: block;
+            }
+
+            .slick-next:before,
+            .slick-prev:before {
+                font-size: 35px !important;
+            }
+
+            .fac-row {
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .fac-item {
+                min-width: 100%;
+                font-size: 13px;
+            }
+
+            .fac-title {
+                font-size: 16px;
+            }
+
+            .room-charges,
+            .extra-list-items {
+                font-size: 14px;
             }
         }
     </style>
@@ -68,16 +161,87 @@
 <!-- BOOKING FORM -->
 <section class="booking-section">
     <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-6">
-                <div class="form-room-slider  booking-sec " id="roomSlider">
-                    <div>
-                        <img src="{{ asset('Images/Img/window-101.jpeg') }}" alt="Room">
-                        <!-- <img src="/${img}" alt> -->
+        <div class="row justify-content-center align-items-start">
+            <div class="col-md-6 ">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-room-slider  booking-sec " id="roomSlider">
+                            <div>
+                                <img src="{{ asset('Images/Img/window-101.jpeg') }}" alt="Room">
+                                <!-- <img src="/${img}" alt> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="row pt-3">
+                    <div class="col-md-12">
+                        <!-- New Sections Add On -->
+                        <div class="container">
+                            <div class="row justify-content-between align-items-start">
+                                <h2 class="lined-heading mb-2"><span>Room Details</span></h2>
+                                <div class="col-sm-12">
+                                    <h3 class="room-charges">Room Price: <span class="room-price"> <b>₹2999</b></span></h3>
+                                    <h3 style="font-size: 18px; font-weight: 600; line-height: 1.1; color: #5e5e5e;">Facilities</h3>
+                                    <div class="facilities-box">
 
+                                        <div class="fac-row">
+                                            <div class="fac-item">
+                                                <i class="fa fa-check-circle"></i> Double Bed
+                                            </div>
+                                            <div class="fac-item">
+                                                <i class="fa fa-check-circle"></i> Spacious Wash Room
+                                            </div>
+                                        </div>
+
+                                        <div class="fac-row" style="background-color: white;">
+                                            <div class="fac-item">
+                                                <i class="fa fa-check-circle"></i> Attached Balcony
+                                            </div>
+                                            <div class="fac-item">
+                                                <i class="fa fa-check-circle"></i> Mini Fridage
+                                            </div>
+                                            <div class="fac-item">
+                                                <i class="fa fa-check-circle"></i> Free Wi-Fi
+                                            </div>
+                                        </div>
+
+                                        <div class="fac-row">
+                                            <div class="fac-item">
+                                                <i class="fa fa-check-circle"></i> Cable facility
+                                            </div>
+                                            <div class="fac-item">
+                                                <i class="fa fa-check-circle"></i> Electric Kettle
+                                            </div>
+                                            <div class="fac-item">
+                                                <i class="fa fa-check-circle"></i> Wather Bottle
+                                            </div>
+                                        </div>
+
+                                        <div class="fac-row" style="background-color: white;">
+                                            <div class="fac-item">
+                                                <i class="fa fa-check-circle"></i> Smart LED TV
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 pt-2">
+                                    <h3 class="pb-1 text-danger" style="font-size: 18px; font-weight: 600; line-height: 1.1; color: #5e5e5e;">Extra Charges</h3>
+                                    <p class="extra-list-items">
+                                        • Tariff for Extra adult and Child above 7 years <br>
+                                        • Without extra bed <b> &#8377;500/Night</b><br>
+                                        • With extra bed <b>&#8377;1000/Night</b><br>
+                                        • Tea | Coffe | Food as per order<br>
+                                        • Namkin | Biscuits | Juices | drinks as per use.<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
             <div class="col-md-6 mt-3">
 
                 @if(session('error'))
@@ -227,7 +391,7 @@
     <div id="paymentBox" style="display:none; margin-top:40px;" class="payment-card">
         <div class="container card p-4 shadow ">
             <h4 class="text-center">Complete Your Payment</h4>
-            <p class="text-center text-success">We are Accept Your Payment olny This Method</p>
+            <p class="text-center text-success">We are Accept Your Payment only This Method</p>
             <div class="row justify-content-center align-items-center mt-3">
                 <div class="col-md-5">
                     <div class="Bank-deatils">
@@ -264,7 +428,7 @@
 </section>
 
 <!-- New Sections Add On -->
-<section>
+<!-- <section>
     <div class="container">
         <div class="row justify-content-between align-items-start">
             <h2 class="lined-heading"><span>Room Details</span></h2>
@@ -306,11 +470,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 <!-- New Sections Add On -->
-<section class="rooms my-5">
+<section class="rooms mb-5">
     <div class="container pt-3">
         <div class="row" id="roomCardsContainer">
 
@@ -378,14 +542,14 @@
     </div>
 </div>`;
 
-    const commonExtra = `
-   <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
-    • Tariff for Extra adult and Child above 7 years <br>
-    • Without extra bed <b> &#8377;500/Night</b><br>
-    • With extra bed <b>&#8377;1000/Night</b><br>
-    • Tea | Coffe | Food as per order<br>
-    • Namkin | Biscuits | Jusice | drinks as per use.<br>
-</p>  `;
+    //     const commonExtra = `
+    //    <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
+    //     • Tariff for Extra adult and Child above 7 years <br>
+    //     • Without extra bed <b> &#8377;500/Night</b><br>
+    //     • With extra bed <b>&#8377;1000/Night</b><br>
+    //     • Tea | Coffe | Food as per order<br>
+    //     • Namkin | Biscuits | Jusice | drinks as per use.<br>
+    // </p>  `;
 
     const roomData = {
         "Mountain Peaks & Valley View - 2999": {
@@ -398,22 +562,19 @@
                     title: "Shri Khand peak View",
                     roomNo: "103",
                     img: "Images/Img/bed-room-103.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 },
                 {
                     title: "Apple orchard and Forest View",
                     roomNo: "105",
                     img: "Images/Img/bed-room-105.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 },
                 {
                     title: "Apple orchard and Forest View",
                     roomNo: "106",
                     img: "Images/Img/bed-room-106.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 }
             ]
         },
@@ -427,22 +588,19 @@
                     title: "Mountain Peaks & Valley View",
                     roomNo: "101",
                     img: "Images/Img/window-101.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 },
                 {
                     title: "Shri Khand peak View",
                     roomNo: "103",
                     img: "Images/Img/bed-room-103.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 },
                 {
                     title: "Apple orchard and Forest View",
                     roomNo: "106",
                     img: "Images/Img/bed-room-106.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 }
             ]
         },
@@ -456,22 +614,19 @@
                     title: "Apple orchard and Forest View",
                     roomNo: "104",
                     img: "Images/Img/window-104.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 },
                 {
                     title: "Apple orchard and Forest View",
                     roomNo: "105",
                     img: "Images/Img/bed-room-105.jpeg",
-                    "facilities": commonFacilities,
-                    "facilities": commonFacilities,
+                    "facilities": commonFacilities
                 },
                 {
                     title: "Apple orchard and Forest View",
                     roomNo: "106",
                     img: "Images/Img/bed-room-106.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 }
 
             ]
@@ -487,22 +642,19 @@
                     title: "Mountain Peaks & Valley View",
                     roomNo: "101",
                     img: "Images/Img/window-101.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 },
                 {
                     title: "Apple orchard and Forest View",
                     roomNo: "105",
                     img: "Images/Img/bed-room-105.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 },
                 {
                     title: "Apple orchard and Forest View",
                     roomNo: "106",
                     img: "Images/Img/bed-room-106.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 }
             ]
         },
@@ -516,22 +668,19 @@
                     title: "Apple orchard and Forest View",
                     roomNo: "105",
                     img: "Images/Img/bed-room-105.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 },
                 {
                     title: "Mountain Peaks & Valley View",
                     roomNo: "101",
                     img: "Images/Img/window-101.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 },
                 {
                     title: "Apple orchard and Forest View",
                     roomNo: "106",
                     img: "Images/Img/bed-room-106.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 }
             ]
         },
@@ -545,22 +694,19 @@
                     title: "Mountain Peaks & Valley View",
                     roomNo: "101",
                     img: "Images/Img/window-101.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 },
                 {
                     title: "Apple orchard and Forest View",
                     roomNo: "104",
                     img: "Images/Img/window-104.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 },
                 {
                     title: "Apple orchard and Forest View",
                     roomNo: "106",
                     img: "Images/Img/bed-room-106.jpeg",
-                    "facilities": commonFacilities,
-                    "extra": commonExtra
+                    "facilities": commonFacilities
                 }
             ]
         }
@@ -585,7 +731,6 @@
             autoplay: false,
             fade: true,
             arrows: true,
-
         });
     }
 
@@ -614,17 +759,13 @@
                             <div class="row">
                                 <div class="tabs">
                                     <div class="tab-buttons">
-                                        <button class="tab-btn active" data-tab="fac_${uniqueId}">Facilities</button>
-                                        <button class="tab-btn" data-tab="extra_${uniqueId}">Extra Charges</button>
+                                        <button class="tab-btn active" data-tab="fac_${uniqueId}">Room Overview</button>
                                     </div>
 
                                     <div class="tab-content active" id="fac_${uniqueId}">
                                        ${card.facilities || ''}
                                     </div>
 
-                                    <div class="tab-content" id="extra_${uniqueId}">
-                                    ${card.extra || ''}
-                                    </div>
                                 </div>
                             </div>
                             <a href="{{ route('roomlist') }}" class="btn btn-warning btn-block">Read More</a>
@@ -891,31 +1032,6 @@
             //   fetchBookedDates(firstRoom.value);
             // }
         }
-    });
-</script>
-
-
-<script>
-    document.addEventListener("click", function(e) {
-
-        if (e.target.classList.contains("tab-btn")) {
-
-            let tab = e.target;
-            let tabContainer = tab.closest(".tabs");
-
-            let tabs = tabContainer.querySelectorAll(".tab-btn");
-            let contents = tabContainer.querySelectorAll(".tab-content");
-
-            tabs.forEach(btn => btn.classList.remove("active"));
-            contents.forEach(content => content.classList.remove("active"));
-
-            tab.classList.add("active");
-
-            tabContainer
-                .querySelector(`#${tab.dataset.tab}`)
-                .classList.add("active");
-        }
-
     });
 </script>
 @endpush
