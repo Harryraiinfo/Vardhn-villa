@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Gallery-pic - Vardhn Villa')
+@section('title', 'Room-List - Vardhn Villa')
 
 @section('content')
 
@@ -19,7 +19,7 @@
         <div class="row room-list fadeIn appear">
 
             <!-- Room 1 -->
-            <div class="col-sm-4 mt-4">
+            <div class="col col-sm-4 mt-4">
                 <div class="room-thumb">
                     <div class="form-room-slider">
                         <div><img src="{{ asset('Images/Img/bed-room-101.jpeg')}}" alt="bed-room-101" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
@@ -59,7 +59,7 @@
                                                 <ul class="list-unstyled">
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Water Bottle</li>
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
                                                 </ul>
                                             </div>
@@ -71,7 +71,7 @@
                                             • Tariff for Extra adult and Child above 7 years <br>
                                             • Without extra bed <b> &#8377;500/Night</b><br>
                                             • With extra bed <b>&#8377;1000/Night</b><br>
-                                            • Tea | Coffe | Food as per order<br>
+                                            • Tea | Coffee | Food as per order<br>
                                             • Namkin | Biscuits | Jusice | drinks as per use.<br>
                                         </p>
                                     </div> -->
@@ -84,7 +84,7 @@
             </div>
 
             <!-- Room 2 -->
-            <div class="col-sm-4 mt-4">
+            <div class="col col-sm-4 mt-4">
                 <div class="room-thumb">
                     <div class="form-room-slider">
                         <div><img src="{{ asset('Images/Img/window-101.jpeg')}}" alt="window-101" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
@@ -128,7 +128,7 @@
                                                 <ul class="list-unstyled">
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Water Bottle</li>
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
                                                 </ul>
                                             </div>
@@ -140,7 +140,7 @@
                                             • Tariff for Extra adult and Child above 7 years <br>
                                             • Without extra bed <b> &#8377;500/Night</b><br>
                                             • With extra bed <b>&#8377;1000/Night</b><br>
-                                            • Tea | Coffe | Food as per order<br>
+                                            • Tea | Coffee | Food as per order<br>
                                             • Namkin | Biscuits | Jusice | drinks as per use.<br>
                                         </p>
                                     </div> -->
@@ -154,7 +154,7 @@
 
 
             <!-- Room 3 -->
-            <div class="col-sm-4 mt-4">
+            <div class="col col-sm-4 mt-4">
                 <div class="room-thumb">
                     <!-- <img src="{{ asset('Images/Img/table-chair-103.jpeg')}}" alt="bed-room image" class="img-responsive"> -->
                     <div class="form-room-slider">
@@ -196,7 +196,7 @@
                                                 <ul class="list-unstyled">
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Water Bottle</li>
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
                                                 </ul>
                                             </div>
@@ -208,7 +208,7 @@
                                             • Tariff for Extra adult and Child above 7 years <br>
                                             • Without extra bed <b> &#8377;500/Night</b><br>
                                             • With extra bed <b>&#8377;1000/Night</b><br>
-                                            • Tea | Coffe | Food as per order<br>
+                                            • Tea | Coffee | Food as per order<br>
                                             • Namkin | Biscuits | Jusice | drinks as per use.<br>
                                         </p>
                                     </div> -->
@@ -221,7 +221,7 @@
             </div>
 
             <!-- Room 4 -->
-            <div class="col-sm-4 mt-4 ">
+            <div class="col col-sm-4 mt-4 ">
                 <div class="room-thumb">
                     <div class="form-room-slider">
                         <div><img src="{{ asset('Images/Img/bed-room-104.jpeg')}}" alt="bed-room-104" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
@@ -262,7 +262,7 @@
                                                 <ul class="list-unstyled">
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Water Bottle</li>
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
                                                 </ul>
                                             </div>
@@ -274,7 +274,7 @@
                                             • Tariff for Extra adult and Child above 7 years <br>
                                             • Without extra bed <b> &#8377;500/Night</b><br>
                                             • With extra bed <b>&#8377;1000/Night</b><br>
-                                            • Tea | Coffe | Food as per order<br>
+                                            • Tea | Coffee | Food as per order<br>
                                             • Namkin | Biscuits | Jusice | drinks as per use.<br>
                                         </p>
                                     </div> -->
@@ -288,7 +288,7 @@
 
 
             <!-- Room 5 -->
-            <div class="col-sm-4 mt-4 ">
+            <div class="col col-sm-4 mt-4 ">
                 <div class="room-thumb">
                     <div class="form-room-slider">
                         <div><img src="{{ asset('Images/Img/bed-room-105.jpeg')}}" alt="bed-room-105" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
@@ -328,7 +328,7 @@
                                                 <ul class="list-unstyled">
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Water Bottle</li>
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
                                                 </ul>
                                             </div>
@@ -340,7 +340,7 @@
                                             • Tariff for Extra adult and Child above 7 years <br>
                                             • Without extra bed <b> &#8377;500/Night</b><br>
                                             • With extra bed <b>&#8377;1000/Night</b><br>
-                                            • Tea | Coffe | Food as per order<br>
+                                            • Tea | Coffee | Food as per order<br>
                                             • Namkin | Biscuits | Jusice | drinks as per use.<br>
                                         </p>
                                     </div> -->
@@ -353,9 +353,9 @@
             </div>
 
             <!-- Room 6-->
-            <div class="col-sm-4 mt-4">
+            <div class="col col-sm-4 mt-4">
                 <div class="room-thumb">
-                      <div class="form-room-slider">
+                    <div class="form-room-slider">
                         <div><img src="{{ asset('Images/Img/bed-room-106.jpeg')}}" alt="bed-room-106" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
                         <div><img src="{{ asset('Images/Img/led-tv-106.jpeg')}}" alt="led-tv-106" class="img-responsive" style="border-radius: 0px; height: 100%;" /></div>
                     </div>
@@ -391,7 +391,7 @@
                                                 <ul class="list-unstyled">
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
-                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
+                                                    <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Water Bottle</li>
                                                     <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
                                                 </ul>
                                             </div>
@@ -403,7 +403,7 @@
                                             • Tariff for Extra adult and Child above 7 years <br>
                                             • Without extra bed <b> &#8377;500/Night</b><br>
                                             • With extra bed <b>&#8377;1000/Night</b><br>
-                                            • Tea | Coffe | Food as per order<br>
+                                            • Tea | Coffee | Food as per order<br>
                                             • Namkin | Biscuits | Jusice | drinks as per use.<br>
                                         </p>
                                     </div> -->
@@ -430,7 +430,7 @@
     $('.form-room-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 1000,
         speed: 1000,
         arrows: false,

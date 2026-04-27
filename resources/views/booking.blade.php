@@ -213,7 +213,7 @@
                                                 <i class="fa fa-check-circle"></i> Electric Kettle
                                             </div>
                                             <div class="fac-item">
-                                                <i class="fa fa-check-circle"></i> Wather Bottle
+                                                <i class="fa fa-check-circle"></i> Water Bottle
                                             </div>
                                         </div>
 
@@ -231,7 +231,7 @@
                                         • Tariff for Extra adult and Child above 7 years <br>
                                         • Without extra bed <b> &#8377;500/Night</b><br>
                                         • With extra bed <b>&#8377;1000/Night</b><br>
-                                        • Tea | Coffe | Food as per order<br>
+                                        • Tea | Coffee | Food as per order<br>
                                         • Namkin | Biscuits | Juices | drinks as per use.<br>
                                     </p>
                                 </div>
@@ -391,7 +391,7 @@
     <div id="paymentBox" style="display:none; margin-top:40px;" class="payment-card">
         <div class="container card p-4 shadow ">
             <h4 class="text-center">Complete Your Payment</h4>
-            <p class="text-center text-success">We are Accept Your Payment only This Method</p>
+            <p class="text-center text-success">We Accept Your Payment only This Method</p>
             <div class="row justify-content-center align-items-center mt-3">
                 <div class="col-md-5">
                     <div class="Bank-deatils">
@@ -448,7 +448,7 @@
                         <tr>
                             <td><i class="fa fa-check-circle"></i> Cable facility</td>
                             <td><i class="fa fa-check-circle"></i> Electric Kettle</td>
-                            <td><i class="fa fa-check-circle"></i> Wather Bottle</td>
+                            <td><i class="fa fa-check-circle"></i> Water Bottle</td>
                         </tr>
                         <tr>
                             <td><i class="fa fa-check-circle"></i> Smart LED TV</td>
@@ -464,7 +464,7 @@
                     • Tariff for Extra adult and Child above 7 years <br>
                     • Without extra bed <b> &#8377;500/Night</b><br>
                     • With extra bed <b>&#8377;1000/Night</b><br>
-                    • Tea | Coffe | Food as per order<br>
+                    • Tea | Coffee | Food as per order<br>
                     • Namkin | Biscuits | Jusice | drinks as per use.<br>
                 </p>
             </div>
@@ -536,7 +536,7 @@
         <ul class="list-unstyled">
             <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
             <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
-            <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
+            <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Water Bottle</li>
             <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
         </ul>
     </div>
@@ -547,7 +547,7 @@
     //     • Tariff for Extra adult and Child above 7 years <br>
     //     • Without extra bed <b> &#8377;500/Night</b><br>
     //     • With extra bed <b>&#8377;1000/Night</b><br>
-    //     • Tea | Coffe | Food as per order<br>
+    //     • Tea | Coffee | Food as per order<br>
     //     • Namkin | Biscuits | Jusice | drinks as per use.<br>
     // </p>  `;
 

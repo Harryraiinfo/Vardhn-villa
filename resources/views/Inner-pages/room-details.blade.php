@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Book Your Stay - VARDHN VILLA')
+@section('title', 'Room-Details - VARDHN VILLA')
 
 @section('content')
 

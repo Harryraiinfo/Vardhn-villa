@@ -1161,7 +1161,7 @@
         position: relative;
         padding: 10px 0 0 20px;
         display: inline-block;
-            margin-top: 5px;
+        margin-top: 5px;
 
     }
 
@@ -1326,4 +1326,33 @@
             position: relative;
             margin-top: -254px;
         }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+
+        .room-thumb,
+        .room-thumb .mask{
+            width: 100%;
+            height: 176px;
+        }
+        .room-thumb img{
+                        height: 156px;
+        }
+
+        .room-thumb .main h5 {
+            padding: 0 10px;
+            font-size: 12px;
+        }
+
+        .room-thumb .main,
+        .room-thumb .main .price {
+            height: 35px;
+            font-size: 10px;
+        }
+
+        .room-thumb .content .ul.list-unstyled li {
+            padding: 10px;
+            font-size: 10px;
+        }
+
     }
