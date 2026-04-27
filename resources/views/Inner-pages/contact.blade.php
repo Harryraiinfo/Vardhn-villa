@@ -44,7 +44,7 @@
                     <div class="contact-info" data-aos="fade-down" data-aos-delay="200">
                         <h2>Contact Info</h2>
                         <p>📍 Sarahan, Himachal Pradesh</p>
-                        <p>📞 <a href="https://wa.me/+919317196995" target="_blank">+91 9317196995</a></p>
+                        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/+919317196995" target="_blank"> WhatsApp +91 9317196995</a></p>
                         <p>📞 Landline <a href="tel:01782-292131">01782-292131</a></p>
                         <p>📧 <a href="mailto:vardhnvilla@gmail.com">vardhnvilla@gmail.com</a></p>
 

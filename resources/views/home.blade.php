@@ -19,8 +19,8 @@
 
         <div class="slide" style="height:100vh; background-image:url('{{ asset('Images/Banner-img/Winter-view.jpeg') }}')">
             <div class="overlay-heading">
-                <h1>Vardhn Villa</h1>
-                <p>Luxury Stay Experience</p>
+                <h1 data-aos="fade-down" data-aos-delay="200">Vardhn Villa</h1>
+                <p data-aos="fade-down" data-aos-delay="200">Luxury Stay Experience</p>
                 <a href="{{ route('booking') }}" class="btn btn-outline-warning">Book Now</a>
             </div>
         </div>
@@ -68,18 +68,17 @@
             <div class="col-md-6 mb-3">
                 <div class="clearfix ">
                     <!-- <h1 class="pb-2" data-aos="zoom-in">Welcome to VARDHN VILLA</h1>
-                    <h4 class="pb-2" data-aos="fade-up"
-                        data-aos-delay="200">Luxurious Homestay in the heart of Himachal Pradesh</h4>
+                    <h4 class="pb-2" data-aos="fade-up" data-aos-delay="200">Luxurious Homestay in the heart of Himachal Pradesh</h4>
 
                     <p data-aos="fade-up" data-aos-delay="400"> VARDHN VILLA is newly constructed homestay located 1km ahead of the famous Bhima Kali Temple at Sarahan Bushahr. The villa offers six Luxurious rooms with stunning views of the snow covered mountain ranges of Shree Khand Mahadev and mesmerizing sunsets from the rooms and balconies.
                     </p>
                     <a class="btn btn-warning"
                         href="{{ route('about') }}">Read More</a> -->
 
-                    <h1 style="color: #ffc107; font-weight: 700;">Welcome to Vardhn Villa</h1>
-                    <h4 class="mb-3" style="color: #c3872a;">Your Sanctuary in the Clouds</h4>
-                    <p>Nestled in the serene embrace of the green hills, <strong>Vardhn Villa</strong> is more than a stay—it’s a soulful escape. Located 162 km from the bustle of Shimla in the beautiful town of Sarahan Bushahr, Himachal Pradesh, our villa offers a front-row seat to the majestic Himalayas, blending luxury with the warmth of a mountain home.</p>
-                    <p>Our Villa ensures a peaceful and premium stay experience for travellers through its modern architecture, making it a perfect and comfortable choice.</p>
+                    <h1 style="color: #ffc107; font-weight: 700;" data-aos="zoom-in">Welcome to Vardhn Villa</h1>
+                    <h4 class="mb-3" style="color: #c3872a;" data-aos="fade-up" data-aos-delay="200">Your Sanctuary in the Clouds</h4>
+                    <p data-aos="fade-up" data-aos-delay="400">Nestled in the serene embrace of the green hills, <strong>Vardhn Villa</strong> is more than a stay—it’s a soulful escape. Located 162 km from the bustle of Shimla in the beautiful town of Sarahan Bushahr, Himachal Pradesh, our villa offers a front-row seat to the majestic Himalayas, blending luxury with the warmth of a mountain home.</p>
+                    <p data-aos="fade-up" data-aos-delay="400">Our Villa ensures a peaceful and premium stay experience for travellers through its modern architecture, making it a perfect and comfortable choice.</p>
                     <a class="btn btn-warning mt-3  me-2"
                         href="{{ route('about') }}">Read More</a>
                     <a href="{{ route('booking') }}" class="btn btn-warning mt-3">Book Your Stay Now</a>
@@ -156,15 +155,15 @@
                 </div>
             </div>
             <div class="col-md-6 ps-4 pt-4">
-                <h1 class="food_heading"> Delicious Food</h1>
-                <ul>
-                    <li>Hot & Cold Water</li>
-                    <li>Breakfast / Lunch / Dinner</li>
-                    <li>Non-vegetarian options available on request</li>
-                    <li>Freshly cooked local and north Indian vegetarian food</li>
+                <h1 class="food_heading" data-aos="fade-up" data-aos-delay="200"> Delicious Food</h1>
+                <ul data-aos="fade-up" data-aos-delay="200">
+                    <li data-aos="fade-up" data-aos-delay="200">Hot & Cold Water</li>
+                    <li data-aos="fade-up" data-aos-delay="200">Breakfast / Lunch / Dinner</li>
+                    <li data-aos="fade-up" data-aos-delay="200">Non-vegetarian options available on request</li>
+                    <li data-aos="fade-up" data-aos-delay="200">Freshly cooked local and north Indian vegetarian food</li>
                 </ul>
                 <br>
-                <div class="food_btn"> <a href="{{route('food')}}" class="btn btn-warning">View Menu</a> </div>
+                <div class="food_btn" data-aos="fade-down" data-aos-delay="200"> <a href="{{route('food')}}" class="btn btn-warning">View Menu</a> </div>
             </div>
         </div>
     </div>
@@ -198,7 +197,7 @@
             @endforeach
         </div>
     </div>
-    <div class="text-center mt-4">
+    <div class="text-center mt-4" data-aos="fade-down" data-aos-delay="200">
         <a href="{{route('reviews.form')}}" class="btn btn-outline-warning">VIEW ALL REVIEWS</a>
     </div>
 </section>
@@ -207,7 +206,7 @@
 <!------------- Facilities Section Start---------- -->
 <section class="facilities">
     <div class="container">
-        <h2>Facilities for a Comfortable Stay</h2>
+        <h2 data-aos="fade-down" data-aos-delay="200">Facilities for a Comfortable Stay</h2>
 
         <div class="facility-slider">
 

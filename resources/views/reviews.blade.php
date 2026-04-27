@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-    /* HERO */
+    /* Review Page Style */
     .review-hero {
         background: url('{{ asset("Images/Img/window-101.jpeg") }}') center/cover no-repeat;
         height: 480px;
@@ -196,7 +196,7 @@
 
             <!-- LEFT FORM -->
             <div class="col-md-4">
-                <div class="review-card">
+                <div class="review-card" data-aos="fade-up" data-aos-delay="200">
                     @if(session('success'))
                     <div class="alert alert-success">
                         {{ session('success') }}
@@ -246,7 +246,7 @@
                                 <i class="fa-solid fa-user-circle fs-1"></i>
                                 <!-- <img src="https://i.pravatar.cc/100?u={{ $review->id }}"> -->
                                 <div class="ps-3">
-                                    <h6>{{ $review->name }}</h6>
+                                    <h6 data-aos="fade-up" data-aos-delay="300">{{ $review->name }}</h6>
                                     <div class="review-stars mt-1">
                                         @for($i=1; $i<=5; $i++)
                                             @if($i <=$review->rating)
@@ -272,12 +272,10 @@
                     @endforeach
                 </div>
 
-                <!-- <div class="text-center mt-4">
-                <a href="#" class="view-btn">VIEW ALL REVIEWS</a>
-            </div> -->
-
+                <!-- <div class="text-center my-4">
+                    <a href="#" class="btn btn-warning">VIEW ALL REVIEWS</a>
+                </div> -->
             </div>
-
         </div>
     </div>
 </div>

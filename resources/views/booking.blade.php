@@ -198,7 +198,7 @@
                                                 <i class="fa fa-check-circle"></i> Attached Balcony
                                             </div>
                                             <div class="fac-item">
-                                                <i class="fa fa-check-circle"></i> Mini Fridage
+                                                <i class="fa fa-check-circle"></i> Mini Fridge
                                             </div>
                                             <div class="fac-item">
                                                 <i class="fa fa-check-circle"></i> Free Wi-Fi
@@ -213,15 +213,11 @@
                                                 <i class="fa fa-check-circle"></i> Electric Kettle
                                             </div>
                                             <div class="fac-item">
-                                                <i class="fa fa-check-circle"></i> Water Bottle
-                                            </div>
-                                        </div>
-
-                                        <div class="fac-row" style="background-color: white;">
-                                            <div class="fac-item">
                                                 <i class="fa fa-check-circle"></i> Smart LED TV
                                             </div>
+
                                         </div>
+
                                     </div>
                                 </div>
 
@@ -325,9 +321,9 @@
                                     </label>
 
                                     <label class="room-card">
-                                        <input type="checkbox" value="Temple and Valley - 2999">
+                                        <input type="checkbox" value="Temple and Valley View - 2999">
                                         <div class="room-content">
-                                            <span class="room-name">Temple and Valley</span>
+                                            <span class="room-name">Temple and Valley View</span>
                                             <span class="room-price">₹2999</span>
                                         </div>
                                     </label>
@@ -442,13 +438,12 @@
                         </tr>
                         <tr>
                             <td><i class="fa fa-check-circle"></i> Attached Balcony</td>
-                            <td><i class="fa fa-check-circle"></i> Mini Fridage</td>
-                            <td><i class="fa fa-check-circle"></i> Free Wi-Fi</td>
+                            <td><i class="fa fa-check-circle"></i> Mini Fridge</td>
                         </tr>
                         <tr>
+                            <td><i class="fa fa-check-circle"></i> Free Wi-Fi</td>
                             <td><i class="fa fa-check-circle"></i> Cable facility</td>
                             <td><i class="fa fa-check-circle"></i> Electric Kettle</td>
-                            <td><i class="fa fa-check-circle"></i> Water Bottle</td>
                         </tr>
                         <tr>
                             <td><i class="fa fa-check-circle"></i> Smart LED TV</td>
@@ -528,15 +523,14 @@
             <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Double Bed</li>
             <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Spacious Wash Room</li>
             <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Attached Balcony</li>
-            <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Mini Fridage</li>
+            <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Mini Fridge</li>
+            </ul>
+            </div>
+            <div class="col-sm-6">
+            <ul class="list-unstyled">
             <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Free Wi-Fi</li>
-        </ul>
-    </div>
-    <div class="col-sm-6">
-        <ul class="list-unstyled">
             <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
             <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
-            <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Water Bottle</li>
             <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
         </ul>
     </div>
@@ -579,7 +573,7 @@
             ]
         },
 
-        "Temple and Valley - 2999": {
+        "Temple and Valley View - 2999": {
             images: [
                 "Images/Img/led-tv-105.jpeg",
                 "Images/Img/bed-room-105.jpeg"

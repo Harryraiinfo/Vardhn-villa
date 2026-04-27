@@ -19,7 +19,7 @@
     <div class="container">
         <div class="facility-grid">
             <div class="facility-card" data-aos="zoom-in">
-                <img src="{{ asset('Images/Img/Bed-room-02.jpeg') }}" alt="Luxury Rooms">
+                <img src="{{ asset('Images/Img/bed-room-106.jpeg') }}" alt="Luxury Rooms">
                 <h3>Luxury Rooms</h3>
                 <p>Spacious rooms with mountain views.</p>
             </div>
@@ -36,12 +36,6 @@
                 <p>Secure parking for all guests.</p>
             </div>
 
-            <!-- <div class="facility-card" data-aos="zoom-in" data-aos-delay="300">
-                <img src="{{ asset('Images/Img/Restaurant.png') }}" alt="Restaurant">
-                <h3>Restaurant</h3>
-                <p>Delicious food with local flavors.</p>
-            </div> -->
-
             <div class="facility-card" data-aos="zoom-in" data-aos-delay="500">
                 <img src="{{ asset('Images/Img/dining-table-01.jpeg') }}" alt="Dining Room">
                 <h3>Dining Room</h3>
@@ -49,7 +43,7 @@
             </div>
 
             <div class="facility-card" data-aos="zoom-in" data-aos-delay="500">
-                <img src="{{ asset('Images/Img/balcony-with-view.png') }}" alt="Balcony View">
+                <img src="{{ asset('Images/Img/window-101.jpeg') }}" alt="Balcony View">
                 <h3>Balcony with Stunning View</h3>
                 <p>Beautiful Himalayan mountain view.</p>
             </div>
@@ -71,12 +65,6 @@
                 <h3>Television</h3>
                 <p>Enjoy television with your family and friends.</p>
             </div>
-
-            <!-- <div class="facility-card" data-aos="zoom-in" data-aos-delay="500">
-                <img src="{{ asset('Images/Img/laundry.png') }}" alt="Laundry">
-                <h3>Laundry</h3>
-                <p>24/7 available laundry service.</p>
-            </div> -->
 
             <div class="facility-card" data-aos="zoom-in" data-aos-delay="400">
                 <img src="{{ asset('Images/Img/Hot-water.png') }}" alt="Hot Water">

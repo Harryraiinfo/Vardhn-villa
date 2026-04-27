@@ -52,31 +52,38 @@
 
             <div class="timeline-item">
                 <div class="card-box">
-                    <h5>✔ 7 Days Before</h5>
+                    <h5>✔ 30 Days Before</h5>
                     <p>100% refund available</p>
                 </div>
             </div>
 
             <div class="timeline-item">
                 <div class="card-box">
-                    <h5>✔ 3-7 Days Before</h5>
+                    <h5>✔ 15 Days Before</h5>
                     <p>50% refund available</p>
                 </div>
             </div>
 
             <div class="timeline-item">
                 <div class="card-box">
-                    <h5>❌ Within 48 Hours</h5>
-                    <p>No refund available</p>
+                    <h5>✔ 7 Days Before</h5>
+                    <p> 25% refund available</p>
                 </div>
             </div>
 
             <div class="timeline-item">
                 <div class="card-box">
+                    <h5>❌ Less than 7 Days</h5>
+                    <p>No refund available</p>
+                </div>
+            </div>
+
+            <!-- <div class="timeline-item">
+                <div class="card-box">
                     <h5>⚠ No Show</h5>
                     <p>No refund if guest does not arrive</p>
                 </div>
-            </div>
+            </div> -->
 
         </div>
 

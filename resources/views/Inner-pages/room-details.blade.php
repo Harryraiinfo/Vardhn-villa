@@ -197,7 +197,7 @@
                         <i class="fa fa-check-circle"></i> Attached Balcony
                       </div>
                       <div class="fac-item">
-                        <i class="fa fa-check-circle"></i> Mini Fridage
+                        <i class="fa fa-check-circle"></i> Mini Fridge
                       </div>
                       <div class="fac-item">
                         <i class="fa fa-check-circle"></i> Free Wi-Fi
@@ -212,26 +212,22 @@
                         <i class="fa fa-check-circle"></i> Electric Kettle
                       </div>
                       <div class="fac-item">
-                        <i class="fa fa-check-circle"></i> Wather Bottle
-                      </div>
-                    </div>
-
-                    <div class="fac-row" style="background-color: white;">
-                      <div class="fac-item">
                         <i class="fa fa-check-circle"></i> Smart LED TV
                       </div>
+
                     </div>
+
                   </div>
                 </div>
 
                 <div class="col-sm-12 pt-2">
                   <h3 class="pb-1 text-danger" style="font-size: 18px; font-weight: 600; line-height: 1.1; color: #5e5e5e;">Extra Charges</h3>
                   <p class="extra-list-items">
-                    • Tariff for Extra adult and Child above 7 years <br>
+                    • Tariff for Extra Adult and Child above 7 years <br>
                     • Without extra bed <b> &#8377;500/Night</b><br>
                     • With extra bed <b>&#8377;1000/Night</b><br>
-                    • Tea | Coffe | Food as per order<br>
-                    • Namkin | Biscuits | Juices | drinks as per use.<br>
+                    • Tea | Coffee | Food as per order<br>
+                    • Namkin | Biscuits | Juices | Drinks as per use.<br>
                   </p>
                 </div>
               </div>
@@ -326,9 +322,9 @@
                   </label>
 
                   <label class="room-card">
-                    <input type="checkbox" value="Temple and Valley - 2999">
+                    <input type="checkbox" value="Temple and Valley View - 2999">
                     <div class="room-content">
-                      <span class="room-name">Temple and Valley</span>
+                      <span class="room-name">Temple and Valley View</span>
                       <span class="room-price">₹2999</span>
                     </div>
                   </label>
@@ -345,25 +341,25 @@
                 <div class="room-options">
 
                   <label class="room-card">
-                    <input type="checkbox" value="Mountain & Valley View - 2999">
+                    <input type="checkbox" value="Mountain Peaks and Valley View - 2999">
                     <div class="room-content">
-                      <span class="room-name">Mountain & Valley View</span>
+                      <span class="room-name">Mountain Peaks and Valley View</span>
                       <span class="room-price">₹2999</span>
                     </div>
                   </label>
 
                   <label class="room-card">
-                    <input type="checkbox" value="Apple orchard and Forest View - 2999">
+                    <input type="checkbox" value="Apple Orchard and Forest View - 2999">
                     <div class="room-content">
-                      <span class="room-name">Apple orchard and Forest View</span>
+                      <span class="room-name">Apple Orchard and Forest View</span>
                       <span class="room-price">₹2999</span>
                     </div>
                   </label>
 
                   <label class="room-card">
-                    <input type="checkbox" value="Village & Apple orchard View - 2999">
+                    <input type="checkbox" value="Village & Apple Orchard View - 2999">
                     <div class="room-content">
-                      <span class="room-name">Village & Apple orchard View</span>
+                      <span class="room-name">Village & Apple Orchard View</span>
                       <span class="room-price">₹2999</span>
                     </div>
                   </label>
@@ -482,15 +478,14 @@
             <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Double Bed</li>
             <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Spacious Wash Room</li>
             <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Attached Balcony</li>
-            <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Mini Fridage</li>
+            <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Mini Fridge</li>
+            </ul>
+            </div>
+            <div class="col-sm-6">
+            <ul class="list-unstyled">
             <li><i class="fa fa-check-circle" style="color: #ffc107;"></i> Free Wi-Fi</li>
-        </ul>
-    </div>
-    <div class="col-sm-6">
-        <ul class="list-unstyled">
             <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Cable facility</li>
             <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Electric Kettle</li>
-            <li><i class="fa fa-check-circle" style="color:#ffc107;"></i> Wather Bottle</li>
             <li><i class="fa fa-check-circle" style="color:#ffc107;"></i>Smart LED TV</li>
         </ul>
     </div>
@@ -498,11 +493,11 @@
 
   //   const commonExtra = `
   //    <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
-  //     • Tariff for Extra adult and Child above 7 years <br>
+  //     • Tariff for Extra Adult and Child above 7 years <br>
   //     • Without extra bed <b> &#8377;500/Night</b><br>
   //     • With extra bed <b>&#8377;1000/Night</b><br>
-  //     • Tea | Coffe | Food as per order<br>
-  //     • Namkin | Biscuits | Jusice | drinks as per use.<br>
+  //     • Tea | Coffee | Food as per order<br>
+  //     • Namkin | Biscuits | Jusice | Drinks as per use.<br>
   // </p>  `;
 
   const roomData = {
@@ -519,13 +514,13 @@
           "facilities": commonFacilities
         },
         {
-          title: "Apple orchard and Forest View",
+          title: "Apple Orchard and Forest View",
           roomNo: "105",
           img: "Images/Img/bed-room-105.jpeg",
           "facilities": commonFacilities
         },
         {
-          title: "Village & Apple orchard View",
+          title: "Village & Apple Orchard View",
           roomNo: "106",
           img: "Images/Img/bed-room-106.jpeg",
           "facilities": commonFacilities
@@ -533,7 +528,7 @@
       ]
     },
 
-    "Temple and Valley - 2999": {
+    "Temple and Valley View - 2999": {
 
       images: [
         "Images/Img/led-tv-105.jpeg",
@@ -552,7 +547,7 @@
           "facilities": commonFacilities
         },
         {
-          title: "Village & Apple orchard View",
+          title: "Village & Apple Orchard View",
           roomNo: "106",
           img: "Images/Img/bed-room-106.jpeg",
           "facilities": commonFacilities
@@ -566,19 +561,19 @@
         "Images/Img/led-tv-103.jpeg"
       ],
       cards: [{
-          title: "Mountain & Valley View",
+          title: "Mountain Peaks and Valley View",
           roomNo: "104",
           img: "Images/Img/window-104.jpeg",
           "facilities": commonFacilities
         },
         {
-          title: "Apple orchard and Forest View",
+          title: "Apple Orchard and Forest View",
           roomNo: "105",
           img: "Images/Img/bed-room-105.jpeg",
           "facilities": commonFacilities
         },
         {
-          title: "Village & Apple orchard View",
+          title: "Village & Apple Orchard View",
           roomNo: "106",
           img: "Images/Img/bed-room-106.jpeg",
           "facilities": commonFacilities
@@ -587,7 +582,7 @@
       ]
     },
 
-    "Mountain & Valley View - 2999": {
+    "Mountain Peaks and Valley View - 2999": {
 
       images: [
         "Images/Img/bed-room-104.jpeg",
@@ -601,13 +596,13 @@
           "facilities": commonFacilities
         },
         {
-          title: "Apple orchard and Forest View",
+          title: "Apple Orchard and Forest View",
           roomNo: "105",
           img: "Images/Img/bed-room-105.jpeg",
           "facilities": commonFacilities
         },
         {
-          title: "Village & Apple orchard View",
+          title: "Village & Apple Orchard View",
           roomNo: "106",
           img: "Images/Img/bed-room-106.jpeg",
           "facilities": commonFacilities
@@ -615,13 +610,13 @@
       ]
     },
 
-    "Apple orchard and Forest View - 2999": {
+    "Apple Orchard and Forest View - 2999": {
       images: [
         "Images/Img/bed-room-105.jpeg",
         "Images/Img/led-tv-105.jpeg"
       ],
       cards: [{
-          title: "Mountain & Valley View",
+          title: "Mountain Peaks and Valley View",
           roomNo: "104",
           img: "Images/Img/window-104.jpeg",
           "facilities": commonFacilities
@@ -633,7 +628,7 @@
           "facilities": commonFacilities
         },
         {
-          title: "Village & Apple orchard View",
+          title: "Village & Apple Orchard View",
           roomNo: "106",
           img: "Images/Img/bed-room-106.jpeg",
           "facilities": commonFacilities
@@ -641,7 +636,7 @@
       ]
     },
 
-    "Village & Apple orchard View - 2999": {
+    "Village & Apple Orchard View - 2999": {
       images: [
         "Images/Img/led-tv-106.jpeg",
         "Images/Img/bed-room-106.jpeg"
@@ -653,13 +648,13 @@
           "facilities": commonFacilities
         },
         {
-          title: "Mountain & Valley View",
+          title: "Mountain Peaks and Valley View",
           roomNo: "104",
           img: "Images/Img/window-104.jpeg",
           "facilities": commonFacilities
         },
         {
-          title: "Village & Apple orchard View",
+          title: "Village & Apple Orchard View",
           roomNo: "106",
           img: "Images/Img/bed-room-106.jpeg",
           "facilities": commonFacilities

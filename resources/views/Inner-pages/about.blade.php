@@ -16,16 +16,16 @@
             <div class="col-md-6 mb-3">
                 <div class="about-text" data-aos="fade-up" data-aos-delay="100">
                     <h2 style="font-weight: 600;">Welcome to Vardhn Villa</h2>
-                    <p> Vardhn Villa is a luxurious homestay located in Sarahan, Himachal Pradesh. Surrounded by breathtaking mountain views, we offer a peaceful and premium stay for the travelers. </p>
+                    <p> Vardhn Villa is a luxurious homestay located in Sarahan, Himachal Pradesh. Surrounded by breathtaking mountain views, we offer a peaceful and premium stay for the travellers. </p>
 
-                    <p> Our villa is designed with modern architecture and comfort in mind. Whether you are here for relaxation or adventure, we ensure a memorable stay. </p>
+                    <p> Our Villa is designed with modern architecture and comfort in mind. Whether you are here for relaxation or adventure, we ensure a memorable stay. </p>
 
                     <ul>
                         <li>✔ 6 Luxury Rooms</li>
                         <li>✔ Mountain View Balconies</li>
                         <li>✔ 24/7 Hot & Cold Water</li>
                         <li>✔ Delicious Local Food</li>
-                        <li>✔ Free Wi-Fi</li>
+                        <li>✔ Free Wi-Fi and Parking</li>
                     </ul>
                 </div>
             </div>
