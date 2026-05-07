@@ -214,9 +214,7 @@
                       <div class="fac-item">
                         <i class="fa fa-check-circle"></i> Smart LED TV
                       </div>
-
                     </div>
-
                   </div>
                 </div>
 
@@ -232,10 +230,8 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
 
       <div class="col-md-6">
@@ -302,11 +298,9 @@
           </div>
 
           <div class="form-row">
-
-
             <div>
               <div>
-                <label class="">Select Room</label>
+                <label class="pb-2">Select Room</label>
 
                 <!-- Hidden input (IMPORTANT for backend) -->
                 <input type="hidden" name="room_type" id="room_type">
@@ -368,6 +362,7 @@
               </div>
             </div>
           </div>
+          <p id="SelectroomMessage" style="font-weight:bold; margin-top:2px; color:red;"></p>
 
           <textarea name="special_request" placeholder="Special Request"></textarea>
           <input type="hidden" name="total_price" id="total_price_input">
@@ -375,7 +370,6 @@
             Total Price: ₹0
           </p>
           <button class="btn btn-outline-warning" type="submit" onclick="showPayment(event)">Book Now</button>
-
 
           @if(session('success'))
           <p class="text-success mt-2">{{ session('success') }}</p>
@@ -430,7 +424,6 @@
     <div class="row" id="roomCardsContainer">
 
     </div>
-  </div>
   </div>
 </section>
 
@@ -490,15 +483,6 @@
         </ul>
     </div>
 </div>`;
-
-  //   const commonExtra = `
-  //    <p class="text-left" style="line-height:1.6; margin-bottom: 5px;">
-  //     • Tariff for Extra Adult and Child above 7 years <br>
-  //     • Without extra bed <b> &#8377;500/Night</b><br>
-  //     • With extra bed <b>&#8377;1000/Night</b><br>
-  //     • Tea | Coffee | Food as per order<br>
-  //     • Namkin | Biscuits | Jusice | Drinks as per use.<br>
-  // </p>  `;
 
   const roomData = {
     "Mountain Peaks & Valley View - 2999": {
@@ -667,8 +651,8 @@
   function updateSlider(roomType) {
     let slider = $('#roomSlider');
 
-    slider.slick('unslick'); // destroy old slider
-    slider.html(''); // clear
+    slider.slick('unslick');
+    slider.html('');
 
     let images = roomData[roomType]?.images || [];
 
@@ -686,7 +670,6 @@
     });
   }
 
-  // -------------------
   function updateRoomCards(roomType) {
     let container = document.getElementById('roomCardsContainer');
     container.innerHTML = "";
@@ -810,8 +793,6 @@
     return minAvailable;
   }
 
-  //  VALIDATION FUNCTION
-
   function validateDates() {
     let checkin = document.getElementById('checkin').value;
     let checkout = document.getElementById('checkout').value;
@@ -862,7 +843,6 @@
 </script>
 <!-- --------- -->
 
-
 <script>
   function showPayment(event) {
     event.preventDefault();
@@ -871,16 +851,6 @@
     if (form.checkValidity()) {
       document.getElementById('paymentBox').style.display = 'block';
 
-    } else {
-      form.reportValidity();
-    }
-  }
-
-  function submitBookingForm() {
-    let form = document.getElementById('bookingForm');
-
-    if (form.checkValidity()) {
-      form.submit();
     } else {
       form.reportValidity();
     }
@@ -917,8 +887,10 @@
       let timeDiff = end - start;
       let days = timeDiff / (1000 * 60 * 60 * 24);
 
-      if (days > 0) {
-        let total = price * rooms * days;
+      if (days >= 0) {
+        let billableDays = (days === 0) ? 1 : days;
+
+        let total = price * rooms * billableDays;
         document.getElementById('totalPrice').innerText = "Total Price: ₹" + total;
       } else {
         document.getElementById('totalPrice').innerText = "Total Price: ₹0";
@@ -926,7 +898,6 @@
     }
   }
 
-  // Trigger on change
   document.getElementById('room_type').addEventListener('change', calculateTotal);
   document.getElementById('rooms').addEventListener('change', calculateTotal);
   document.getElementById('checkin').addEventListener('change', calculateTotal);
@@ -936,54 +907,111 @@
 <script>
   let selectedRoomsData = [];
 
-  document.querySelectorAll('.room-card input').forEach((checkbox) => {
+  const roomInputs = document.querySelectorAll('.room-card input');
+
+  roomInputs.forEach((checkbox) => {
+
     checkbox.addEventListener('change', function() {
+
+      let maxRooms = parseInt(document.getElementById('rooms').value);
+
+      let checkedRooms = document.querySelectorAll('.room-card input:checked');
+
+      if (checkedRooms.length > maxRooms) {
+
+        this.checked = false;
+
+        let messageBox =
+          document.getElementById('SelectroomMessage');
+
+        messageBox.innerText =
+          `You can only select ${maxRooms} room(s)`;
+
+        messageBox.style.color = "red";
+
+        setTimeout(() => {
+          messageBox.innerText = "";
+        }, 2000);
+
+        return;
+      }
 
       let value = this.value;
       if (this.checked) {
-        updateSlider(this.value);
-        updateRoomCards(this.value);
-      }
 
-      if (this.checked) {
+        updateSlider(value);
+
+        updateRoomCards(value);
+
         selectedRoomsData.push(value);
+
       } else {
-        selectedRoomsData = selectedRoomsData.filter(item => item !== value);
+
+        selectedRoomsData =
+          selectedRoomsData.filter(item => item !== value);
       }
 
-      // 👇 IMPORTANT: backend ke liye string bana rahe
-      document.getElementById('room_type').value = selectedRoomsData.join(',');
+      selectedRoomsData = [...new Set(selectedRoomsData)];
 
-      // 👇 existing functions trigger karo
+      document.getElementById('room_type').value =
+        selectedRoomsData.join(',');
+
       calculateTotal();
 
-      if (selectedRoomsData.length > 0) {
-        selectedRoomsData.forEach(room => {
-          fetchBookedDates(room);
-        });
-      }
+      selectedRoomsData.forEach(room => {
+        fetchBookedDates(room);
+      });
+
     });
+
   });
 
+  document.getElementById('rooms')
+    .addEventListener('change', function() {
+
+      let maxRooms = parseInt(this.value);
+
+      let checkedBoxes =
+        document.querySelectorAll('.room-card input:checked');
+
+      if (checkedBoxes.length > maxRooms) {
+
+        for (let i = maxRooms; i < checkedBoxes.length; i++) {
+
+          checkedBoxes[i].checked = false;
+
+          selectedRoomsData =
+            selectedRoomsData.filter(
+              item => item !== checkedBoxes[i].value
+            );
+        }
+      }
+
+      document.getElementById('room_type').value =
+        JSON.stringify(selectedRoomsData);
+      calculateTotal();
+    });
 
   window.addEventListener('load', function() {
 
     let firstRoom = document.querySelector('.room-card input');
 
     if (firstRoom) {
+
       firstRoom.checked = true;
 
       selectedRoomsData = [firstRoom.value];
-      document.getElementById('room_type').value = firstRoom.value;
+
+      document.getElementById('room_type').value =
+        firstRoom.value;
 
       updateSlider(firstRoom.value);
+
       updateRoomCards(firstRoom.value);
-      // 👇 Availability check ke liye call
-      // if (document.getElementById('checkin').value && document.getElementById('checkout').value) {
-      //   fetchBookedDates(firstRoom.value);
-      // }
+
+      calculateTotal();
     }
+
   });
 </script>
-
 @endpush

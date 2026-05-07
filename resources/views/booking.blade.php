@@ -300,12 +300,10 @@
                             </select>
                         </div>
                     </div>
-
                     <div class="form-row">
-
                         <div>
                             <div>
-                                <label class="">Select Room</label>
+                                <label class="pb-2">Select Room</label>
 
                                 <!-- Hidden input (IMPORTANT for backend) -->
                                 <input type="hidden" name="room_type" id="room_type">
@@ -340,25 +338,25 @@
                                 <div class="room-options">
 
                                     <label class="room-card">
-                                        <input type="checkbox" value="Mountain & Valley View - 2999">
+                                        <input type="checkbox" value="Mountain Peaks and Valley View - 2999">
                                         <div class="room-content">
-                                            <span class="room-name">Mountain & Valley View</span>
+                                            <span class="room-name">Mountain Peaks and Valley View</span>
                                             <span class="room-price">₹2999</span>
                                         </div>
                                     </label>
 
                                     <label class="room-card">
-                                        <input type="checkbox" value="Apple orchard and Forest View - 2999">
+                                        <input type="checkbox" value="Apple Orchard and Forest View - 2999">
                                         <div class="room-content">
-                                            <span class="room-name">Apple orchard and Forest View</span>
+                                            <span class="room-name">Apple Orchard and Forest View</span>
                                             <span class="room-price">₹2999</span>
                                         </div>
                                     </label>
 
                                     <label class="room-card">
-                                        <input type="checkbox" value="Village & Apple orchard View - 2999">
+                                        <input type="checkbox" value="Village & Apple Orchard View - 2999">
                                         <div class="room-content">
-                                            <span class="room-name">Village & Apple orchard View</span>
+                                            <span class="room-name">Village & Apple Orchard View</span>
                                             <span class="room-price">₹2999</span>
                                         </div>
                                     </label>
@@ -367,6 +365,7 @@
                             </div>
                         </div>
                     </div>
+                    <p id="SelectroomMessage" style="font-weight:bold; margin-top:2px; color:red;"></p>
 
                     <textarea name="special_request" placeholder="Special Request"></textarea>
                     <input type="hidden" name="total_price" id="total_price_input">
@@ -921,16 +920,6 @@
 
     function submitBookingForm() {
         let form = document.getElementById('bookingForm');
-
-        if (form.checkValidity()) {
-            form.submit();
-        } else {
-            form.reportValidity();
-        }
-    }
-
-    function submitBookingForm() {
-        let form = document.getElementById('bookingForm');
         let btn = event.target;
 
         if (form.checkValidity()) {
@@ -960,8 +949,10 @@
             let timeDiff = end - start;
             let days = timeDiff / (1000 * 60 * 60 * 24);
 
-            if (days > 0) {
-                let total = price * rooms * days;
+            if (days >= 0) {
+                let billableDays = (days === 0) ? 1 : days;
+
+                let total = price * rooms * billableDays;
                 document.getElementById('totalPrice').innerText = "Total Price: ₹" + total;
             } else {
                 document.getElementById('totalPrice').innerText = "Total Price: ₹0";
@@ -979,53 +970,111 @@
 <script>
     let selectedRoomsData = [];
 
-    document.querySelectorAll('.room-card input').forEach((checkbox) => {
+    const roomInputs = document.querySelectorAll('.room-card input');
+
+    roomInputs.forEach((checkbox) => {
+
         checkbox.addEventListener('change', function() {
+
+            let maxRooms = parseInt(document.getElementById('rooms').value);
+
+            let checkedRooms = document.querySelectorAll('.room-card input:checked');
+
+            if (checkedRooms.length > maxRooms) {
+
+                this.checked = false;
+
+                let messageBox =
+                    document.getElementById('SelectroomMessage');
+
+                messageBox.innerText =
+                    `You can only select ${maxRooms} room(s)`;
+
+                messageBox.style.color = "red";
+
+                setTimeout(() => {
+                    messageBox.innerText = "";
+                }, 2000);
+
+                return;
+            }
 
             let value = this.value;
             if (this.checked) {
-                updateSlider(this.value);
-                updateRoomCards(this.value);
-            }
 
-            if (this.checked) {
+                updateSlider(value);
+
+                updateRoomCards(value);
+
                 selectedRoomsData.push(value);
+
             } else {
-                selectedRoomsData = selectedRoomsData.filter(item => item !== value);
+
+                selectedRoomsData =
+                    selectedRoomsData.filter(item => item !== value);
             }
 
-            // 👇 IMPORTANT: backend ke liye string bana rahe
-            document.getElementById('room_type').value = selectedRoomsData.join(',');
+            selectedRoomsData = [...new Set(selectedRoomsData)];
 
-            // 👇 existing functions trigger karo
+            document.getElementById('room_type').value =
+                selectedRoomsData.join(',');
+
             calculateTotal();
 
-            if (selectedRoomsData.length > 0) {
-                selectedRoomsData.forEach(room => {
-                    fetchBookedDates(room);
-                });
-            }
+            selectedRoomsData.forEach(room => {
+                fetchBookedDates(room);
+            });
+
         });
+
     });
 
+    document.getElementById('rooms')
+        .addEventListener('change', function() {
+
+            let maxRooms = parseInt(this.value);
+
+            let checkedBoxes =
+                document.querySelectorAll('.room-card input:checked');
+
+            if (checkedBoxes.length > maxRooms) {
+
+                for (let i = maxRooms; i < checkedBoxes.length; i++) {
+
+                    checkedBoxes[i].checked = false;
+
+                    selectedRoomsData =
+                        selectedRoomsData.filter(
+                            item => item !== checkedBoxes[i].value
+                        );
+                }
+            }
+
+            document.getElementById('room_type').value =
+                JSON.stringify(selectedRoomsData);
+            calculateTotal();
+        });
 
     window.addEventListener('load', function() {
 
         let firstRoom = document.querySelector('.room-card input');
 
         if (firstRoom) {
+
             firstRoom.checked = true;
 
             selectedRoomsData = [firstRoom.value];
-            document.getElementById('room_type').value = firstRoom.value;
+
+            document.getElementById('room_type').value =
+                firstRoom.value;
 
             updateSlider(firstRoom.value);
+
             updateRoomCards(firstRoom.value);
-            // 👇 Availability check ke liye call
-            // if (document.getElementById('checkin').value && document.getElementById('checkout').value) {
-            //   fetchBookedDates(firstRoom.value);
-            // }
+
+            calculateTotal();
         }
+
     });
 </script>
 @endpush
