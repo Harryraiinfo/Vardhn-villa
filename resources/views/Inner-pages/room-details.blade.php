@@ -234,7 +234,7 @@
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6 mt-3">
 
         @if(session('error'))
         <div class="alert alert-danger">

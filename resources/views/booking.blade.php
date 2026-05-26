@@ -165,7 +165,7 @@
             <div class="col-md-6 ">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-room-slider  booking-sec " id="roomSlider">
+                        <div class="form-room-slider booking-sec " id="roomSlider">
                             <div>
                                 <img src="{{ asset('Images/Img/window-101.jpeg') }}" alt="Room">
                                 <!-- <img src="/${img}" alt> -->
@@ -625,7 +625,7 @@
             ]
         },
 
-        "Mountain & Valley View - 2999": {
+        "Mountain Peaks and Valley View - 2999": {
             images: [
                 "Images/Img/bed-room-104.jpeg",
                 "Images/Img/window-104.jpeg",
@@ -652,7 +652,7 @@
             ]
         },
 
-        "Apple orchard and Forest View - 2999": {
+        "Apple Orchard and Forest View - 2999": {
             images: [
                 "Images/Img/bed-room-105.jpeg",
                 "Images/Img/led-tv-105.jpeg"
@@ -678,7 +678,7 @@
             ]
         },
 
-        "Village & Apple orchard View - 2999": {
+        "Village & Apple Orchard View - 2999": {
             images: [
                 "Images/Img/led-tv-106.jpeg",
                 "Images/Img/bed-room-106.jpeg"

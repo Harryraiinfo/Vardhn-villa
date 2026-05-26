@@ -5,6 +5,7 @@
 <div class="container mt-4">
 
     <h3>Customer Invoice</h3>
+    <p class="text-end pe-2"> Invoice No: <b> {{ $booking->invoice_no}}</b></p>
 
     <div class="card p-4 shadow">
 
